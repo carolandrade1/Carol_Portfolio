@@ -1,7 +1,19 @@
 import React from 'react';
+import Menu from '../src/components/common/menu';
 
-import Title from '../src/components/Title';
-
-export default function Home() {
-  return <Title>My page</Title>;
+function Home() {
+  return (
+    <>
+      <Menu />
+    </>
+  );
 }
+
+// Home.propTypes = {
+//   theme: PropTypes.shape({}).isRequired,
+//   setTheme: PropTypes.func.isRequired,
+// };
+
+// Home.defaultProps = {};
+
+export default Home;
