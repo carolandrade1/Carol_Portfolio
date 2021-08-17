@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
+import IndexHead from '../src/components/common/head/head';
 import GlobalStyle from '../src/theme/global/GlobalStyles';
 import { ThemeLight, ThemeDark } from '../src/theme';
 
@@ -9,6 +10,7 @@ export default function App({ Component, pageProps }) {
   const [theme, setTheme] = useState('light');
   return (
     <>
+      <IndexHead />
       <GlobalStyle />
       <ThemeProvider theme={theme === 'light' ? ThemeLight : ThemeDark}>
         <Component
