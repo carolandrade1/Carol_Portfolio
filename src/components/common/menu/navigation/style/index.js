@@ -16,6 +16,7 @@ const Ul = styled.ul`
   text-align: center;
 
     li {
+      font-family: 'Sora', sans-serif;
       padding: 20px;
       opacity: 0;
       animation: fadeInRight 1s ease-in-out forwards;
