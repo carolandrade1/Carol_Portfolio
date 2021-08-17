@@ -16,7 +16,7 @@ const colorsLight = {
   },
 };
 
-const colorsDark = {
+export const colorsDark = {
   background: {
     main: {
       color: '#000000',
@@ -34,4 +34,4 @@ const colorsDark = {
   },
 };
 
-export default { colorsDark, colorsLight };
+export default colorsLight;
