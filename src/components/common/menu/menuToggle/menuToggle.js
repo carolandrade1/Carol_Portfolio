@@ -13,7 +13,7 @@ const MenuToggle = ({ open, setOpen }) => (
 );
 
 MenuToggle.propTypes = {
-  open: PropTypes.shape({}).isRequired,
+  open: PropTypes.bool.isRequired,
   setOpen: PropTypes.func.isRequired,
 };
 

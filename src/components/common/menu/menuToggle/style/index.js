@@ -10,6 +10,7 @@ const StyledBurger = styled.div`
     z-index: 20;
 
   div {
+    cursor: pointer;
     width: 35px;
     height: 2px;
     background-color: ${({ open }) => (open ? '#000' : '#000')};

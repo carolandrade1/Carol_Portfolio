@@ -31,8 +31,8 @@ function Navigation({
         {/* <IconTheme theme={theme} /> */}
       </Button>
       {links.map((link) => (
-        <li key={link.url}>
-          <Text tag="a" variant="title" href={link.url}>
+        <li key={link.url} className="li">
+          <Text tag="a" variant="titleXS" href={link.url}>
             {link.texto}
           </Text>
         </li>
@@ -44,7 +44,7 @@ function Navigation({
 Navigation.propTypes = {
   theme: PropTypes.string.isRequired,
   setTheme: PropTypes.func.isRequired,
-  open: PropTypes.shape({}).isRequired,
+  open: PropTypes.bool.isRequired,
   setOpen: PropTypes.func.isRequired,
 };
 
