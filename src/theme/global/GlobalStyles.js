@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif; //'Sora', sans-serif;
-    background-color: ${({ theme }) => theme.colors.background.main.color};
+    background-color: white;
     display: flex;
     min-height: 100vh;
     width: 100%;
@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.fonts.main.color};
+    color: black;
   }
 
   h1, h2, h3, h4 {
