@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import Button from '../button/button';
 
 const Path = (props) => (
   <motion.path
@@ -14,19 +14,8 @@ const Path = (props) => (
   />
 );
 
-const Button = styled.button`
-    border: 0;
-    cursor: pointer;
-    padding: 12px 24px;
-    font-weight: bold;
-    opacity: 1;
-    outline: none;
-    border: none;
-    background: transparent;
-`; // tirar isso daqui
-
 const MenuToggle = ({ toggle }) => (
-  <Button onClick={toggle} type="button">
+  <Button ghost onClick={toggle} type="button">
     <svg width="40" height="35" viewBox="0 0 23 23">
       <Path
         variants={{

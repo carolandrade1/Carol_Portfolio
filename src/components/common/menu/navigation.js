@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import Text from '../../foundation/text';
+import Button from '../button/button';
 
 const variantsUl = {
   open: {
@@ -43,15 +45,15 @@ const links = [
   },
 ];
 
-function Navigation() {
+function Navigation({ theme, setTheme }) {
   // toggle theme
-  // const ToggleTheme = () => theme === 'light' ? setTheme('dark') : setTheme('light');
+  const ToggleTheme = () => (theme === 'light' ? setTheme('dark') : setTheme('light'));
 
   return (
     <motion.ul variants={variantsUl}>
-      {/* <ToggleButton title="Toggle Theme" onClick={ToggleTheme}>
-        <IconTheme theme={theme} />
-      </ToggleButton> */}
+      <Button ghost title="Toggle Theme" onClick={ToggleTheme}>
+        {/* <IconTheme theme={theme} /> */}
+      </Button>
       {links.map((link) => (
         <motion.li
           variants={variantsLi}
@@ -67,5 +69,12 @@ function Navigation() {
     </motion.ul>
   );
 }
+
+Navigation.propTypes = {
+  theme: PropTypes.shape({}).isRequired,
+  setTheme: PropTypes.func.isRequired,
+};
+
+Navigation.defaultProps = {};
 
 export default Navigation;

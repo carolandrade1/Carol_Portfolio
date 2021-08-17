@@ -1,19 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Menu from '../src/components/common/menu';
 
-function Home() {
+function Home({ theme, setTheme }) {
   return (
     <>
-      <Menu />
+      <Menu theme={theme} setTheme={setTheme} />
     </>
   );
 }
 
-// Home.propTypes = {
-//   theme: PropTypes.shape({}).isRequired,
-//   setTheme: PropTypes.func.isRequired,
-// };
+Home.propTypes = {
+  theme: PropTypes.shape({}).isRequired,
+  setTheme: PropTypes.func.isRequired,
+};
 
-// Home.defaultProps = {};
+Home.defaultProps = {};
 
 export default Home;
