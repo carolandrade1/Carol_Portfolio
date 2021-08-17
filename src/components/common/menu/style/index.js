@@ -7,7 +7,6 @@ const MenuWrapper = styled.nav`
     height: 10vh;
 
 
-
 `;
 
 export default MenuWrapper;

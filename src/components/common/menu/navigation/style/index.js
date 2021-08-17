@@ -10,11 +10,35 @@ const Ul = styled.ul`
   right: 0;
   height: 100vh;
   width: 100%;
-  padding-top: 3.5rem;
+  padding: 10vh;
   z-index: 5;
   transition: ease .2s linear;
   text-align: center;
 
+    li {
+      padding: 20px;
+      opacity: 0;
+      animation: fadeInRight 1s ease-in-out forwards;
+      animation-delay: .20s;
+
+      &:nth-of-type(2) {
+        animation-delay: .50s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: .80s;
+      }
+    }
+
+    @keyframes fadeInRight {
+      0% {
+        opacity: 0;
+        left: 30%;
+      }
+      100% {
+        opacity: 1;
+        left: 0;
+      }
+    }
 `;
 
 export default Ul;
