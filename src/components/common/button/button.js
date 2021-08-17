@@ -8,6 +8,7 @@ const ButtonGhost = css`
     color: ${({ theme, variant }) => get(theme, `colors.${variant}.color`)}; // rever
     background: transparent;
     outline: none;
+    padding: 0;
 `;
 
 const ButtonDefault = css`
@@ -29,7 +30,6 @@ const Button = styled.button`
       ${TextStyleVariantsMap.smallestException}
     `,
     md: css`
-      padding: 12px 24px;
       ${TextStyleVariantsMap.paragraph1}
     `,
   })}
