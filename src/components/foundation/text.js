@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import get from 'lodash/get';
 import breakpointsMedia from '../../theme/util/breakpoints';
+import propToStyle from '../../theme/util/propToStyle';
 
 export const TextStyleVariantsMap = {
   titleXS: css`
@@ -46,6 +47,7 @@ export const TextStyleVariantsMap = {
 const TextBase = styled.span`
     ${(props) => TextStyleVariantsMap[props.variant]};
     color: ${({ theme, color }) => get(theme, `colors.${color}.color`)};
+    ${propToStyle('padding')}
 `;
 
 export default function Text({

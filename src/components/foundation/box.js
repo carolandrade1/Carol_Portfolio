@@ -1,22 +1,27 @@
-import styled, { css } from 'styled-components';
-import breakpointsMedia from '../../theme/util/breakpoints';
+import styled from 'styled-components';
+import propToStyle from '../../theme/util/propToStyle';
 
 const Box = styled.div`
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 10px;
-
-    ${breakpointsMedia({
-    md: css`
-      max-width: 768px;
-    `,
-    lg: css`
-      max-width: 1160px;
-    `,
-    xl: css`
-      max-width: 1400px;
-    `,
-  })}
+  ${propToStyle('flex')}
+  ${propToStyle('display')}
+  ${propToStyle('flexDirection')}
+  ${propToStyle('justifyContent')}
+  ${propToStyle('flexWrap')}
+  ${propToStyle('height')}
+  ${propToStyle('width')}
+  ${propToStyle('zIndex')}
+  ${propToStyle('position')}
+  ${propToStyle('top')}
+  ${propToStyle('alignItems')}
+  ${propToStyle('textAlign')}
+  ${propToStyle('paddingLeft')}
+  ${propToStyle('paddingRight')}
+  ${propToStyle('paddingTop')}
+  ${propToStyle('paddingBottom')}
+  ${propToStyle('marginLeft')}
+  ${propToStyle('marginRight')}
+  ${propToStyle('marginTop')}
+  ${propToStyle('marginBottom')}
 `;
 
 export default Box;
