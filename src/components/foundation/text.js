@@ -49,7 +49,6 @@ const TextBase = styled.span`
     ${propToStyle('padding')}
     ${propToStyle('marginBottom')}
     ${propToStyle('marginTop')}
-    ${propToStyle('marginTop')}
 `;
 
 export default function Text({

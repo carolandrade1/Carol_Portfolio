@@ -6,16 +6,22 @@ import ListaProjetos from './style';
 
 const projetosItem = [
   {
-    texto: 'Instalura',
-    url: '/',
+    texto: 'Alurakut',
+    url: 'https://alurakut-cas.vercel.app/login',
+    codeurl: 'https://github.com/carolandrade1/alurakut',
+    src: '/images/LoginDesktop.png',
   },
   {
-    texto: 'Alurakut',
-    url: '/projetos',
+    texto: 'Projetos JS',
+    url: 'https://carolandrade1.github.io/javascript-projects/',
+    codeurl: 'https://github.com/carolandrade1/javascript-projects',
+    src: '/images/LoginDesktop.png',
   },
   {
     texto: 'Layouts Responsivos',
-    url: '/contato',
+    url: 'https://carolandrade1.github.io/responsive-layout-css/',
+    codeurl: 'https://github.com/carolandrade1/responsive-layout-css',
+    src: '/images/LoginDesktop.png',
   },
 ];
 
@@ -52,39 +58,42 @@ function Projetos() {
         md: '40px',
       }}
     >
-      <Text tag="p" variant="subTitle">
+      <Text tag="p" variant="subTitle" marginBottom="40px">
         Projetos
         <br />
         Selecionados
       </Text>
-      <Box>
-        <ListaProjetos>
-          {projetosItem.map((link) => (
-            <a href={link.url} key={link.texto}>
+      <ListaProjetos>
+        {projetosItem.map((link) => (
+          <a href={link.url} key={link.texto}>
+            <Box
+              className="itemsProjetos"
+              display="flex"
+              justifyContent="space-between"
+              alignItems="center"
+            >
               <Box
-                className="itemsProjetos"
                 display="flex"
-                justifyContent="space-between"
-                alignItems="center"
+                flexDirection="column"
               >
-                <Box
-                  display="flex"
-                  flexDirection="column"
-                >
-                  <Text tag="p" variant="paragraph1">
-                    {link.texto}
-                  </Text>
-                  <Button width="70px" height="22px">Code</Button>
-                </Box>
-                <svg width="35" height="35" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M37.5 15.625V59.375" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="bevel" />
-                  <path d="M59.375 37.5L37.5 59.375L15.625 37.5" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                <Text tag="p" variant="paragraph1" marginBottom="12px">
+                  {link.texto}
+                </Text>
+                <Button width="70px" height="22px">
+                  <Text tag="a" variant="paragraph3" href={link.codeurl}>Code</Text>
+                </Button>
+                <div className="img">
+                  <img src={link.src} alt={link.texto} width="250px" height="150px" />
+                </div>
               </Box>
-            </a>
-          ))}
-        </ListaProjetos>
-      </Box>
+              <svg width="35" height="35" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M37.5 15.625V59.375" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="bevel" />
+                <path d="M59.375 37.5L37.5 59.375L15.625 37.5" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </Box>
+          </a>
+        ))}
+      </ListaProjetos>
     </Box>
   );
 }
