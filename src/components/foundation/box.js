@@ -9,11 +9,13 @@ const Box = styled.div`
   ${propToStyle('flexWrap')}
   ${propToStyle('height')}
   ${propToStyle('width')}
+  ${propToStyle('maxWidth')}
   ${propToStyle('zIndex')}
   ${propToStyle('position')}
   ${propToStyle('top')}
   ${propToStyle('alignItems')}
   ${propToStyle('textAlign')}
+  ${propToStyle('padding')}
   ${propToStyle('paddingLeft')}
   ${propToStyle('paddingRight')}
   ${propToStyle('paddingTop')}
