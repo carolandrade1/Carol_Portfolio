@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Container from '../src/components/foundation/container';
 import Menu from '../src/components/common/menu';
+import Hero from '../src/components/unique/hero/hero';
 import Footer from '../src/components/common/footer/footer';
 
 function Home({ theme, setTheme }) {
@@ -15,6 +16,7 @@ function Home({ theme, setTheme }) {
       justifyContent="space-between"
     >
       <Menu theme={theme} setTheme={setTheme} />
+      <Hero />
       <Footer />
     </Container>
   );

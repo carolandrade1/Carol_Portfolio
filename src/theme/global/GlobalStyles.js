@@ -33,6 +33,10 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.15;
     margin: 0px;
   }
+
+  p {
+    margin: 0;
+  }
   
   #__next {
     flex: 1;

@@ -6,11 +6,6 @@ import FooterIcons from './footerIcons';
 function Footer() {
   return (
     <Box
-      marginTop={{
-        xs: '50px',
-        md: '100px',
-      }}
-      marginBottom="20px"
       textAlign="center"
       display="flex"
       justifyContent={{

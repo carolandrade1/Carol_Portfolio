@@ -10,7 +10,7 @@ const Container = styled.div`
   ${propToStyle('flexWrap')}
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px;
 
     ${breakpointsMedia({
     md: css`
@@ -20,7 +20,7 @@ const Container = styled.div`
       max-width: 1200px;
     `,
     xl: css`
-      max-width: 1400px;
+      max-width: 1300px;
     `,
   })}
 `;

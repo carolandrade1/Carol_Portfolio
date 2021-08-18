@@ -5,16 +5,16 @@ const StyledBurger = styled.div`
     justify-content: space-around;
     flex-flow: column nowrap;
     cursor: pointer;
-    width: 35px;
+    width: 30px;
     height: 25px;
     z-index: 20;
 
   div {
     cursor: pointer;
-    width: 35px;
+    width: 30px;
     height: 2px;
     background-color: ${({ theme }) => theme.colors.svg.main.color};
-    transform-origin: 6px;
+    transform-origin: 4px;
     transition: all 0.3s linear;
     z-index: 20;
 
