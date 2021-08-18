@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Text from '../../../foundation/text';
 import Button from '../../button/button';
 import Ul from './style';
+import FooterIcons from '../../footer/footerIcons';
+import Box from '../../../foundation/box';
 
 const links = [
   {
@@ -42,6 +44,15 @@ function Navigation({
           <Text tag="p" variant="paragraph1">Light Mode</Text>
         )}
       </Button>
+      <Box
+        display="flex"
+        width="30%"
+        justifyContent="center"
+        marginLeft="auto"
+        marginRight="auto"
+      >
+        <FooterIcons />
+      </Box>
     </Ul>
   );
 }

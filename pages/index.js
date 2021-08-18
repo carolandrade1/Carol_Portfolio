@@ -1,13 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+import Container from '../src/components/foundation/container';
 import Menu from '../src/components/common/menu';
-import Box from '../src/components/foundation/box';
+import Footer from '../src/components/common/footer/footer';
 
 function Home({ theme, setTheme }) {
   return (
-    <Box>
+    <Container
+      flex="1"
+      display="flex"
+      flexWrap="wrap"
+      flexDirection="column"
+      justifyContent="space-between"
+    >
       <Menu theme={theme} setTheme={setTheme} />
-    </Box>
+      <Footer />
+    </Container>
   );
 }
 
