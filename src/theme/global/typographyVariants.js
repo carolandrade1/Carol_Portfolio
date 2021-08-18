@@ -10,7 +10,7 @@ const typographyVariants = {
     lineHeight: 1.25,
   },
   subTitle: {
-    fontSize: '22px',
+    fontSize: '35px',
     fontWeight: '500',
     lineHeight: 1.25,
   },

@@ -5,6 +5,7 @@ const Box = styled.div`
   ${propToStyle('flex')}
   ${propToStyle('display')}
   ${propToStyle('flexDirection')}
+  ${propToStyle('flexBasis')}
   ${propToStyle('justifyContent')}
   ${propToStyle('flexWrap')}
   ${propToStyle('height')}

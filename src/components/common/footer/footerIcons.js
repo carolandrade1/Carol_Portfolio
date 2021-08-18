@@ -9,10 +9,7 @@ function FooterIcons() {
 
   return (
     <Box
-      display={{
-        xs: 'none',
-        md: 'flex',
-      }}
+      display="flex"
       justifyContent="space-between"
     >
       <Text tag="a" padding="5px" href="https://www.linkedin.com/in/carolandrade1/" target="_blank" rel="noopener noreferrer" title="Linkedin">

@@ -23,10 +23,10 @@ const Button = styled.button`
 
     ${breakpointsMedia({
     xs: css`
-      ${TextStyleVariantsMap.paragraph2}
+      ${TextStyleVariantsMap.paragraph3}
     `,
     md: css`
-      ${TextStyleVariantsMap.paragraph1}
+      ${TextStyleVariantsMap.paragraph3}
     `,
   })}
 

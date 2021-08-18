@@ -20,7 +20,14 @@ function Footer() {
         {' '}
         - Carol
       </Text>
-      <FooterIcons />
+      <Box
+        display={{
+          xs: 'none',
+          md: 'initial',
+        }}
+      >
+        <FooterIcons />
+      </Box>
     </Box>
   );
 }
