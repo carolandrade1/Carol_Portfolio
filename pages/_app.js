@@ -11,8 +11,8 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <IndexHead />
-      <GlobalStyle />
       <ThemeProvider theme={theme === 'light' ? ThemeLight : ThemeDark}>
+        <GlobalStyle />
         <Component
         // eslint-disable-next-line react/jsx-props-no-spreading
           {...pageProps}

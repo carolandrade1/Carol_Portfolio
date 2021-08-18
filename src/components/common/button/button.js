@@ -5,7 +5,6 @@ import breakpointsMedia from '../../../theme/util/breakpoints';
 import propToStyle from '../../../theme/util/propToStyle';
 
 const ButtonGhost = css`
-    color: ${({ theme, variant }) => get(theme, `colors.${variant}.color`)}; // rever
     background: transparent;
     outline: none;
     padding: 0;
@@ -13,8 +12,7 @@ const ButtonGhost = css`
 
 const ButtonDefault = css`
     color: white;
-    color: ${({ theme, variant }) => get(theme, `colors.${variant}.contrastText`)}; // rever
-    background-color: ${({ theme, variant }) => get(theme, `colors.${variant}.color`)}; // rever
+    background-color: ${({ theme, variant }) => get(theme, `colors.${variant}.color`)};
 `;
 
 const Button = styled.button`
@@ -24,6 +22,7 @@ const Button = styled.button`
     font-weight: bold;
     opacity: 1;
     border-radius: 8px;
+    color: ${({ theme }) => theme.colors.fonts.main.color};
 
     ${breakpointsMedia({
     xs: css`
