@@ -27,9 +27,6 @@ function Navigation({
 
   return (
     <Ul open={open} onClick={() => setOpen(!open)}>
-      <Button ghost title="Toggle Theme" onClick={ToggleTheme}>
-        {/* <IconTheme theme={theme} /> */}
-      </Button>
       {links.map((link) => (
         <li key={link.url} className="li">
           <Text tag="a" variant="titleXS" href={link.url}>
@@ -37,6 +34,14 @@ function Navigation({
           </Text>
         </li>
       ))}
+      <Button ghost title="Toggle Theme" onClick={ToggleTheme}>
+        {theme === 'light' && (
+          <Text tag="p" variant="paragraph1">Dark Mode</Text>
+        )}
+        {theme === 'dark' && (
+          <Text tag="p" variant="paragraph1">Light Mode</Text>
+        )}
+      </Button>
     </Ul>
   );
 }

@@ -13,7 +13,7 @@ const StyledBurger = styled.div`
     cursor: pointer;
     width: 35px;
     height: 2px;
-    background-color: ${({ open }) => (open ? '#000' : '#000')};
+    background-color: ${({ theme }) => theme.colors.svg.main.color};
     transform-origin: 6px;
     transition: all 0.3s linear;
     z-index: 20;

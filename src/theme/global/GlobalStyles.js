@@ -11,8 +11,8 @@ const GlobalStyle = createGlobalStyle`
   html, body {
     margin: 0;
     padding: 0;
-    font-family: 'Inter', sans-serif; //'Sora', sans-serif;
-    background-color: white;
+    font-family: 'Sora', sans-serif;
+    background-color: ${({ theme }) => theme.colors.background.main.color};
     display: flex;
     min-height: 100vh;
     width: 100%;
@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: black;
+    color: ${({ theme }) => theme.colors.fonts.main.color};
   }
 
   h1, h2, h3, h4 {
