@@ -42,7 +42,7 @@ function Projetos() {
         md: 'space-between',
       }}
       height={{
-        xs: '130vh',
+        xs: '120vh',
         md: '140vh',
       }}
       marginTop={{

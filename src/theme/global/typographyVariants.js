@@ -1,6 +1,6 @@
 const typographyVariants = {
   title: {
-    fontSize: '64px',
+    fontSize: '74px',
     fontWeight: '700',
     lineHeight: 1.25,
   },
