@@ -126,13 +126,28 @@ function Projetos() {
                   {link.texto}
                 </Text>
                 <Button width="70px" height="22px">
-                  <Text tag="a" variant="paragraph3" href={link.codeurl} target="_blank" rel="noopener noreferrer">Code</Text>
+                  <Text
+                    tag="a"
+                    variant="paragraph3"
+                    href={link.codeurl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Code Github"
+                  >
+                    Code
+                  </Text>
                 </Button>
                 <div className="img">
-                  <img src={link.src} alt={link.texto} width="250px" height="160px" />
+                  <img src={link.src} alt={link.texto} width="280px" height="158px" />
                 </div>
               </Box>
-              <a href={link.url} className="linkSvg" target="_blank" rel="noopener noreferrer">
+              <a
+                href={link.url}
+                className="linkSvg"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Site Live"
+              >
                 <svg width="35" height="35" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M37.5 15.625V59.375" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="bevel" />
                   <path d="M59.375 37.5L37.5 59.375L15.625 37.5" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
