@@ -13,7 +13,7 @@ function Footer() {
         md: 'space-between',
       }}
       alignItems="center"
-      zIndex="15"
+      zIndex="5"
       position="sticky"
       bottom="20px"
     >

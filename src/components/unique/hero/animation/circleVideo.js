@@ -7,7 +7,7 @@ const ContainerCircle = () => {
   const { color } = themeContext.colors.svg.main;
 
   return (
-    <a className="circlelink" href="/projetos" title="Mostrar projetos">
+    <a className="circlelink" href="#projetos" title="Mostrar projetos">
       <motion.svg
         className="circle"
         width="230"
