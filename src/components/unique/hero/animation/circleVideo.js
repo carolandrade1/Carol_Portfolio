@@ -118,7 +118,7 @@ const ContainerCircle = () => {
 
 const ContainerAnimation = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-end;
 
     .circlelink {
@@ -136,7 +136,6 @@ const ContainerAnimation = styled.div`
         position: absolute;
         top: 30%;
         right: 37%;
-        transform: rotate(-130deg);
     }
 
     .video {

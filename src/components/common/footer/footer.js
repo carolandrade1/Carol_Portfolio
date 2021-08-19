@@ -13,6 +13,9 @@ function Footer() {
         md: 'space-between',
       }}
       alignItems="center"
+      zIndex="15"
+      position="sticky"
+      bottom="20px"
     >
       <Text href="https://github.com/carolandrade1" target="_blank" rel="noopener noreferrer" tag="a" variant="paragraph3" color="fonts.main" textAlign="center">
         ©
@@ -20,7 +23,14 @@ function Footer() {
         {' '}
         - Carol
       </Text>
-      <FooterIcons />
+      <Box
+        display={{
+          xs: 'none',
+          md: 'initial',
+        }}
+      >
+        <FooterIcons />
+      </Box>
     </Box>
   );
 }

@@ -5,6 +5,7 @@ const Box = styled.div`
   ${propToStyle('flex')}
   ${propToStyle('display')}
   ${propToStyle('flexDirection')}
+  ${propToStyle('flexBasis')}
   ${propToStyle('justifyContent')}
   ${propToStyle('flexWrap')}
   ${propToStyle('height')}
@@ -13,6 +14,7 @@ const Box = styled.div`
   ${propToStyle('zIndex')}
   ${propToStyle('position')}
   ${propToStyle('top')}
+  ${propToStyle('bottom')}
   ${propToStyle('alignItems')}
   ${propToStyle('textAlign')}
   ${propToStyle('padding')}
