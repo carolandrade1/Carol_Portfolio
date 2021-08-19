@@ -2,8 +2,13 @@ import React from 'react';
 import Box from '../../foundation/box';
 import Text from '../../foundation/text';
 import Button from '../../common/button/button';
+import RedesSociais from './style';
+import FormCadastro from '../../forms/formCadastro';
+import Modal from '../../common/modal/modal';
 
 function Contato() {
+  const [isModalOpen, setModalState] = React.useState(false);
+
   return (
     <Box
       display="flex"
@@ -26,10 +31,25 @@ function Contato() {
       }}
       textAlign="center"
     >
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => {
+          setModalState(false);
+        }}
+      >
+        {(propsDoModal) => (
+          <FormCadastro propsDoModal={propsDoModal} setModalState={setModalState} />
+        )}
+      </Modal>
       <Text tag="p" variant="titleXS">
-        Lets stay in_
-        <Button ghost>
-          <Text className="spanContato" tag="span" variant="titleXS">touch</Text>
+        Vamos manter_
+        <Button
+          ghost
+          onClick={() => {
+            setModalState(!isModalOpen); // novo state sendo atribuido
+          }}
+        >
+          <Text className="spanContato" tag="span" variant="titleXS">contato</Text>
         </Button>
       </Text>
       <Box
@@ -41,7 +61,7 @@ function Contato() {
         }}
       >
         <Text tag="p" variant="paragraph3">Redes Sociais</Text>
-        <Box>
+        <RedesSociais>
           <Text
             tag="a"
             href="#"
@@ -69,7 +89,7 @@ function Contato() {
           >
             Codepen
           </Text>
-        </Box>
+        </RedesSociais>
       </Box>
     </Box>
   );
