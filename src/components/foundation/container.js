@@ -17,7 +17,7 @@ const Container = styled.div`
       max-width: 768px;
     `,
     lg: css`
-      max-width: 1200px;
+      max-width: 1150px;
     `,
     xl: css`
       max-width: 1300px;

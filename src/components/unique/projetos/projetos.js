@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 import Box from '../../foundation/box';
 import Text from '../../foundation/text';
 import Button from '../../common/button/button';
@@ -9,23 +10,26 @@ const projetosItem = [
     texto: 'Alurakut',
     url: 'https://alurakut-cas.vercel.app/login',
     codeurl: 'https://github.com/carolandrade1/alurakut',
-    src: '/images/LoginDesktop.png',
+    src: '/images/LPalurakut.png',
   },
   {
     texto: 'Projetos JS',
     url: 'https://carolandrade1.github.io/javascript-projects/',
     codeurl: 'https://github.com/carolandrade1/javascript-projects',
-    src: '/images/LoginDesktop.png',
+    src: '/images/LPjavascriptprojetos.png',
   },
   {
     texto: 'Layouts Responsivos',
     url: 'https://carolandrade1.github.io/responsive-layout-css/',
     codeurl: 'https://github.com/carolandrade1/responsive-layout-css',
-    src: '/images/LoginDesktop.png',
+    src: '/images/LPlayouts.png',
   },
 ];
 
 function Projetos() {
+  const themeContext = useContext(ThemeContext);
+  const { color } = themeContext.colors.svg.main;
+
   return (
     <Box
       display="flex"
@@ -65,7 +69,7 @@ function Projetos() {
       </Text>
       <ListaProjetos>
         {projetosItem.map((link) => (
-          <a href={link.url} key={link.texto}>
+          <li key={link.texto}>
             <Box
               className="itemsProjetos"
               display="flex"
@@ -80,18 +84,20 @@ function Projetos() {
                   {link.texto}
                 </Text>
                 <Button width="70px" height="22px">
-                  <Text tag="a" variant="paragraph3" href={link.codeurl}>Code</Text>
+                  <Text tag="a" variant="paragraph3" href={link.codeurl} target="_blank" rel="noopener noreferrer">Code</Text>
                 </Button>
                 <div className="img">
-                  <img src={link.src} alt={link.texto} width="250px" height="150px" />
+                  <img src={link.src} alt={link.texto} width="250px" height="160px" />
                 </div>
               </Box>
-              <svg width="35" height="35" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M37.5 15.625V59.375" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="bevel" />
-                <path d="M59.375 37.5L37.5 59.375L15.625 37.5" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              <a href={link.url} className="linkSvg" target="_blank" rel="noopener noreferrer">
+                <svg width="35" height="35" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M37.5 15.625V59.375" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="bevel" />
+                  <path d="M59.375 37.5L37.5 59.375L15.625 37.5" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
             </Box>
-          </a>
+          </li>
         ))}
       </ListaProjetos>
     </Box>
