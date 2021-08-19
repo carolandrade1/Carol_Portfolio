@@ -19,7 +19,7 @@ const colorsLight = {
 export const colorsDark = {
   background: {
     main: {
-      color: '#000000',
+      color: '#313032',
     },
   },
   fonts: {

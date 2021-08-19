@@ -6,9 +6,16 @@ const ListaProjetos = styled.ul`
 
     .itemsProjetos {
         position: relative;
-        padding: 25px 20px;
+        padding: 30px 20px;
         border-bottom: 1px solid ${({ theme }) => theme.colors.svg.main.color};
+    }
 
+    .destaqueCard:hover .linkSvg {
+        cursor: pointer;
+        transform: rotate(-45deg);
+        background-color: #D2AFFF;
+        border-radius: 50%;
+        transition: ease-in-out .5s ;
     }
 
     svg {
