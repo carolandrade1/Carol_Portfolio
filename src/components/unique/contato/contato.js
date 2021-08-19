@@ -17,14 +17,7 @@ function Contato() {
         xs: 'space-around',
         md: 'space-around',
       }}
-      height={{
-        xs: '40vh',
-        md: '90vh',
-      }}
-      paddingTop={{
-        xs: '150px',
-        md: '150px',
-      }}
+      height="70vh"
       padding={{
         xs: '0px',
         md: '40px',
@@ -42,14 +35,14 @@ function Contato() {
         )}
       </Modal>
       <Text tag="p" variant="titleXS">
-        Vamos manter_
+        Vamos_
         <Button
           ghost
           onClick={() => {
             setModalState(!isModalOpen); // novo state sendo atribuido
           }}
         >
-          <Text className="spanContato" tag="span" variant="titleXS">contato</Text>
+          <Text className="spanContato" tag="span" variant="titleXS">conversar?</Text>
         </Button>
       </Text>
       <Box
@@ -65,6 +58,7 @@ function Contato() {
           <Text
             tag="a"
             href="#"
+            variant="paragraph1"
             target="_blank"
             rel="noopener noreferrer"
             title="Likedin"

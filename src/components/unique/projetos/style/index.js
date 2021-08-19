@@ -4,22 +4,10 @@ import breakpointsMedia from '../../../../theme/util/breakpoints';
 const ListaProjetos = styled.ul`
     flex-basis: 60%;
 
-    img {
-        aspect-ratio: 3 / 2;
-    }
-
     .itemsProjetos {
         position: relative;
         padding: 30px 20px;
         border-bottom: 1px solid ${({ theme }) => theme.colors.svg.main.color};
-    }
-
-    .destaqueCard:hover .linkSvg {
-        cursor: pointer;
-        transform: rotate(-45deg);
-        background-color: #D2AFFF;
-        border-radius: 50%;
-        transition: ease-in-out .5s ;
     }
 
     svg {
