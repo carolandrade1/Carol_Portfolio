@@ -83,7 +83,7 @@ function Projetos() {
                 display="flex"
                 flexDirection="column"
               >
-                <Text tag="p" variant="paragraph1" marginBottom="12px">
+                <Text tag="p" variant="paragraph1XS" marginBottom="12px">
                   {link.texto}
                 </Text>
                 <Button width="110px" height="35px">

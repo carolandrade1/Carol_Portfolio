@@ -88,18 +88,18 @@ function FormContent({ setModalState }) {
         Fechar
       </Button>
       <Text
-        variant="paragraph1"
+        variant="paragraph1XS"
         tag="h1"
       >
         Diga Olá!
       </Text>
-      <Text
+      {/* <Text
         variant="paragraph2"
         tag="p"
         marginBottom="32px"
       >
         Qualquer coisa no momento
-      </Text>
+      </Text> */}
 
       <div>
         <TextField

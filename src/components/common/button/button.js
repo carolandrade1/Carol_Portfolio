@@ -18,21 +18,21 @@ const ButtonDefault = css`
 const Button = styled.button`
     cursor: pointer;
     color: ${({ theme }) => theme.colors.fonts.main.color};
-    border: 2px solid ${({ theme }) => theme.colors.svg.main.color};
-    padding: 3px 12px;
+    border: 1px solid ${({ theme }) => theme.colors.svg.main.color};
+    padding: 8px 12px;
 
     ${breakpointsMedia({
     xs: css`
       ${TextStyleVariantsMap.paragraph3}
     `,
     md: css`
-      ${TextStyleVariantsMap.paragraph3}
+      ${TextStyleVariantsMap.paragraph2}
     `,
   })}
 
     &:disabled {
       cursor: not-allowed;
-      opacity: .2;
+      opacity: .3;
     }
     ${({ fullWidth }) => fullWidth && css`
       width: 100%;
@@ -40,7 +40,7 @@ const Button = styled.button`
 
     ${({ ghost }) => (ghost ? ButtonGhost : ButtonDefault)}
     &:hover {
-      opacity: .5;
+      opacity: .7;
     }
 
   ${propToStyle('width')}

@@ -63,7 +63,7 @@ function Hero() {
           Carol Andrade
         </Text>
         <Text
-          className="subtitle"
+          className="paragraph2"
           tag="p"
           variant="paragraph2"
           textAlign="left"

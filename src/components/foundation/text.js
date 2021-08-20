@@ -26,10 +26,21 @@ export const TextStyleVariantsMap = {
         font-weight: ${({ theme }) => theme.typographyVariants.subTitle.fontWeight};
         line-height: ${({ theme }) => theme.typographyVariants.subTitle.lineHeight};
     `,
-  paragraph1: css`
-        font-size: ${({ theme }) => theme.typographyVariants.paragraph1.fontSize};
-        font-weight: ${({ theme }) => theme.typographyVariants.paragraph1.fontWeight};
-        line-height: ${({ theme }) => theme.typographyVariants.paragraph1.lineHeight};
+  paragraph1XS: css`
+        ${({ theme }) => css`
+            font-size: ${theme.typographyVariants.paragraph1XS.fontSize};
+            font-weight: ${theme.typographyVariants.paragraph1XS.fontWeight};
+            line-height: ${theme.typographyVariants.paragraph1XS.lineHeight};
+        `}
+    ${breakpointsMedia({
+    md: css`
+        ${({ theme }) => css`
+            font-size: ${theme.typographyVariants.paragraph1.fontSize};
+            font-weight: ${theme.typographyVariants.paragraph1.fontWeight};
+            line-height: ${theme.typographyVariants.paragraph1.lineHeight};
+        `}
+    `,
+  })}
     `,
   paragraph2: css`
         font-size: ${({ theme }) => theme.typographyVariants.paragraph2.fontSize};
@@ -64,12 +75,12 @@ export default function Text({
 
 Text.propTypes = {
   tag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'li', 'a', 'span', 'input']),
-  variant: PropTypes.oneOf(['titleXS', 'title', 'subTitle', 'paragraph1', 'paragraph2', 'paragraph3']),
+  variant: PropTypes.oneOf(['titleXS', 'title', 'subTitle', 'paragraph1', 'paragraph1XS', 'paragraph2', 'paragraph3']),
   children: PropTypes.node,
 };
 
 Text.defaultProps = {
   tag: 'span',
-  variant: 'paragraph1',
+  variant: 'paragraph2',
   children: null,
 };

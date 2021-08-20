@@ -38,10 +38,10 @@ function Navigation({
       ))}
       <Button ghost title="Toggle Theme" onClick={ToggleTheme}>
         {theme === 'light' && (
-          <Text tag="p" variant="paragraph1">Dark Mode</Text>
+          <Text tag="p" variant="paragraph1XS">Dark Mode</Text>
         )}
         {theme === 'dark' && (
-          <Text tag="p" variant="paragraph1">Light Mode</Text>
+          <Text tag="p" variant="paragraph1XS">Light Mode</Text>
         )}
       </Button>
       <Box
