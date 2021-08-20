@@ -65,7 +65,7 @@ function Projetos() {
         md: '40px',
       }}
     >
-      <Text id="projetos" tag="p" variant="subTitle" marginBottom="40px">
+      <Text id="projetos" tag="p" variant="subTitle" marginBottom="40px" paddingTop="60px">
         Projetos
         <br />
         Selecionados

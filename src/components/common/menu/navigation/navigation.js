@@ -13,11 +13,11 @@ const links = [
   },
   {
     texto: 'Projetos',
-    url: '/projetos',
+    url: '#projetos',
   },
   {
     texto: 'Contato',
-    url: '/contato',
+    url: '#contato',
   },
 ];
 
