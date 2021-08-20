@@ -34,7 +34,7 @@ function Contato() {
           <FormCadastro propsDoModal={propsDoModal} setModalState={setModalState} />
         )}
       </Modal>
-      <Text tag="p" variant="titleXS">
+      <Text tag="p" id="contato" variant="titleXS">
         Vamos_
         <Button
           ghost

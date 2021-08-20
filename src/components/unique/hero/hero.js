@@ -72,11 +72,13 @@ function Hero() {
           Desenvolvedora front-end, atualmente localizada em Belo Horizonte, Brasil.
           Em busca da minha primeira oportunidade na area de desenvolvimento web.
         </Text>
-        <Button width="110px" height="35px">
-          <Text tag="span" variant="paragraph3">
-            Contato
-          </Text>
-        </Button>
+        <a href="#contato">
+          <Button width="110px" height="35px">
+            <Text tag="span" variant="paragraph3">
+              Contato
+            </Text>
+          </Button>
+        </a>
       </Box>
       <CircleVideo />
     </Box>

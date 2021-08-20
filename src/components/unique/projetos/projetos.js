@@ -47,11 +47,11 @@ function Projetos() {
         xs: 'justify',
         md: 'space-between',
       }}
-      height="100vh"
-      marginTop="{{
+      height="120vh"
+      marginTop={{
         xs: '150px',
-        md: '150px',
-      }}"
+        md: '200px',
+      }}
       padding={{
         xs: '0px',
         md: '40px',
@@ -86,7 +86,7 @@ function Projetos() {
                 <Text tag="p" variant="paragraph1" marginBottom="12px">
                   {link.texto}
                 </Text>
-                <Button width="70px" height="22px">
+                <Button width="110px" height="35px">
                   <Text
                     tag="a"
                     variant="paragraph3"

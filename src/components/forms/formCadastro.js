@@ -103,28 +103,34 @@ function FormContent({ setModalState }) {
 
       <div>
         <TextField
-          placeholder="Nome"
+          placeholder="nome"
           name="nome"
           value={userInfo.nome}
           onChange={handleChange}
+          id="nome"
+          label="Nome"
         />
       </div>
 
       <div>
         <TextField
-          placeholder="Email"
+          placeholder="seuemail@dominio.com"
           name="email"
           value={userInfo.email}
           onChange={handleChange}
+          id="email"
+          label="Email"
         />
       </div>
 
       <div>
         <TextField
-          placeholder="Mensagem"
+          placeholder="mande um Oi :)"
           name="mensagem"
           value={userInfo.mensagem}
           onChange={handleChange}
+          id="mensagem"
+          label="Mensagem"
         />
       </div>
 
@@ -142,12 +148,7 @@ function FormContent({ setModalState }) {
           display="flex"
           justifyContent="center"
         >
-          <img
-            src="/images/success.gif"
-            alt="Tudo certo!"
-            width="100px"
-            height="100px"
-          />
+          <Text tag="p">Tudo certo!</Text>
         </Box>
       )}
 
@@ -156,12 +157,7 @@ function FormContent({ setModalState }) {
           display="flex"
           justifyContent="center"
         >
-          <img
-            src="/images/erro.gif"
-            alt="Ixi, alguma coisa deu errado!"
-            width="100px"
-            height="100px"
-          />
+          <Text tag="p">Tudo errado!</Text>
         </Box>
       )}
     </form>
