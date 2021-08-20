@@ -10,6 +10,7 @@ const InputWrapper = styled.div`
 
   label {
     width: 100%;
+    color: ${({ theme }) => theme.colors.fonts.main.color};
     text-align: left;
     font-weight: 600;
   }
@@ -21,6 +22,7 @@ const Input = styled(Text)`
   border-bottom: 1px solid ${({ theme }) => theme.colors.svg.main.color};
   padding: 12px 0;
   outline: 0;
+  background-color: ${({ theme }) => theme.colors.background.main.color};
 `;
 
 Input.defaultProps = {

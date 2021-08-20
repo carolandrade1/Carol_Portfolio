@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '../../foundation/box';
 import Text from '../../foundation/text';
 import Button from '../../common/button/button';
-import RedesSociais from './style';
+import RedesSociais, { ContatoModal } from './style';
 import FormCadastro from '../../forms/formCadastro';
 import Modal from '../../common/modal/modal';
 
@@ -34,17 +34,22 @@ function Contato() {
           <FormCadastro propsDoModal={propsDoModal} setModalState={setModalState} />
         )}
       </Modal>
-      <Text tag="p" id="contato" variant="titleXS">
-        Vamos_
-        <Button
-          ghost
-          onClick={() => {
-            setModalState(!isModalOpen); // novo state sendo atribuido
-          }}
-        >
-          <Text className="spanContato" tag="span" variant="titleXS">conversar?</Text>
-        </Button>
-      </Text>
+      <ContatoModal>
+        <Text tag="p" id="contato" variant="titleXS">
+          Vamos_
+          <Button
+            ghost
+            onClick={() => {
+              setModalState(!isModalOpen); // novo state sendo atribuido
+            }}
+          >
+            <Text tag="p" variant="titleXS">
+              <strong>conversar?</strong>
+            </Text>
+          </Button>
+        </Text>
+
+      </ContatoModal>
       <Box
         display="flex"
         flexDirection="column"
@@ -57,8 +62,8 @@ function Contato() {
         <RedesSociais>
           <Text
             tag="a"
-            href="#"
-            variant="paragraph1"
+            href="https://www.linkedin.com/in/carolandrade1/"
+            variant="paragraph1XS"
             target="_blank"
             rel="noopener noreferrer"
             title="Likedin"
@@ -67,7 +72,8 @@ function Contato() {
           </Text>
           <Text
             tag="a"
-            href="#"
+            href="https://github.com/carolandrade1"
+            variant="paragraph1XS"
             target="_blank"
             rel="noopener noreferrer"
             title="Github"
@@ -76,7 +82,8 @@ function Contato() {
           </Text>
           <Text
             tag="a"
-            href="#"
+            href="https://codepen.io/carolandrade1"
+            variant="paragraph1XS"
             target="_blank"
             rel="noopener noreferrer"
             title="Codepen"

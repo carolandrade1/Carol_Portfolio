@@ -19,6 +19,11 @@ const typographyVariants = {
     fontWeight: '400',
     lineHeight: 1.25,
   },
+  paragraph1XS: {
+    fontSize: '20px',
+    fontWeight: '400',
+    lineHeight: 1.25,
+  },
   paragraph2: {
     fontSize: '16px',
     fontWeight: '400',
