@@ -2,9 +2,8 @@ import styled from 'styled-components';
 
 export const ContatoModal = styled.div`
 
-    strong {
+    #contato {
         position: relative;
-        opacity: 1;
 
         &::after {
             content: '';
@@ -13,7 +12,6 @@ export const ContatoModal = styled.div`
             left: -8px;
             right: -8px;
             height: 12px;
-            opacity: 0.8;
             z-index: -1;
 
             background-image: url('https://i.postimg.cc/fbcgwf5p/Vector.png');
@@ -22,22 +20,6 @@ export const ContatoModal = styled.div`
             background-position: center center;
         }
     }
-
-    @keyframes animate 
-    {
-        0%, 10%, 100% {
-            width: 0;
-        }
-        70%, 90% {
-            width: 100%
-        }
-    }
-
-
-    
-
-
-
 `;
 
 const RedesSociais = styled.div`

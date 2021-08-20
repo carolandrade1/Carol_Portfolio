@@ -35,20 +35,16 @@ function Contato() {
         )}
       </Modal>
       <ContatoModal>
-        <Text tag="p" id="contato" variant="titleXS">
-          Vamos_
-          <Button
-            ghost
-            onClick={() => {
-              setModalState(!isModalOpen); // novo state sendo atribuido
-            }}
-          >
-            <Text tag="p" variant="titleXS">
-              <strong>conversar?</strong>
-            </Text>
-          </Button>
-        </Text>
-
+        <Button
+          ghost
+          onClick={() => {
+            setModalState(!isModalOpen); // novo state sendo atribuido
+          }}
+        >
+          <Text tag="p" id="contato" variant="titleXS">
+            Vamos conversar?
+          </Text>
+        </Button>
       </ContatoModal>
       <Box
         display="flex"

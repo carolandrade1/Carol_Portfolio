@@ -26,7 +26,7 @@ const ListaProjetos = styled.ul`
             z-index: 3;
             display: initial;
             position: absolute;
-            top: -15%;
+            top: -10%;
             left: 40%;
             `,
   })}

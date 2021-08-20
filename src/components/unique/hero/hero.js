@@ -17,7 +17,7 @@ function Hero() {
         md: 'row',
       }}
       height={{
-        xs: '85vh',
+        xs: '75vh',
         md: '85vh',
       }}
       padding={{
