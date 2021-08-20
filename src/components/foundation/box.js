@@ -15,6 +15,7 @@ const Box = styled.div`
   ${propToStyle('position')}
   ${propToStyle('top')}
   ${propToStyle('bottom')}
+  ${propToStyle('boxShadow')}
   ${propToStyle('alignItems')}
   ${propToStyle('textAlign')}
   ${propToStyle('padding')}

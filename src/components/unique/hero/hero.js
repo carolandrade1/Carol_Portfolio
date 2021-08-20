@@ -7,17 +7,18 @@ import Button from '../../common/button/button';
 function Hero() {
   return (
     <Box
-      display={{
-        xs: 'block',
-        md: 'flex',
-      }}
+      display="flex"
       justifyContent={{
-        xs: 'center',
+        xs: 'space-between',
         md: 'space-around',
       }}
+      flexDirection={{
+        xs: 'column',
+        md: 'row',
+      }}
       height={{
-        xs: '75vh',
-        md: '80vh',
+        xs: '85vh',
+        md: '85vh',
       }}
       padding={{
         xs: '0px',
@@ -35,7 +36,10 @@ function Hero() {
       <Box
         display="flex"
         flexDirection="column"
-        maxWidth="500px"
+        maxWidth={{
+          xs: 'auto',
+          md: '600px',
+        }}
         textAlign="left"
         marginTop={{
           xs: '0px',
@@ -68,11 +72,13 @@ function Hero() {
           Desenvolvedora front-end, atualmente localizada em Belo Horizonte, Brasil.
           Em busca da minha primeira oportunidade na area de desenvolvimento web.
         </Text>
-        <Button width="110px" height="35px">
-          <Text tag="span" variant="paragraph3">
-            Contato
-          </Text>
-        </Button>
+        <a href="#contato">
+          <Button width="110px" height="35px">
+            <Text tag="span" variant="paragraph3">
+              Contato
+            </Text>
+          </Button>
+        </a>
       </Box>
       <CircleVideo />
     </Box>

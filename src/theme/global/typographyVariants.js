@@ -1,6 +1,6 @@
 const typographyVariants = {
   title: {
-    fontSize: '64px',
+    fontSize: '74px',
     fontWeight: '700',
     lineHeight: 1.25,
   },
@@ -10,12 +10,12 @@ const typographyVariants = {
     lineHeight: 1.25,
   },
   subTitle: {
-    fontSize: '35px',
+    fontSize: '40px',
     fontWeight: '500',
     lineHeight: 1.25,
   },
   paragraph1: {
-    fontSize: '18px',
+    fontSize: '24px',
     fontWeight: '400',
     lineHeight: 1.25,
   },
