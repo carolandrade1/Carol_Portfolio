@@ -109,6 +109,7 @@ function FormContent({ setModalState }) {
           onChange={handleChange}
           id="nome"
           label="Nome"
+          type="text"
         />
       </div>
 
@@ -120,6 +121,7 @@ function FormContent({ setModalState }) {
           onChange={handleChange}
           id="email"
           label="Email"
+          type="email"
         />
       </div>
 
@@ -131,6 +133,7 @@ function FormContent({ setModalState }) {
           onChange={handleChange}
           id="mensagem"
           label="Mensagem"
+          type="text"
         />
       </div>
 

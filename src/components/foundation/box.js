@@ -9,6 +9,7 @@ const Box = styled.div`
   ${propToStyle('justifyContent')}
   ${propToStyle('flexWrap')}
   ${propToStyle('height')}
+  ${propToStyle('minHeight')}
   ${propToStyle('width')}
   ${propToStyle('maxWidth')}
   ${propToStyle('zIndex')}

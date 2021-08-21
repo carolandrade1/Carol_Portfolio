@@ -82,6 +82,6 @@ Text.propTypes = {
 
 Text.defaultProps = {
   tag: 'span',
-  variant: 'paragraph2',
+  variant: 'paragraph3',
   children: null,
 };

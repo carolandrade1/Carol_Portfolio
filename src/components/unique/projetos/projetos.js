@@ -1,41 +1,40 @@
-import React, { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
+import React from 'react';
 import Box from '../../foundation/box';
 import Text from '../../foundation/text';
-import Button from '../../common/button/button';
-import ListaProjetos from './style';
+import ListaProjetos, { LinkA } from './style';
 
 const projetosItem = [
   {
-    texto: 'Instalura',
+    title: 'Instalura',
     url: 'https://alurakut-cas.vercel.app/login',
     codeurl: 'https://github.com/carolandrade1/alurakut',
-    src: '/images/LPinstalura.png',
+    src: '/images/LPinstalura.webp',
+    description: 'O projeto está sendo desenvolvido durante o Bootcamp Front-End Avançado da Alura.',
   },
   {
-    texto: 'Alurakut',
+    title: 'Alurakut',
     url: 'https://alurakut-cas.vercel.app/login',
     codeurl: 'https://github.com/carolandrade1/alurakut',
-    src: '/images/LPalurakut.png',
+    src: '/images/LPalurakut.webp',
+    description: 'Versão do antigo Orkut, o projeto nos faz lembrar dos velhos tempos.',
   },
   {
-    texto: 'Projetos JS',
+    title: 'Projetos JS',
     url: 'https://carolandrade1.github.io/javascript-projects/',
     codeurl: 'https://github.com/carolandrade1/javascript-projects',
-    src: '/images/LPjavascriptprojetos.png',
+    src: '/images/LPjavascriptprojetos.webp',
+    description: 'Aqui você encontra vários projetos manipulando o DOM.',
   },
   {
-    texto: 'Layouts Responsivos',
+    title: 'Layouts CSS',
     url: 'https://carolandrade1.github.io/responsive-layout-css/',
     codeurl: 'https://github.com/carolandrade1/responsive-layout-css',
-    src: '/images/LPlayouts.png',
+    src: '/images/LPlayouts.webp',
+    description: '10 Layouts que destacam o quão robusto e impactante uma única linha de código CSS pode ser.',
   },
 ];
 
 function Projetos() {
-  const themeContext = useContext(ThemeContext);
-  const { color } = themeContext.colors.svg.main;
-
   return (
     <Box
       display="flex"
@@ -47,10 +46,10 @@ function Projetos() {
         xs: 'justify',
         md: 'space-between',
       }}
-      height="120vh"
+      minHeight="120vh"
       marginTop={{
         xs: '150px',
-        md: '200px',
+        md: '100px',
       }}
       padding={{
         xs: '0px',
@@ -72,7 +71,7 @@ function Projetos() {
       </Text>
       <ListaProjetos>
         {projetosItem.map((link) => (
-          <li key={link.texto}>
+          <li key={link.title}>
             <Box
               className="itemsProjetos"
               display="flex"
@@ -83,37 +82,31 @@ function Projetos() {
                 display="flex"
                 flexDirection="column"
               >
-                <Text tag="p" variant="paragraph1XS" marginBottom="12px">
-                  {link.texto}
-                </Text>
-                <Button width="110px" height="35px">
+                <LinkA>
                   <Text
-                    tag="a"
-                    variant="paragraph3"
+                    tag="span"
+                    variant="paragraph1XS"
                     href={link.codeurl}
                     target="_blank"
                     rel="noopener noreferrer"
                     title="Code Github"
                   >
-                    Code
+                    {link.title}
                   </Text>
-                </Button>
-                <div className="img">
-                  <img src={link.src} alt={link.texto} width="280px" height="158px" />
-                </div>
+                </LinkA>
+                <Text tag="p" variant="paragraph3">
+                  {link.description}
+                </Text>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Site Live"
+                  className="img"
+                >
+                  <img src={link.src} alt={link.title} />
+                </a>
               </Box>
-              <a
-                href={link.url}
-                className="linkSvg"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Site Live"
-              >
-                <svg width="35" height="35" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M37.5 15.625V59.375" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="bevel" />
-                  <path d="M59.375 37.5L37.5 59.375L15.625 37.5" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </a>
             </Box>
           </li>
         ))}
