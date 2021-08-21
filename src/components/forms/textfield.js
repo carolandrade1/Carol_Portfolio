@@ -31,12 +31,19 @@ Input.defaultProps = {
 };
 
 export default function TextField({
-  placeholder, name, onChange, value, id, label,
+  placeholder, name, onChange, value, label, type,
 }) {
   return (
     <InputWrapper>
-      <label htmlFor={id}>{label}</label>
-      <Input type="text" id={id} placeholder={placeholder} name={name} onChange={onChange} value={value} />
+      <label htmlFor={name}>{label}</label>
+      <Input
+        type={type}
+        placeholder={placeholder}
+        name={name}
+        onChange={onChange}
+        value={value}
+        required
+      />
     </InputWrapper>
   );
 }
@@ -46,6 +53,6 @@ TextField.propTypes = {
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
 };

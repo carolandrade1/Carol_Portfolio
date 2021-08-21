@@ -22,6 +22,10 @@ function Contato() {
         xs: '0px',
         md: '40px',
       }}
+      marginTop={{
+        xs: '50px',
+        md: '100px',
+      }}
       textAlign="center"
     >
       <Modal

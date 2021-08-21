@@ -14,12 +14,17 @@ const colorsLight = {
       color: '#000000',
     },
   },
+  details: {
+    main: {
+      color: '#D2AFFF',
+    },
+  },
 };
 
 export const colorsDark = {
   background: {
     main: {
-      color: '#313032',
+      color: '#040404',
     },
   },
   fonts: {
@@ -30,6 +35,11 @@ export const colorsDark = {
   svg: {
     main: {
       color: '#FFFFFF',
+    },
+  },
+  details: {
+    main: {
+      color: '#9D59F5',
     },
   },
 };
