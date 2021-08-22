@@ -24,7 +24,6 @@ const links = [
 function Navigation({
   theme, setTheme, open, setOpen,
 }) {
-  // toggle theme
   const ToggleTheme = () => (theme === 'light' ? setTheme('dark') : setTheme('light'));
 
   return (

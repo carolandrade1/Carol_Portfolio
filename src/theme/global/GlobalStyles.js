@@ -31,6 +31,10 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     color: ${({ theme }) => theme.colors.fonts.main.color};
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.details.main.color};
+    }
   }
 
   h1, h2, h3, h4 {
