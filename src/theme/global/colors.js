@@ -16,7 +16,7 @@ const colorsLight = {
   },
   details: {
     main: {
-      color: '#D2AFFF',
+      color: '#9759CD',
     },
   },
 };

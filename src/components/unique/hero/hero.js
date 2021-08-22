@@ -3,6 +3,7 @@ import Box from '../../foundation/box';
 import Text from '../../foundation/text';
 import CircleVideo from './animation/circleVideo';
 import Button from '../../common/button/button';
+import TextContainer from './style';
 
 function Hero() {
   return (
@@ -33,19 +34,7 @@ function Hero() {
         md: '40px',
       }}
     >
-      <Box
-        display="flex"
-        flexDirection="column"
-        maxWidth={{
-          xs: 'auto',
-          md: '600px',
-        }}
-        textAlign="left"
-        marginTop={{
-          xs: '0px',
-          md: '20px',
-        }}
-      >
+      <TextContainer>
         <Text
           tag="p"
           variant="paragraph2"
@@ -63,7 +52,6 @@ function Hero() {
           Carol Andrade
         </Text>
         <Text
-          className="paragraph2"
           tag="p"
           variant="paragraph2"
           textAlign="left"
@@ -72,14 +60,14 @@ function Hero() {
           Desenvolvedora front-end, atualmente localizada em Belo Horizonte, Brasil.
           Em busca da minha primeira oportunidade na area de desenvolvimento web.
         </Text>
-        <a href="#contato">
+        <a href="#contato" className="contato">
           <Button width="110px" height="35px">
-            <Text tag="span" variant="paragraph3">
+            <Text tag="span" variant="paragraph2">
               Contato
             </Text>
           </Button>
         </a>
-      </Box>
+      </TextContainer>
       <CircleVideo />
     </Box>
   );
