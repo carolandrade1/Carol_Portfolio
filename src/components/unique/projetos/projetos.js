@@ -100,7 +100,7 @@ function Projetos() {
                   title="Site Live"
                   className="img"
                 >
-                  <img src={link.src} alt={link.title} />
+                  <img src={link.src} alt={link.title} loading="lazy" />
                 </a>
               </Box>
             </Box>
