@@ -82,14 +82,10 @@ function Projetos() {
                 display="flex"
                 flexDirection="column"
               >
-                <LinkA>
+                <LinkA href={link.codeurl} target="_blank" rel="noopener noreferrer" title="Code Github">
                   <Text
                     tag="span"
                     variant="paragraph1XS"
-                    href={link.codeurl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Code Github"
                   >
                     {link.title}
                   </Text>
