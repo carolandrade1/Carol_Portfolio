@@ -76,7 +76,6 @@ function FormContent({ setModalState }) {
         onClick={() => {
           setModalState(false);
         }}
-        variant="paragraph3"
         ghost
         style={{
           position: 'absolute',
@@ -85,7 +84,12 @@ function FormContent({ setModalState }) {
           padding: '0px',
         }}
       >
-        Fechar
+        <Text
+          variant="paragraph3"
+          tag="span"
+        >
+          Fechar
+        </Text>
       </Button>
       <Text
         variant="paragraph1XS"

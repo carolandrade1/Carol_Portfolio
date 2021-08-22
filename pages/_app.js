@@ -7,7 +7,7 @@ import GlobalStyle from '../src/theme/global/GlobalStyles';
 import { ThemeLight, ThemeDark } from '../src/theme';
 
 export default function App({ Component, pageProps }) {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(true);
   return (
     <>
       <IndexHead />

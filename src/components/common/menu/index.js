@@ -20,7 +20,7 @@ const Menu = ({ theme, setTheme }) => {
 };
 
 Menu.propTypes = {
-  theme: PropTypes.string.isRequired,
+  theme: PropTypes.bool.isRequired,
   setTheme: PropTypes.func.isRequired,
 };
 
