@@ -27,7 +27,7 @@ function Home({ theme, setTheme }) {
 }
 
 Home.propTypes = {
-  theme: PropTypes.bool.isRequired,
+  theme: PropTypes.string.isRequired,
   setTheme: PropTypes.func.isRequired,
 };
 

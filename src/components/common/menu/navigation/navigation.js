@@ -57,7 +57,7 @@ function Navigation({
 }
 
 Navigation.propTypes = {
-  theme: PropTypes.bool.isRequired,
+  theme: PropTypes.string.isRequired,
   setTheme: PropTypes.func.isRequired,
   open: PropTypes.bool.isRequired,
   setOpen: PropTypes.func.isRequired,
