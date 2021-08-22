@@ -4,6 +4,7 @@ export const ContatoModal = styled.div`
 
     #contato:hover {
         text-shadow: 2px 2px 4px black;
+        color: ${({ theme }) => theme.colors.details.main.color};
     }
 `;
 

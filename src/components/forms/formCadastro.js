@@ -107,7 +107,6 @@ function FormContent({ setModalState }) {
           name="nome"
           value={userInfo.nome}
           onChange={handleChange}
-          id="nome"
           label="Nome"
           type="text"
         />
@@ -119,7 +118,6 @@ function FormContent({ setModalState }) {
           name="email"
           value={userInfo.email}
           onChange={handleChange}
-          id="email"
           label="Email"
           type="email"
         />
@@ -131,7 +129,6 @@ function FormContent({ setModalState }) {
           name="mensagem"
           value={userInfo.mensagem}
           onChange={handleChange}
-          id="mensagem"
           label="Mensagem"
           type="text"
         />
@@ -151,7 +148,12 @@ function FormContent({ setModalState }) {
           display="flex"
           justifyContent="center"
         >
-          <Text tag="p">Tudo certo!</Text>
+          <img
+            src="/images/success.gif"
+            alt="Tudo certo!"
+            width="100px"
+            height="100px"
+          />
         </Box>
       )}
 
@@ -160,7 +162,12 @@ function FormContent({ setModalState }) {
           display="flex"
           justifyContent="center"
         >
-          <Text tag="p">Tudo errado!</Text>
+          <img
+            src="/images/erro.gif"
+            alt="Ixi, alguma coisa deu errado!"
+            width="100px"
+            height="100px"
+          />
         </Box>
       )}
     </form>

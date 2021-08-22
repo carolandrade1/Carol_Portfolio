@@ -61,8 +61,8 @@ function Hero() {
           Em busca da minha primeira oportunidade na area de desenvolvimento web.
         </Text>
         <a href="#contato" className="contato">
-          <Button width="110px" height="35px">
-            <Text tag="span" variant="paragraph2">
+          <Button width="110px" height="42px">
+            <Text tag="p" variant="paragraph2">
               Contato
             </Text>
           </Button>

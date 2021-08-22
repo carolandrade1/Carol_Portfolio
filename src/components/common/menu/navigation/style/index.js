@@ -34,6 +34,10 @@ const Ul = styled.ul`
         left: 0;
       }
     }
+
+    p:hover {
+      color: ${({ theme }) => theme.colors.details.main.color};
+    }
 `;
 
 export default Ul;

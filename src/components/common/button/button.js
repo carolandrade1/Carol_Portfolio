@@ -11,15 +11,18 @@ const ButtonGhost = css`
 `;
 
 const ButtonDefault = css`
-    color: ${({ theme }) => theme.colors.fonts.main.color};;
+    color: ${({ theme }) => theme.colors.fonts.main.color};
     background-color: ${({ theme }) => theme.colors.background.main.color};
+
+    &:hover {
+      border: 2px solid ${({ theme }) => theme.colors.details.main.color};
+    }
 `;
 
 const Button = styled.button`
     cursor: pointer;
-    color: ${({ theme }) => theme.colors.fonts.main.color};
     border: 1px solid ${({ theme }) => theme.colors.svg.main.color};
-    padding: 8px 12px;
+    padding: 10px 12px;
 
     ${breakpointsMedia({
     xs: css`
@@ -39,9 +42,6 @@ const Button = styled.button`
     `};
 
     ${({ ghost }) => (ghost ? ButtonGhost : ButtonDefault)}
-    &:hover {
-      opacity: .7;
-    }
 
   ${propToStyle('width')}
   ${propToStyle('height')}
