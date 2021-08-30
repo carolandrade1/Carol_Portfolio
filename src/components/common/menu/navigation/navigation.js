@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Text from '../../../foundation/text';
+import Link from 'next/link';
 import Ul from './style';
+import Text from '../../../foundation/text';
 
 const links = [
   {
@@ -26,11 +27,11 @@ function Navigation({ open, setOpen }) {
   return (
     <Ul open={open} onClick={() => setOpen(!open)}>
       {links.map((link) => (
-        <li key={link.url} className="li">
-          <Text tag="a" variant="titleXS" href={link.url} color="fonts.main">
+        <Text tag="li" variant="titleXS" color="fonts.main" className="li" key={link.url}>
+          <Link href={link.url}>
             {link.texto}
-          </Text>
-        </li>
+          </Link>
+        </Text>
       ))}
     </Ul>
   );

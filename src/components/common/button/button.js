@@ -1,7 +1,10 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { TextStyleVariantsMap } from '../../foundation/text';
 import breakpointsMedia from '../../../theme/util/breakpoints';
 import propToStyle from '../../../theme/util/propToStyle';
+import Link from '../link/link';
 
 const ButtonGhost = css`
     background: transparent;
@@ -13,13 +16,9 @@ const ButtonGhost = css`
 const ButtonDefault = css`
     color: ${({ theme }) => theme.colors.fonts.main.color};
     background-color: ${({ theme }) => theme.colors.background.main.color};
-
-    &:hover {
-      border: 2px solid ${({ theme }) => theme.colors.details.main.color};
-    }
 `;
 
-const Button = styled.button`
+const ButtonWrapper = styled.button`
     cursor: pointer;
     border: 1px solid ${({ theme }) => theme.colors.svg.main.color};
     padding: 10px 12px;
@@ -47,4 +46,29 @@ const Button = styled.button`
   ${propToStyle('height')}
 `;
 
-export { Button as default };
+const Button = ({ href, children, ...props }) => {
+  const isLink = Boolean(href);
+  const tag = isLink ? Link : 'button';
+
+  return (
+    <ButtonWrapper
+      as={tag}
+      href={href}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...props}
+    >
+      {children}
+    </ButtonWrapper>
+  );
+};
+
+Button.defaultProps = {
+  href: undefined,
+};
+
+Button.propTypes = {
+  href: PropTypes.string,
+  children: PropTypes.node.isRequired,
+};
+
+export default Button;
