@@ -68,7 +68,7 @@ export const TextStyleVariantsMap = {
 
 const TextBase = styled.span`
     ${(props) => TextStyleVariantsMap[props.variant]};
-    color: ${({ theme, color }) => get(theme, `colors.${color}.color`)};;
+    color: ${({ theme, color }) => get(theme, `colors.${color}.color`)};
     ${propToStyle('padding')}
     ${propToStyle('paddingTop')}
     ${propToStyle('marginBottom')}

@@ -45,7 +45,7 @@ function Contato() {
             setModalState(!isModalOpen); // novo state sendo atribuido
           }}
         >
-          <Text tag="p" id="contato" variant="titleXS">
+          <Text tag="p" id="contato" variant="titleXS" color="fonts.main">
             Vamos conversar?
           </Text>
         </Button>
@@ -67,6 +67,7 @@ function Contato() {
             target="_blank"
             rel="noopener noreferrer"
             title="Likedin"
+            color="fonts.main"
           >
             Linkedin
           </Text>
@@ -77,6 +78,7 @@ function Contato() {
             target="_blank"
             rel="noopener noreferrer"
             title="Github"
+            color="fonts.main"
           >
             Github
           </Text>
@@ -87,6 +89,7 @@ function Contato() {
             target="_blank"
             rel="noopener noreferrer"
             title="Codepen"
+            color="fonts.main"
           >
             Codepen
           </Text>

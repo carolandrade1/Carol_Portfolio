@@ -87,6 +87,7 @@ function FormContent({ setModalState }) {
         <Text
           variant="paragraph3"
           tag="span"
+          color="fonts.light"
         >
           Fechar
         </Text>
@@ -94,6 +95,7 @@ function FormContent({ setModalState }) {
       <Text
         variant="paragraph1XS"
         tag="h1"
+        color="fonts.main"
       >
         Diga Olá!
       </Text>

@@ -64,7 +64,7 @@ function Projetos() {
         md: '40px',
       }}
     >
-      <Text id="projetos" tag="p" variant="subTitleXS" marginBottom="40px" paddingTop="60px">
+      <Text id="projetos" tag="p" variant="subTitleXS" marginBottom="40px" paddingTop="60px" color="fonts.main">
         Projetos
         <br />
         Selecionados
@@ -86,11 +86,12 @@ function Projetos() {
                   <Text
                     tag="span"
                     variant="paragraph1XS"
+                    color="fonts.main"
                   >
                     {link.title}
                   </Text>
                 </LinkA>
-                <Text tag="p" variant="paragraph3">
+                <Text tag="p" variant="paragraph3" color="fonts.light">
                   {link.description}
                 </Text>
                 <a
