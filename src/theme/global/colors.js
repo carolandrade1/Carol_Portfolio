@@ -1,4 +1,4 @@
-const colorsLight = {
+const colors = {
   background: {
     main: {
       color: '#FFFFFF',
@@ -21,27 +21,4 @@ const colorsLight = {
   },
 };
 
-export const colorsDark = {
-  background: {
-    main: {
-      color: '#040404',
-    },
-  },
-  fonts: {
-    main: {
-      color: '#FFFFFF',
-    },
-  },
-  svg: {
-    main: {
-      color: '#FFFFFF',
-    },
-  },
-  details: {
-    main: {
-      color: '#9D59F5',
-    },
-  },
-};
-
-export default colorsLight;
+export default colors;

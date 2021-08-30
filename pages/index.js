@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
 import Container from '../src/components/foundation/container';
 import Menu from '../src/components/common/menu';
 import Hero from '../src/components/unique/hero/hero';
@@ -8,7 +6,7 @@ import Projetos from '../src/components/unique/projetos/projetos';
 import Contato from '../src/components/unique/contato/contato';
 import Footer from '../src/components/common/footer/footer';
 
-function Home({ theme, setTheme }) {
+function Home() {
   return (
     <Container
       flex="1"
@@ -17,7 +15,7 @@ function Home({ theme, setTheme }) {
       flexDirection="column"
       justifyContent="space-between"
     >
-      <Menu theme={theme} setTheme={setTheme} />
+      <Menu />
       <Hero />
       <Projetos />
       <Contato />
@@ -25,11 +23,6 @@ function Home({ theme, setTheme }) {
     </Container>
   );
 }
-
-Home.propTypes = {
-  theme: PropTypes.string.isRequired,
-  setTheme: PropTypes.func.isRequired,
-};
 
 Home.defaultProps = {};
 
