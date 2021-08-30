@@ -1,4 +1,4 @@
-const redirects = require('./config/redirects');
+// const redirects = require('./config/redirects');
 
 module.exports = {
   i18n: {
@@ -6,9 +6,9 @@ module.exports = {
     defaultLocale: 'pt-BR',
   },
   trailingSlash: true,
-  async redirects() {
-    return redirects;
-  },
+  // async redirects() {
+  //   return redirects;
+  // },
   async headers() {
     return [
       {
