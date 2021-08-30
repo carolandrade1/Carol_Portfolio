@@ -5,8 +5,8 @@ import Footer from '../../common/footer/footer';
 import Menu from '../../common/menu';
 import Modal from '../../common/modal/modal';
 import FormCadastro from '../../forms/formCadastro';
-// import SEO from '../../common/head'; //fazer
 import Container from '../../foundation/container';
+import SEO from '../../common/SEO';
 
 export const WebsitePageContext = React.createContext({
   toggleModalCadastro: () => { },
@@ -14,7 +14,7 @@ export const WebsitePageContext = React.createContext({
 
 export default function WebsitePageWrapper({
   children,
-//   seoProps,
+  seoProps,
 }) {
   const [isModalOpen, setModalState] = React.useState(false);
 
@@ -27,9 +27,9 @@ export default function WebsitePageWrapper({
         },
       }}
     >
-      {/* <SEO
+      <SEO
         {...seoProps}
-      /> */}
+      />
 
       <Container
         flex="1"

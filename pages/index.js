@@ -1,25 +1,19 @@
 import React from 'react';
-import Container from '../src/components/foundation/container';
-import Menu from '../src/components/common/menu';
-import Hero from '../src/components/unique/hero/hero';
-import Footer from '../src/components/common/footer/footer';
+import websitePageHOC from '../src/components/wrappers/websitePage/hoc';
+import Hero from '../src/components/screens/hero/hero';
 
-function Home() {
+function HomeScreen() {
   return (
-    <Container
-      flex="1"
-      display="flex"
-      flexWrap="wrap"
-      flexDirection="column"
-      justifyContent="space-between"
-    >
-      <Menu />
-      <Hero />
-      <Footer />
-    </Container>
+    <Hero />
   );
 }
 
-Home.defaultProps = {};
+export default websitePageHOC(HomeScreen, {
+  pageWrapperProps: {
+    seoProps: {
+      headTitle: 'Home',
+    },
+  },
+});
 
-export default Home;
+HomeScreen.defaultProps = {};
