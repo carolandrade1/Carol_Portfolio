@@ -40,6 +40,7 @@ function Hero() {
           variant="paragraph2"
           textAlign="left"
           marginBottom="12px"
+          color="fonts.main"
         >
           Olá, meu nome é
         </Text>
@@ -48,6 +49,7 @@ function Hero() {
           variant="titleXS"
           textAlign="left"
           marginBottom="12px"
+          color="details.main"
         >
           Carol Andrade
         </Text>
@@ -56,13 +58,14 @@ function Hero() {
           variant="paragraph2"
           textAlign="left"
           marginBottom="12px"
+          color="fonts.main"
         >
           Desenvolvedora front-end, atualmente localizada em Belo Horizonte, Brasil.
           Em busca da minha primeira oportunidade na area de desenvolvimento web.
         </Text>
         <a href="#contato" className="contato">
           <Button width="110px" height="42px">
-            <Text tag="p" variant="paragraph2">
+            <Text tag="p" variant="paragraph2" color="fonts.main">
               Contato
             </Text>
           </Button>
