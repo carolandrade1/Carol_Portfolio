@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../../foundation/text';
 import Ul from './style';
-import FooterIcons from '../../footer/footerIcons';
-import Box from '../../../foundation/box';
 
 const links = [
   {
@@ -30,15 +28,6 @@ function Navigation({ open, setOpen }) {
           </Text>
         </li>
       ))}
-      <Box
-        display="flex"
-        width="30%"
-        justifyContent="center"
-        marginLeft="auto"
-        marginRight="auto"
-      >
-        <FooterIcons />
-      </Box>
     </Ul>
   );
 }

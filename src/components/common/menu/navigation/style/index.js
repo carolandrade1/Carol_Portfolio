@@ -13,7 +13,7 @@ const Ul = styled.ul`
   height: 100vh;
   width: 100%;
   padding: 10vh;
-  z-index: 5;
+  z-index: 3;
   text-align: center;
   opacity: 0;
   animation: fadeInRight 0.5s ease-in-out forwards;
@@ -27,11 +27,9 @@ const Ul = styled.ul`
     @keyframes fadeInRight {
       0% {
         opacity: 0;
-        left: 10%;
       }
       100% {
         opacity: 1;
-        left: 0;
       }
     }
 

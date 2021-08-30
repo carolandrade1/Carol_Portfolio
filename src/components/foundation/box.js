@@ -19,6 +19,7 @@ const Box = styled.div`
   ${propToStyle('boxShadow')}
   ${propToStyle('alignItems')}
   ${propToStyle('textAlign')}
+  ${propToStyle('backgroundColor')}
   ${propToStyle('padding')}
   ${propToStyle('paddingLeft')}
   ${propToStyle('paddingRight')}
