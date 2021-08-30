@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import get from 'lodash/get';
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../theme/util/breakpoints';
 import propToStyle from '../../theme/util/propToStyle';
@@ -21,10 +22,21 @@ export const TextStyleVariantsMap = {
     `,
   })}
     `,
-  subTitle: css`
-        font-size: ${({ theme }) => theme.typographyVariants.subTitle.fontSize};
-        font-weight: ${({ theme }) => theme.typographyVariants.subTitle.fontWeight};
-        line-height: ${({ theme }) => theme.typographyVariants.subTitle.lineHeight};
+  subTitleXS: css`
+        ${({ theme }) => css`
+            font-size: ${theme.typographyVariants.subTitleXS.fontSize};
+            font-weight: ${theme.typographyVariants.subTitleXS.fontWeight};
+            line-height: ${theme.typographyVariants.subTitleXS.lineHeight};
+        `}
+    ${breakpointsMedia({
+    md: css`
+        ${({ theme }) => css`
+            font-size: ${theme.typographyVariants.subTitle.fontSize};
+            font-weight: ${theme.typographyVariants.subTitle.fontWeight};
+            line-height: ${theme.typographyVariants.subTitle.lineHeight};
+        `}
+    `,
+  })}
     `,
   paragraph1XS: css`
         ${({ theme }) => css`
@@ -56,7 +68,7 @@ export const TextStyleVariantsMap = {
 
 const TextBase = styled.span`
     ${(props) => TextStyleVariantsMap[props.variant]};
-    color: ${({ theme }) => theme.colors.fonts.main.color};
+    color: ${({ theme, color }) => get(theme, `colors.${color}.color`)};;
     ${propToStyle('padding')}
     ${propToStyle('paddingTop')}
     ${propToStyle('marginBottom')}
@@ -76,7 +88,7 @@ export default function Text({
 
 Text.propTypes = {
   tag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'li', 'a', 'span', 'input']),
-  variant: PropTypes.oneOf(['titleXS', 'title', 'subTitle', 'paragraph1', 'paragraph1XS', 'paragraph2', 'paragraph3']),
+  variant: PropTypes.oneOf(['titleXS', 'title', 'subTitleXS', 'subTitle', 'paragraph1', 'paragraph1XS', 'paragraph2', 'paragraph3']),
   children: PropTypes.node,
 };
 
