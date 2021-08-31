@@ -27,7 +27,7 @@ function Navigation({ open, setOpen }) {
   return (
     <Ul open={open} onClick={() => setOpen(!open)}>
       {links.map((link) => (
-        <Text tag="li" variant="titleXS" color="fonts.main" className="li" key={link.url}>
+        <Text tag="li" color="fonts.main" className="li" key={link.url}>
           <Link href={link.url}>
             {link.texto}
           </Link>

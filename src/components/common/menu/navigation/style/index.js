@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import breakpointsMedia from '../../../../../theme/util/breakpoints';
 
 const Ul = styled.ul`
-  display: ${({ open }) => (open ? 'flex' : 'none')};
+  display: flex;
   flex-flow: column nowrap;
   flex: 1;
   justify-content: space-between;
@@ -18,11 +19,33 @@ const Ul = styled.ul`
   opacity: 0;
   animation: fadeInRight 0.5s ease-in-out forwards;
 
-    li {
-      padding: 20px;
-      opacity: 0;
-      animation: fadeInRight 1s ease-in-out forwards;
-    }
+  ${breakpointsMedia({
+    md: css`
+      flex: 0;
+      flex-flow: row nowrap;
+      height: 8vh;
+      padding: 0;
+      opacity: 1;
+      animation: none;
+      transform: translateX(0);
+      position: relative;
+    `,
+  })}
+
+  li {
+    font-size: ${({ theme }) => theme.typographyVariants.titleXS.fontSize};
+    padding: 20px;
+    opacity: 0;
+    animation: fadeInRight 1s ease-in-out forwards;
+
+    ${breakpointsMedia({
+    md: css`
+      font-size: ${({ theme }) => theme.typographyVariants.paragraph2.fontSize};
+      opacity: 1;
+      animation: none;
+    `,
+  })}
+  }
 
     @keyframes fadeInRight {
       0% {
