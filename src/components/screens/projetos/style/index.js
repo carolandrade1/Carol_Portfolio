@@ -1,49 +1,55 @@
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../../theme/util/breakpoints';
 
+export const ProjetosPrincipais = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    max-width: 650px;
+    max-height: 480px;
+    padding-bottom: 120px;
+    transform: translateY(65px);
+
+    img {
+        height: 100%;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+`;
+
 const ListaProjetos = styled.ul`
-    flex-basis: 60%;
     padding-top: 0;
 
     .itemsProjetos {
+        display: flex;
         position: relative;
         padding: 20px 0;
         justify-content: center;
-        border-bottom: 1px solid ${({ theme }) => theme.colors.details.main.color};
+        border-bottom: none;
 
         ${breakpointsMedia({
     md: css`
         justify-content: space-between;
+        align-items: center;
         padding: 30px 20px;
+        border-bottom: 1px solid ${({ theme }) => theme.colors.fonts.light.color};
     `,
   })}
     }
 
     img {
-        width: 270px;
-        height: 150px;
+        display: initial;
+        width: 290px;
 
     ${breakpointsMedia({
     md: css`
+        display: none;
         width: 290px;
         height: 170px;
     `,
   })}
     }
 
-    .img {
-        display: block;
-        margin: 0 auto;
-
-    ${breakpointsMedia({
-    md: css`
-        display: none;
-    `,
-  })}
-    }
-
-    .itemsProjetos:hover .img {
-      display: block;
+    .itemsProjetos:hover img {
 
       ${breakpointsMedia({
     md: css`
@@ -64,7 +70,7 @@ const ListaProjetos = styled.ul`
     }
 `;
 
-export const LinkA = styled.a`
+export const Efeito = styled.p`
     position: relative;
     padding: 8px 12px;
     transition: all .2s ease;
@@ -75,7 +81,6 @@ export const LinkA = styled.a`
         padding: 8px 12px;
     `,
   })}
-
         &:before {
             content: "";
             position: absolute;
@@ -88,6 +93,17 @@ export const LinkA = styled.a`
             height: 35px;
             transition: all .3s ease;
         }
+
+        &:hover {
+            &:before {
+            width: 220px;
+            background: ${({ theme }) => theme.colors.details.main.color};
+            }
+        }
+        &:active {
+            transform: scale(.96);
+        }
+
         span {
             position: relative;
             font-weight: 500;
@@ -95,15 +111,6 @@ export const LinkA = styled.a`
             letter-spacing: 2px;
             text-transform: uppercase;
             vertical-align: middle;
-        }
-        &:hover {
-            &:before {
-            width: 100%;
-            background: ${({ theme }) => theme.colors.details.main.color};
-            }
-        }
-        &:active {
-            transform: scale(.96);
         }
 `;
 

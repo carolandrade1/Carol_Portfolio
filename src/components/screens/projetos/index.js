@@ -1,7 +1,8 @@
 import React from 'react';
+import Link from '../../common/link/link';
 import Box from '../../foundation/box';
 import Text from '../../foundation/text';
-import ListaProjetos, { LinkA } from './style';
+import ListaProjetos, { Efeito, ProjetosPrincipais } from './style';
 
 const projetosItem = [
   {
@@ -38,15 +39,11 @@ function Projetos() {
   return (
     <Box
       display="flex"
-      flexDirection={{
-        xs: 'column',
-        md: 'row',
-      }}
+      flexDirection="column"
       justifyContent={{
         xs: 'justify',
         md: 'space-between',
       }}
-      minHeight="120vh"
       padding={{
         xs: '0px',
         md: '40px',
@@ -60,47 +57,84 @@ function Projetos() {
         md: '40px',
       }}
     >
-      <Text tag="p" variant="subTitleXS" color="fonts.main">
-        Projetos
-        <br />
-        Selecionados
-      </Text>
+      <Box
+        display="flex"
+        flexDirection={{
+          xs: 'column',
+          md: 'row',
+        }}
+        justifyContent={{
+          xs: 'justify',
+          md: 'space-between',
+        }}
+        minHeight={{
+          xs: 'auto',
+          md: '75vh',
+        }}
+        marginBottom={{
+          xs: '0',
+          md: '50px',
+        }}
+      >
+        <Box
+          display="flex"
+          flexDirection="column"
+          justifyContent={{
+            xs: 'justify',
+            md: 'space-between',
+          }}
+        >
+          <Text tag="span" variant="subTitleXS" color="fonts.main">
+            Projetos
+            <br />
+            Selecionados
+          </Text>
+        </Box>
+
+        <ProjetosPrincipais>
+          <Link href="/">
+            <img src="/images/LPinstalura.webp" alt="" />
+            <Efeito>
+              <Text
+                tag="span"
+                variant="paragraph1XS"
+                color="fonts.main"
+              >
+                Portfolio
+              </Text>
+            </Efeito>
+          </Link>
+        </ProjetosPrincipais>
+      </Box>
       <ListaProjetos>
-        {projetosItem.map((link) => (
-          <li key={link.title}>
-            <Box
+        {projetosItem.map((item) => (
+          <li key={item.title}>
+            <a
+              href={item.codeurl}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Site Live"
               className="itemsProjetos"
-              display="flex"
-              justifyContent="space-between"
-              alignItems="center"
             >
               <Box
                 display="flex"
                 flexDirection="column"
               >
-                <LinkA href={link.codeurl} target="_blank" rel="noopener noreferrer" title="Code Github">
+                <img src={item.src} alt={item.title} loading="lazy" />
+                <Efeito>
                   <Text
                     tag="span"
                     variant="paragraph1XS"
                     color="fonts.main"
                   >
-                    {link.title}
+                    {item.title}
                   </Text>
-                </LinkA>
+                </Efeito>
                 <Text tag="p" variant="paragraph3" color="fonts.light">
-                  {link.description}
+                  {item.description}
                 </Text>
-                <a
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Site Live"
-                  className="img"
-                >
-                  <img src={link.src} alt={link.title} loading="lazy" />
-                </a>
               </Box>
-            </Box>
+            </a>
           </li>
         ))}
       </ListaProjetos>
