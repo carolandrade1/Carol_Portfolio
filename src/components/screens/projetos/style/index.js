@@ -31,7 +31,7 @@ const ListaProjetos = styled.ul`
   })}
     }
 
-    .linkimg {
+    .img {
         display: block;
         margin: 0 auto;
 
