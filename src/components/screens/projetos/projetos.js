@@ -49,7 +49,7 @@ function Projetos() {
       minHeight="120vh"
       marginTop={{
         xs: '150px',
-        md: '100px',
+        md: '0',
       }}
       padding={{
         xs: '0px',

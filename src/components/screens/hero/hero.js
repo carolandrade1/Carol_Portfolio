@@ -2,25 +2,19 @@ import React from 'react';
 import Box from '../../foundation/box';
 import Text from '../../foundation/text';
 import CircleVideo from './animation/circleVideo';
-import Button from '../../common/button/button';
 import TextContainer from './style';
+import Link from '../../common/link/link';
 
 function Hero() {
   return (
     <Box
       display="flex"
-      justifyContent={{
-        xs: 'space-between',
-        md: 'space-around',
-      }}
+      justifyContent="space-around"
       flexDirection={{
         xs: 'column',
         md: 'row',
       }}
-      height={{
-        xs: '75vh',
-        md: '85vh',
-      }}
+      height="75vh"
       padding={{
         xs: '0px',
         md: '40px',
@@ -63,13 +57,11 @@ function Hero() {
           Desenvolvedora front-end, atualmente localizada em Belo Horizonte, Brasil.
           Em busca da minha primeira oportunidade na area de desenvolvimento web.
         </Text>
-        <a href="#contato" className="contato">
-          <Button width="110px" height="42px">
-            <Text tag="p" variant="paragraph2" color="fonts.main">
-              Contato
-            </Text>
-          </Button>
-        </a>
+        <Link href="/contato" className="contato">
+          <Text tag="span" variant="paragraph2" color="fonts.main">
+            Contato
+          </Text>
+        </Link>
       </TextContainer>
       <CircleVideo />
     </Box>
