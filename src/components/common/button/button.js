@@ -8,7 +8,6 @@ import Link from '../link/link';
 
 const ButtonGhost = css`
     background: transparent;
-    border: none;
     outline: none;
     padding: 0;
 `;
@@ -20,7 +19,7 @@ const ButtonDefault = css`
 
 const ButtonWrapper = styled.button`
     cursor: pointer;
-    border: 1px solid ${({ theme }) => theme.colors.svg.main.color};
+    border: none;
     padding: 10px 12px;
 
     ${breakpointsMedia({
