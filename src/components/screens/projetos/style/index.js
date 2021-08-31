@@ -5,12 +5,6 @@ const ListaProjetos = styled.ul`
     flex-basis: 60%;
     padding-top: 0;
 
-    ${breakpointsMedia({
-    md: css`
-        padding-top: 60px;
-    `,
-  })}
-
     .itemsProjetos {
         position: relative;
         padding: 20px 0;
@@ -37,28 +31,28 @@ const ListaProjetos = styled.ul`
   })}
     }
 
-    .img {
+    .linkimg {
         display: block;
         margin: 0 auto;
 
     ${breakpointsMedia({
     md: css`
-                display: none;
-            `,
+        display: none;
+    `,
   })}
     }
 
     .itemsProjetos:hover .img {
-        display: block;
+      display: block;
 
-        ${breakpointsMedia({
+      ${breakpointsMedia({
     md: css`
-            z-index: 3;
-            display: initial;
-            position: absolute;
-            top: -5px;
-            left: 62%;
-            `,
+        z-index: 3;
+        display: initial;
+        position: absolute;
+        top: -5px;
+        left: 62%;
+    `,
   })}
     }
 

@@ -47,10 +47,6 @@ function Projetos() {
         md: 'space-between',
       }}
       minHeight="120vh"
-      marginTop={{
-        xs: '150px',
-        md: '0',
-      }}
       padding={{
         xs: '0px',
         md: '40px',
@@ -64,7 +60,7 @@ function Projetos() {
         md: '40px',
       }}
     >
-      <Text id="projetos" tag="p" variant="subTitleXS" marginBottom="40px" paddingTop="60px" color="fonts.main">
+      <Text tag="p" variant="subTitleXS" color="fonts.main">
         Projetos
         <br />
         Selecionados
@@ -99,7 +95,7 @@ function Projetos() {
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Site Live"
-                  className="img"
+                  className="linkimg"
                 >
                   <img src={link.src} alt={link.title} loading="lazy" />
                 </a>
