@@ -12,7 +12,7 @@ const formStates = {
 };
 
 // eslint-disable-next-line react/prop-types
-function FormContent({ setModalState }) {
+function FormContent() {
   const [isFormSubmited, setIsFormSubmited] = React.useState(false);
   const [submissionStatus, setSubmissionStatus] = React.useState(formStates.DEFAULT);
   const [userInfo, setUserInfo] = React.useState({
@@ -72,26 +72,6 @@ function FormContent({ setModalState }) {
           });
       }}
     >
-      <Button
-        onClick={() => {
-          setModalState(false);
-        }}
-        ghost
-        style={{
-          position: 'absolute',
-          top: '30px',
-          right: '30px',
-          padding: '0px',
-        }}
-      >
-        <Text
-          variant="paragraph3"
-          tag="span"
-          color="fonts.light"
-        >
-          Fechar
-        </Text>
-      </Button>
       <Text
         variant="paragraph1XS"
         tag="h1"
@@ -120,7 +100,7 @@ function FormContent({ setModalState }) {
 
       <div>
         <TextField
-          placeholder="seuemail@dominio.com"
+          placeholder="email@dominio.com"
           name="email"
           value={userInfo.email}
           onChange={handleChange}
