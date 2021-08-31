@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { createGlobalStyle, css } from 'styled-components';
 import { motion } from 'framer-motion';
+import Button from '../button/button';
 
 const ModalWrapper = styled.div`
   display: flex;
@@ -73,6 +74,17 @@ function Modal({ isOpen, onClose, children }) {
         {children({
           'data-modal-safe-area': 'true',
         })}
+        <Button
+          ghost
+          style={{
+            display: 'inline-block',
+            position: 'absolute',
+            right: '30px',
+            top: '30px',
+          }}
+        >
+          Fechar
+        </Button>
       </motion.div>
     </ModalWrapper>
   );

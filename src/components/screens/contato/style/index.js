@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 export const ContatoModal = styled.div`
+    position: relative;
 
     #contato:hover {
         text-shadow: 2px 2px 4px black;
-        color: ${({ theme }) => theme.colors.details.main.color};
+        /* color: ${({ theme }) => theme.colors.details.main.color}; */
     }
+
 `;
 
 const RedesSociais = styled.div`

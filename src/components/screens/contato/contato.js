@@ -40,6 +40,7 @@ function Contato() {
       </Modal>
       <ContatoModal>
         <Button
+          title="Vamos conversar?"
           ghost
           onClick={() => {
             setModalState(!isModalOpen); // novo state sendo atribuido
