@@ -1,7 +1,8 @@
 import React from 'react';
+import Link from '../../common/link/link';
 import Box from '../../foundation/box';
 import Text from '../../foundation/text';
-import ListaProjetos, { LinkA } from './style';
+import ListaProjetos, { ProjetoPrincipal, Seta } from './style';
 
 const projetosItem = [
   {
@@ -38,72 +39,141 @@ function Projetos() {
   return (
     <Box
       display="flex"
-      flexDirection={{
-        xs: 'column',
-        md: 'row',
-      }}
+      flexDirection="column"
       justifyContent={{
         xs: 'justify',
         md: 'space-between',
       }}
-      minHeight="120vh"
       padding={{
         xs: '0px',
         md: '40px',
       }}
-      paddingLeft={{
-        xs: '20px',
-        md: '40px',
-      }}
-      paddingRight={{
-        xs: '20px',
-        md: '40px',
-      }}
+      paddingLeft="20px"
+      paddingRight="20px"
     >
-      <Text tag="p" variant="subTitleXS" color="fonts.main">
-        Projetos
-        <br />
-        Selecionados
-      </Text>
-      <ListaProjetos>
-        {projetosItem.map((link) => (
-          <li key={link.title}>
+      <Box
+        display="flex"
+        flexDirection={{
+          xs: 'column',
+          md: 'row',
+        }}
+        justifyContent={{
+          xs: 'justify',
+          md: 'space-between',
+        }}
+        minHeight={{
+          xs: 'auto',
+          md: '75vh',
+        }}
+        marginBottom={{
+          xs: '0',
+          md: '50px',
+        }}
+        alignItems="flex-end"
+      >
+        <Box
+          display="flex"
+          flexDirection="column"
+          justifyContent={{
+            xs: 'justify',
+            md: 'space-between',
+          }}
+          height="100%"
+          width="100%"
+          textAlign={{
+            xs: 'center',
+            md: 'left',
+          }}
+        >
+          <Text tag="h1" variant="subTitleXS" color="fonts.main" marginBottom="50px">
+            Projetos
+            <br />
+            Selecionados
+          </Text>
+          <Seta>
+            <svg width="75" height="70" viewBox="0 0 75 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.875 49.5834L53.125 20.4167" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M21.875 20.4167H53.125V49.5834" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </Seta>
+        </Box>
+        <ProjetoPrincipal>
+          <Link href="/casePortfolio" title="Case Portfolio">
+            <img src="https://i.postimg.cc/PfSBBWzG/landingpage.png" alt="Imagem da Home do Portfolio" />
             <Box
-              className="itemsProjetos"
               display="flex"
-              justifyContent="space-between"
+              flexDirection="row"
+              justifyContent={{
+                xs: 'justify',
+                md: 'space-between',
+              }}
               alignItems="center"
             >
-              <Box
-                display="flex"
-                flexDirection="column"
+              <Box>
+                <Text
+                  tag="h2"
+                  variant="paragraph1XS"
+                  color="fonts.main"
+                >
+                  Portfolio
+                </Text>
+                <Text tag="p" variant="paragraph3" color="fonts.light">
+                  Veja como este portfolio foi criado!
+                </Text>
+              </Box>
+              <svg className="arrow" width="55" height="50" viewBox="0 0 75 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.875 49.5834L53.125 20.4167" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M21.875 20.4167H53.125V49.5834" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </Box>
+          </Link>
+        </ProjetoPrincipal>
+      </Box>
+      <Box
+        marginTop={{
+          xs: '0px',
+          md: '150px',
+        }}
+      >
+        <ListaProjetos>
+          {projetosItem.map((item) => (
+            <li key={item.title}>
+              <a
+                href={item.codeurl}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Site Live"
+                className="itemsProjetos"
               >
-                <LinkA href={link.codeurl} target="_blank" rel="noopener noreferrer" title="Code Github">
+                <Box
+                  display="flex"
+                  flexDirection="column"
+                >
+                  <img
+                    src={item.src}
+                    alt={item.title}
+                    loading="lazy"
+                  />
                   <Text
-                    tag="span"
+                    tag="h2"
                     variant="paragraph1XS"
                     color="fonts.main"
                   >
-                    {link.title}
+                    {item.title}
                   </Text>
-                </LinkA>
-                <Text tag="p" variant="paragraph3" color="fonts.light">
-                  {link.description}
-                </Text>
-                <a
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Site Live"
-                  className="img"
-                >
-                  <img src={link.src} alt={link.title} loading="lazy" />
-                </a>
-              </Box>
-            </Box>
-          </li>
-        ))}
-      </ListaProjetos>
+                  <Text tag="p" variant="paragraph3" color="fonts.light">
+                    {item.description}
+                  </Text>
+                </Box>
+                <svg className="" width="75" height="70" viewBox="0 0 75 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.875 49.5834L53.125 20.4167" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M21.875 20.4167H53.125V49.5834" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
+            </li>
+          ))}
+        </ListaProjetos>
+      </Box>
     </Box>
   );
 }
