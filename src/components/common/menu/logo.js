@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import Box from '../../foundation/box';
-import Link from '../../common/link/link';
+import Link from '../link/link';
 
 function Logo() {
   const themeContext = useContext(ThemeContext);
