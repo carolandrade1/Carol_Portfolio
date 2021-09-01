@@ -1,18 +1,60 @@
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../../theme/util/breakpoints';
 
-export const ProjetosPrincipais = styled.div`
+export const ProjetoPrincipal = styled.div`
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     max-width: 650px;
     max-height: 480px;
-    padding-bottom: 120px;
-    transform: translateY(65px);
+    padding-bottom: 20px;
+    margin: 0 auto;
+
+    ${breakpointsMedia({
+    md: css`
+        padding-bottom: 120px;
+        margin-right: 0;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &:hover svg{
+            transform: rotate(0);
+            background-color: ${({ theme }) => theme.colors.details.main.color};
+        }
+    `,
+  })}
 
     img {
+        display: initial;
+        width: 290px;
+
+    ${breakpointsMedia({
+    md: css`
         height: 100%;
         width: 100%;
         margin-bottom: 20px;
+    `,
+  })}
+    }
+
+    p {
+        max-width: 300px;
+        line-height: 1.1;
+        letter-spacing: 1px;
+        padding: 10px;
+    }
+
+    svg {
+        display: none;
+    ${breakpointsMedia({
+    md: css`
+        display: initial;
+        border-radius: 50%;
+        transform: rotate(45deg);
+        transition: ease-in-out 0.3s;
+    `,
+  })}
     }
 `;
 
@@ -50,16 +92,11 @@ const ListaProjetos = styled.ul`
     }
 
     .itemsProjetos:hover img {
-
-      ${breakpointsMedia({
-    md: css`
-        z-index: 3;
         display: initial;
         position: absolute;
-        top: -5px;
-        left: 62%;
-    `,
-  })}
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     p {
@@ -68,50 +105,23 @@ const ListaProjetos = styled.ul`
         letter-spacing: 1px;
         padding: 10px;
     }
-`;
 
-export const Efeito = styled.p`
-    position: relative;
-    padding: 8px 12px;
-    transition: all .2s ease;
-    cursor: pointer;
-
+    svg {
+        display: none;
     ${breakpointsMedia({
     md: css`
-        padding: 8px 12px;
+        display: initial;
+        border-radius: 50%;
+        transform: rotate(45deg);
+        transition: ease-in-out 0.3s;
     `,
   })}
-        &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: block;
-            border-radius: 28px;
-            background: ${({ theme }) => theme.colors.details.main.color};
-            width: 35px;
-            height: 35px;
-            transition: all .3s ease;
-        }
+    }
 
-        &:hover {
-            &:before {
-            width: 220px;
-            background: ${({ theme }) => theme.colors.details.main.color};
-            }
-        }
-        &:active {
-            transform: scale(.96);
-        }
-
-        span {
-            position: relative;
-            font-weight: 500;
-            line-height: 18px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            vertical-align: middle;
-        }
+    .itemsProjetos:hover svg {
+        transform: rotate(0);
+        background-color: ${({ theme }) => theme.colors.details.main.color};
+    }
 `;
 
 export default ListaProjetos;

@@ -14,10 +14,10 @@ const Container = styled.div`
 
     ${breakpointsMedia({
     md: css`
-      max-width: 768px;
+      max-width: 950px;
     `,
     lg: css`
-      max-width: 1150px;
+      max-width: 1250px;
     `,
     xl: css`
       max-width: 1300px;
