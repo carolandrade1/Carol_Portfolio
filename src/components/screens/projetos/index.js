@@ -2,7 +2,7 @@ import React from 'react';
 import Link from '../../common/link/link';
 import Box from '../../foundation/box';
 import Text from '../../foundation/text';
-import ListaProjetos, { ProjetoPrincipal } from './style';
+import ListaProjetos, { ProjetoPrincipal, Seta } from './style';
 
 const projetosItem = [
   {
@@ -85,19 +85,21 @@ function Projetos() {
             md: 'left',
           }}
         >
-          <Text tag="span" variant="subTitleXS" color="fonts.main">
+          <Text tag="h1" variant="subTitleXS" color="fonts.main" marginBottom="50px">
             Projetos
             <br />
             Selecionados
           </Text>
-          <svg className="arrow" width="75" height="70" viewBox="0 0 75 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21.875 49.5834L53.125 20.4167" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M21.875 20.4167H53.125V49.5834" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
+          <Seta>
+            <svg width="75" height="70" viewBox="0 0 75 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.875 49.5834L53.125 20.4167" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M21.875 20.4167H53.125V49.5834" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </Seta>
         </Box>
         <ProjetoPrincipal>
           <Link href="/casePortfolio" title="Case Portfolio">
-            <img src="/images/LPinstalura.webp" alt="Imagem da Home do Portfolio" />
+            <img src="https://i.postimg.cc/PfSBBWzG/landingpage.png" alt="Imagem da Home do Portfolio" />
             <Box
               display="flex"
               flexDirection="row"
@@ -109,7 +111,7 @@ function Projetos() {
             >
               <Box>
                 <Text
-                  tag="span"
+                  tag="h2"
                   variant="paragraph1XS"
                   color="fonts.main"
                 >
@@ -153,7 +155,7 @@ function Projetos() {
                     loading="lazy"
                   />
                   <Text
-                    tag="span"
+                    tag="h2"
                     variant="paragraph1XS"
                     color="fonts.main"
                   >

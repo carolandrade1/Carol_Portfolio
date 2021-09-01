@@ -28,6 +28,7 @@ export const ProjetoPrincipal = styled.div`
     img {
         display: initial;
         width: 290px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
     ${breakpointsMedia({
     md: css`
@@ -58,6 +59,20 @@ export const ProjetoPrincipal = styled.div`
     }
 `;
 
+export const Seta = styled.div`
+
+    svg {
+        display: none;
+        transform: rotate(134deg);
+
+    ${breakpointsMedia({
+    md: css`
+        display: initial;
+    `,
+  })}
+    }
+`;
+
 const ListaProjetos = styled.ul`
     padding-top: 0;
 
@@ -68,7 +83,7 @@ const ListaProjetos = styled.ul`
         justify-content: center;
         border-bottom: none;
 
-        ${breakpointsMedia({
+    ${breakpointsMedia({
     md: css`
         justify-content: space-between;
         align-items: center;
@@ -81,12 +96,14 @@ const ListaProjetos = styled.ul`
     img {
         display: initial;
         width: 290px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
     ${breakpointsMedia({
     md: css`
         display: none;
         width: 290px;
-        height: 170px;
+        height: 200px;
+        box-shadow: none;
     `,
   })}
     }
@@ -99,11 +116,21 @@ const ListaProjetos = styled.ul`
         transform: translate(-50%, -50%);
     }
 
+    h2 {
+        padding: 15px 0;
+    }
+
     p {
         max-width: 300px;
         line-height: 1.1;
         letter-spacing: 1px;
-        padding: 10px;
+        text-align: justify;
+
+    ${breakpointsMedia({
+    md: css`
+        max-width: 350px;
+    `,
+  })}
     }
 
     svg {
