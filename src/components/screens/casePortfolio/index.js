@@ -1,9 +1,10 @@
 import React from 'react';
 import Box from '../../foundation/box';
 import Text from '../../foundation/text';
-import Logo from '../../common/menu/logo';
 import Link from '../../common/link/link';
-import Info, { Description, Image, LogoImage, Referencia } from './style';
+import Info, {
+  Description, Image, LogoImage, Referencia,
+} from './style';
 
 const listDescription = [
   {
