@@ -9,7 +9,7 @@
 <h3 align="center"><a href="https://carol-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">Clique aqui para conferir o projeto!</a><h3><br>
 
 <p align="center">
-<img src="https://i.postimg.cc/Sx4xWM3w/landingpage.png" alt="Portfolio" width="800" height=""/>
+<img src="https://i.postimg.cc/PfSBBWzG/landingpage.png" alt="Portfolio" width="800" height=""/>
 </p>
   
 O desafio do projeto é criar uma Single Page Application, que deve ser desenvolvida utilizando NextJS e a biblioteca styled-components.
@@ -19,6 +19,7 @@ O desafio do projeto é criar uma Single Page Application, que deve ser desenvol
 - Na seção de projetos, as imagens são links para os sites enquanto os titulos são links para o repositorio do projeto correspondente.
 - Na seção de contato, você pode clicar no texto 'Vamos conversar?' que ele abre o modal do formulario, possibilitante o preenchimento do mesmo. *Ainda não é possivel ter acesso aos dados enviados.
 <br>
+
 ## 👁‍🗨 CI/CD
 
 Para configuração do projeto utilizei o ESLint, Husky e Conventional Commits. Todos eles já estavam instalado no <a href="https://github.com/carolandrade1/template_next_styled" target="_blank" rel="noopener noreferrer">Template base com Next e Styled Components</a> que utilizei para iniciar o projeto.
