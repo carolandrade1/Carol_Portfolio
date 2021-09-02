@@ -14,7 +14,7 @@ const StyledLink = styled.a`
   transition: opacity ${({ theme }) => theme.transition};
   &:hover,
   &:focus {
-    opacity: .5;
+    opacity: .9;
   }
 `;
 
