@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import Button from '../common/button/button';
 import TextField from './textfield';
 import Box from '../foundation/box';
@@ -21,13 +21,16 @@ function FormContent() {
     mensagem: '',
   });
 
-  function handleChange(event) {
-    const fieldName = event.target.getAttribute('name');
-    setUserInfo({
-      ...userInfo,
-      [fieldName]: event.target.value,
-    });
-  }
+  const handleChange = useCallback(
+    (event) => {
+      const { name, value } = event.target;
+      setUserInfo((state) => ({
+        ...state,
+        [name]: value,
+      }));
+    },
+    [userInfo],
+  );
 
   const isFormInvalid = userInfo.nome.length === 0
   || userInfo.email.length === 0
