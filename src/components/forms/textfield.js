@@ -27,7 +27,7 @@ const Input = styled(Text)`
 
 Input.defaultProps = {
   tag: 'input',
-  variant: 'paragraph2',
+  variant: 'paragraph3',
 };
 
 export default function TextField({

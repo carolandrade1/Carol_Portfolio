@@ -7,6 +7,7 @@ import Button from '../button/button';
 const ModalWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background: ${({ theme }) => theme.colors.background.main.color};
   position: fixed;
   align-items: stretch;

@@ -31,7 +31,7 @@ function Hero() {
       <TextContainer>
         <Text
           tag="p"
-          variant="paragraph2"
+          variant="paragraph3"
           textAlign="left"
           marginBottom="12px"
           color="fonts.main"
@@ -49,7 +49,7 @@ function Hero() {
         </Text>
         <Text
           tag="p"
-          variant="paragraph2"
+          variant="paragraph3"
           textAlign="left"
           marginBottom="12px"
           color="fonts.main"
