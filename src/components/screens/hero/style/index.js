@@ -12,15 +12,22 @@ const TextContainer = styled.div`
     md: css`
         max-width: 600px;
         margin-top: 20px;
+        padding: 0 20px;
     `,
   })}
+
+    p {
+        text-align: justify;
+        line-height: 1.5;
+        max-width: 550px;
+    }
 
     h1 {
         color: ${({ theme }) => theme.colors.details.main.color};
     }
 
     .contato {
-        width: 120px;
+        width: 130px;
         margin-bottom: 15px;
         position: relative;
         padding: 8px 12px;

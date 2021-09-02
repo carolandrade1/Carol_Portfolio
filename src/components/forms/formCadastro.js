@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import Button from '../common/button/button';
 import TextField from './textfield';
 import Box from '../foundation/box';
@@ -21,13 +21,16 @@ function FormContent() {
     mensagem: '',
   });
 
-  function handleChange(event) {
-    const fieldName = event.target.getAttribute('name');
-    setUserInfo({
-      ...userInfo,
-      [fieldName]: event.target.value,
-    });
-  }
+  const handleChange = useCallback(
+    (event) => {
+      const { name, value } = event.target;
+      setUserInfo((state) => ({
+        ...state,
+        [name]: value,
+      }));
+    },
+    [userInfo],
+  );
 
   const isFormInvalid = userInfo.nome.length === 0
   || userInfo.email.length === 0
@@ -121,7 +124,7 @@ function FormContent() {
       </div>
 
       <Button
-        variant="paragraph2"
+        variant="paragraph3"
         type="submit"
         disabled={isFormInvalid}
         fullWidth
@@ -164,22 +167,23 @@ function FormContent() {
 export default function FormCadastro({ propsDoModal, setModalState }) {
   return (
     <Box
+      display="grid"
+      placeItems="center"
       marginLeft="0"
       marginRight="0"
       flex="1"
-      justifyContent="flex-end"
     >
       <Box
         boxShadow="-10px 0px 24px rgba(7, 12, 14, 0.1)"
         display="flex"
         flexDirection="column"
         justifyContent="center"
-        alignContent="center"
         height="100vh"
+        width="100%"
         flex="1"
         padding={{
           xs: '16px',
-          md: '85px',
+          md: '100px',
         }}
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...propsDoModal}
