@@ -130,10 +130,10 @@ function Projetos() {
         </ProjetoPrincipal>
       </Box>
       <Box
-        marginTop={{
-          xs: '0px',
-          md: '150px',
-        }}
+        // marginTop={{
+        //   xs: '0px',
+        //   md: '0px',
+        // }}
       >
         <ListaProjetos>
           {projetosItem.map((item) => (
