@@ -1,3 +1,9 @@
+<table align="right">
+ <tr><td><a href="README_EN.md">English</a></td></tr>
+ <tr><td><a href="README.md">Português</a></td></tr>
+</table>
+<br>
+
 <p align='center'>
 <img src="https://img.shields.io/badge/CarolAndrade-portfolio-blue"/>
 <img src="https://img.shields.io/github/license/carolandrade1/carol_BootcampFrontEndAlura"/>
@@ -16,8 +22,10 @@ O desafio do projeto é criar uma Single Page Application, que deve ser desenvol
 <br>
 ## 🧠 Funcionalidades
 
-- Na seção de projetos, as imagens são links para os sites enquanto os titulos são links para o repositorio do projeto correspondente.
-- Na seção de contato, você pode clicar no texto 'Vamos conversar?' que ele abre o modal do formulario, possibilitante o preenchimento do mesmo. *Ainda não é possivel ter acesso aos dados enviados.
+- Na pagina HOME você pode visualizar os projetos passando o mouse no circulo+seta na tela. Você pode ser direcionado para a página Contato quando clicar no botão 'CONTATO'.
+- Na página SOBRE,  você pode conhecer um pouco mais sobre mim e alguns das pessoas/canais que me ajudaram a começar nessa carreira.
+- Na página de PROJETOS, é apresentado o projeto principal, que é como o proprio portfolio foi criado. Abaixo voce pode ver outros projetos, onde os links te levam para o site dos mesmos.
+- Na página de CONTATO, você pode clicar no texto 'Vamos conversar?' que ele abre o modal do formulario, possibilitante o preenchimento do mesmo. *Ainda não é possivel ter acesso aos dados enviados.
 <br>
 
 ## 👁‍🗨 CI/CD
