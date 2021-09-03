@@ -90,7 +90,7 @@ function Projetos() {
             <br />
             Selecionados
           </Text>
-          <Seta>
+          <Seta href="#lista">
             <svg width="75" height="70" viewBox="0 0 75 70" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M21.875 49.5834L53.125 20.4167" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M21.875 20.4167H53.125V49.5834" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -129,13 +129,8 @@ function Projetos() {
           </Link>
         </ProjetoPrincipal>
       </Box>
-      <Box
-        // marginTop={{
-        //   xs: '0px',
-        //   md: '0px',
-        // }}
-      >
-        <ListaProjetos>
+      <Box>
+        <ListaProjetos id="lista">
           {projetosItem.map((item) => (
             <li key={item.title}>
               <a

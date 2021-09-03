@@ -61,11 +61,17 @@ export const ProjetoPrincipal = styled.div`
     }
 `;
 
-export const Seta = styled.div`
+export const Seta = styled.a`
+    width: 80px;
 
     svg {
         display: none;
         transform: rotate(134deg);
+        border-radius: 50%;
+
+        &:hover {
+            background-color: ${({ theme }) => theme.colors.details.main.color};
+        }
 
     ${breakpointsMedia({
     md: css`
@@ -94,10 +100,7 @@ const ListaProjetos = styled.ul`
     `,
   })}
     }
-
-    a {
-        z-index:3;
-    }
+    
 
     img {
         display: initial;
@@ -111,7 +114,7 @@ const ListaProjetos = styled.ul`
         height: 250px;
         box-shadow: none;
         z-index: 0;
-        opacity: 0.7;
+        opacity: 0.9;
     `,
   })}
     }

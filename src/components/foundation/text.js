@@ -93,7 +93,7 @@ export default function Text({
     )
     : (
       // eslint-disable-next-line react/jsx-props-no-spreading
-      <TextBase as={tag} href={href} variant={variant} {...props}>
+      <TextBase as={tag} variant={variant} {...props}>
         {children}
       </TextBase>
     );
