@@ -8,11 +8,12 @@ export const ProjetoPrincipal = styled.div`
     max-height: 380px;
     padding-bottom: 20px;
     margin: 0 auto;
-    transform: translateY(-100px);
+    transform: none;
 
     ${breakpointsMedia({
     md: css`
         margin-right: 0;
+        transform: translateY(-100px);
 
         &:hover {
             opacity: 1;

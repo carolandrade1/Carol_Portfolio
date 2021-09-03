@@ -28,7 +28,7 @@ export const LogoImage = styled.div`
     order: 1;
 
     img {
-        width: 20%;
+        width: 40%;
         margin-bottom: 25px;
 
     ${breakpointsMedia({
