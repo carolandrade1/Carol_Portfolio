@@ -49,8 +49,8 @@ const ContainerAnimation = styled.div`
 
     ${breakpointsMedia({
     md: css`
-      width: 230px;
-      height: 230px;
+      width: 200px;
+      height: 200px;
     `,
   })}
     }
@@ -60,12 +60,11 @@ const ContainerAnimation = styled.div`
       animation: none;
       width: 150px;
       height: 150px;
-      animation: none;
 
     ${breakpointsMedia({
     md: css`
-      width: 230px;
-      height: 230px;
+      width: 200px;
+      height: 200px;
       animation: rotation 10s infinite linear;
     `,
   })}
@@ -96,12 +95,12 @@ const ContainerAnimation = styled.div`
       stroke-width: 0.2px;
       stroke-dasharray: 42.7;
       stroke-dashoffset: 0;
-      animation: 5s desenha infinite alternate;
+      animation: 2s draw infinite linear;
     `,
   })}
     }
 
-    @keyframes desenha {
+    @keyframes draw {
       to {
         /* Inicio: Ponto inicial */
         stroke-dashoffset: 42.7;
@@ -134,7 +133,7 @@ const ContainerAnimation = styled.div`
         position: absolute;
         display: initial;
         top: -250px;
-        left: -50px;
+        left: -80px;
         width: 350px;
         height: 240px;
         object-fit: cover;

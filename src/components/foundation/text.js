@@ -73,6 +73,7 @@ const TextBase = styled.span`
     ${propToStyle('textAlign')}
     ${propToStyle('lineHeight')}
     ${propToStyle('marginBottom')}
+    ${propToStyle('padding')}
     ${propToStyle('zIndex')}
 `;
 
