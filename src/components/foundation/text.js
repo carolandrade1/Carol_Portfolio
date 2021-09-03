@@ -70,10 +70,11 @@ export const TextStyleVariantsMap = {
 const TextBase = styled.span`
     ${(props) => TextStyleVariantsMap[props.variant]};
     color: ${({ theme, color }) => get(theme, `colors.${color}.color`)};
-    ${propToStyle('padding')}
-    ${propToStyle('paddingTop')}
+    ${propToStyle('textAlign')}
+    ${propToStyle('lineHeight')}
     ${propToStyle('marginBottom')}
-    ${propToStyle('marginTop')}
+    ${propToStyle('padding')}
+    ${propToStyle('zIndex')}
 `;
 
 export default function Text({
@@ -93,7 +94,7 @@ export default function Text({
     )
     : (
       // eslint-disable-next-line react/jsx-props-no-spreading
-      <TextBase as={tag} href={href} variant={variant} {...props}>
+      <TextBase as={tag} variant={variant} {...props}>
         {children}
       </TextBase>
     );

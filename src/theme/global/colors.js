@@ -24,6 +24,9 @@ const colors = {
     main: {
       color: '#9759CD',
     },
+    second: {
+      color: '#B488DA',
+    },
   },
 };
 
