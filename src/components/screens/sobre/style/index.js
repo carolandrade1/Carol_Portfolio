@@ -17,7 +17,7 @@ export const Descricao = styled.div`
   margin-bottom: 40px;
 
   p {
-    line-height: 1.5;
+    line-height: 1.3;
     letter-spacing: 1px;
     text-align: justify;
     max-width: 500px;

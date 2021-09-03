@@ -19,8 +19,8 @@ const listDescription = [
   },
   {
     title: 'Fontes e cores',
-    description: 'A fonte escolhida para o projeto foi Sora, disponibilizada pelo GoogleFonts. As cores  ',
-    ref: ['Background', 'Fonte', 'Detalhes', '#EFEFEF', '#000000', '#9759CD', '#CDC2D3', '#424242'],
+    description: 'A fonte escolhida para o projeto foi Sora, disponibilizada pelo GoogleFonts. Foram escolhidas cores neutras e para alguns detalhes da pagina, a cor roxa.',
+    ref: ['Background', 'Fonte', 'Detalhes', '#EFEFEF', '#000000', '#9759CD', '#CDC2D3', '#424242', '#B488DA'],
   },
 ];
 

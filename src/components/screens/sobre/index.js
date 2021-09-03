@@ -75,6 +75,7 @@ function Sobre() {
           md: 'row',
         }}
         justifyContent="space-between"
+        alignItems="center"
       >
         <Info>
           <Descricao>
@@ -93,7 +94,7 @@ function Sobre() {
           <Canais>
             {canais.map((dado) => (
               <li key={dado.name}>
-                <Text tag="a" href={dado.url} title={dado.name} target="_blank" rel="noopener noreferrer">
+                <Text tag="a" href={dado.url} title={dado.name} color="fonts.light" target="_blank" rel="noopener noreferrer">
                   {dado.name}
                   <img src={dado.imageurl} alt="" />
                 </Text>

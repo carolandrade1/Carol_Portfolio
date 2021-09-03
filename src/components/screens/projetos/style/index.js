@@ -5,13 +5,13 @@ export const ProjetoPrincipal = styled.div`
     display: flex;
     justify-content: space-between;
     max-width: 650px;
-    max-height: 480px;
+    max-height: 380px;
     padding-bottom: 20px;
     margin: 0 auto;
+    transform: translateY(-100px);
 
     ${breakpointsMedia({
     md: css`
-        padding-bottom: 120px;
         margin-right: 0;
 
         &:hover {
@@ -34,7 +34,6 @@ export const ProjetoPrincipal = styled.div`
     md: css`
         height: 100%;
         width: 100%;
-        margin-bottom: 20px;
     `,
   })}
     }
@@ -43,7 +42,10 @@ export const ProjetoPrincipal = styled.div`
         max-width: 300px;
         line-height: 1.1;
         letter-spacing: 1px;
-        padding: 10px;
+    }
+
+    h2 {
+        padding: 15px 0;
     }
 
     svg {
@@ -59,11 +61,17 @@ export const ProjetoPrincipal = styled.div`
     }
 `;
 
-export const Seta = styled.div`
+export const Seta = styled.a`
+    width: 80px;
 
     svg {
         display: none;
         transform: rotate(134deg);
+        border-radius: 50%;
+
+        &:hover {
+            background-color: ${({ theme }) => theme.colors.details.main.color};
+        }
 
     ${breakpointsMedia({
     md: css`
@@ -87,11 +95,12 @@ const ListaProjetos = styled.ul`
     md: css`
         justify-content: space-between;
         align-items: center;
-        padding: 30px 20px;
+        padding: 20px;
         border-bottom: 1px solid ${({ theme }) => theme.colors.fonts.light.color};
     `,
   })}
     }
+    
 
     img {
         display: initial;
@@ -101,19 +110,26 @@ const ListaProjetos = styled.ul`
     ${breakpointsMedia({
     md: css`
         display: none;
-        width: 290px;
-        height: 200px;
+        width: 410px;
+        height: 250px;
         box-shadow: none;
+        z-index: 0;
+        opacity: 0.9;
     `,
   })}
     }
 
     .itemsProjetos:hover img {
+
+    ${breakpointsMedia({
+    md: css`
         display: initial;
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: 65%;
+        transform: translate(-65%, -50%);
+    `,
+  })}
     }
 
     h2 {
@@ -125,6 +141,7 @@ const ListaProjetos = styled.ul`
         line-height: 1.1;
         letter-spacing: 1px;
         text-align: justify;
+        z-index: 2;
 
     ${breakpointsMedia({
     md: css`
