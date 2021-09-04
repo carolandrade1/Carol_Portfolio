@@ -10,6 +10,7 @@
     "commit": "cz"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.4.6",
     "framer-motion": "^4.1.17",
     "lodash": "^4.17.21",
     "lodash.get": "^4.4.2",
