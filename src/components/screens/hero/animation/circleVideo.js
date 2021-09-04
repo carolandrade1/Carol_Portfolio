@@ -25,7 +25,7 @@ const ContainerCircle = () => (
       loop
     />
     <svg className="arrow" width="5" height="5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M11.7071 4.29289L15.4142 8L11.7071 11.7071C11.3166 12.0976 10.6834 12.0976 10.2929 11.7071C9.90237 11.3166 9.90237 10.6834 10.2929 10.2929L11.5858 9H2C1.44771 9 1 8.55228 1 8C1 7.44772 1.44771 7 2 7H11.5858L10.2929 5.70711C9.90237 5.31658 9.90237 4.68342 10.2929 4.29289C10.6834 3.90237 11.3166 3.90237 11.7071 4.29289Z" fill="transparent" />
+      <path d="M11.7071 4.29289L15.4142 8L11.7071 11.7071C11.3166 12.0976 10.6834 12.0976 10.2929 11.7071C9.90237 11.3166 9.90237 10.6834 10.2929 10.2929L11.5858 9H2C1.44771 9 1 8.55228 1 8C1 7.44772 1.44771 7 2 7H11.5858L10.2929 5.70711C9.90237 5.31658 9.90237 4.68342 10.2929 4.29289C10.6834 3.90237 11.3166 3.90237 11.7071 4.29289Z" fill="#B488DA" />
     </svg>
   </Link>
 );
@@ -95,18 +95,16 @@ const ContainerAnimation = styled.div`
       stroke-width: 0.2px;
       stroke-dasharray: 42.7;
       stroke-dashoffset: 0;
-      animation: 2s draw infinite linear;
+      animation: 3s draw infinite alternate;
     `,
   })}
     }
 
     @keyframes draw {
       to {
-        /* Inicio: Ponto inicial */
         stroke-dashoffset: 42.7;
       }
       from {
-        /* Fim: Altera o início para 0 */
         stroke-dashoffset: 0;
       }
     }
