@@ -16,9 +16,10 @@ function Footer() {
       position="sticky"
       bottom="0"
       height="8vh"
+      zIndex="10"
       backgroundColor="#EFEFEF"
     >
-      <Text href="https://github.com/carolandrade1" target="_blank" rel="noopener noreferrer" tag="a" variant="paragraph3" color="fonts.main" textAlign="center">
+      <Text href="https://github.com/carolandrade1" zIndex="18" target="_blank" rel="noopener noreferrer" tag="a" variant="paragraph3" color="fonts.main" textAlign="center">
         ©
         {new Date().getFullYear()}
         {' '}
