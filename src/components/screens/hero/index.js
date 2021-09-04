@@ -43,7 +43,7 @@ function Hero() {
           variant="titleXS"
           textAlign="left"
           marginBottom="12px"
-          color="details.main"
+          color="fonts.main"
         >
           Carol Andrade
         </Text>
