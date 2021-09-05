@@ -126,18 +126,18 @@ function Projetos({ repositorios }) {
                 href={item.html_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Site Live"
+                title="Repositorio Github"
                 className="itemsProjetos"
               >
                 <Box
                   display="flex"
                   flexDirection="column"
                 >
-                  <img
+                  {/* <img
                     src={item.src}
                     alt={item.name}
                     loading="lazy"
-                  />
+                  /> */}
                   <Box
                     display="flex"
                     justifyContent="space-between"
