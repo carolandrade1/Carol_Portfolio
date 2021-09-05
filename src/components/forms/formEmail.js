@@ -33,8 +33,8 @@ function FormContent() {
   );
 
   const isFormInvalid = userInfo.nome.length === 0
-  || userInfo.email.length === 0
-  || userInfo.mensagem.length === 0;
+    || userInfo.email.length === 0
+    || userInfo.mensagem.length === 0;
 
   return (
     <form
@@ -49,24 +49,20 @@ function FormContent() {
           message: userInfo.mensagem,
         };
 
-        fetch('https://contact-form-api-jamstack.herokuapp.com/message', {
+        fetch('/api/sendgrid', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(userDTO),
         })
-          .then((respostaDoServidor) => {
-            if (respostaDoServidor.ok) {
-              return respostaDoServidor.json();
-            }
-
-            throw new Error('Não foi possível enviar a mensagem agora :(');
-          })
-          .then((respostaConvertidaEmObjeto) => {
+          .then((resposta) => {
             setSubmissionStatus(formStates.DONE);
             // eslint-disable-next-line no-console
-            console.log(respostaConvertidaEmObjeto);
+            console.log(resposta);
+            setUserInfo(({
+              nome: '',
+              email: '',
+              mensagem: '',
+            }));
           })
           .catch((error) => {
             setSubmissionStatus(formStates.ERROR);
@@ -80,15 +76,15 @@ function FormContent() {
         tag="h1"
         color="fonts.main"
       >
-        Diga Olá!
+        Obrigada pela visita 😄
       </Text>
-      {/* <Text
+      <Text
         variant="paragraph2"
         tag="p"
         marginBottom="32px"
       >
-        Qualquer coisa no momento
-      </Text> */}
+        Deixe uma mensagem que entrarei em contato.
+      </Text>
 
       <div>
         <TextField
@@ -114,12 +110,13 @@ function FormContent() {
 
       <div>
         <TextField
-          placeholder="mande um Oi :)"
+          placeholder="mande sua mensagem"
           name="mensagem"
           value={userInfo.mensagem}
           onChange={handleChange}
           label="Mensagem"
           type="text"
+          row="5"
         />
       </div>
 
@@ -164,7 +161,7 @@ function FormContent() {
 }
 
 // eslint-disable-next-line react/prop-types
-export default function FormCadastro({ propsDoModal, setModalState }) {
+export default function FormEmail({ propsDoModal, setModalState }) {
   return (
     <Box
       display="grid"

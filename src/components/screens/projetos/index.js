@@ -5,7 +5,7 @@ import Box from '../../foundation/box';
 import Text from '../../foundation/text';
 import ListaProjetos, { ProjetoPrincipal, Seta } from './style';
 
-const repositoriosId = [390006089, 380740837, 385367528, 396137846];
+const repositoriosId = [390006089, 380740837, 385367528, 396137846, 370833957];
 // const imagensItem = [
 //   {
 //     src: '/images/LPinstalura.webp',
@@ -22,6 +22,7 @@ const repositoriosId = [390006089, 380740837, 385367528, 396137846];
 // ];
 
 // eslint-disable-next-line no-unused-vars
+
 function Projetos({ repositorios }) {
   const repos = repositorios.filter((repo) => repositoriosId.includes(repo.id));
   return (
