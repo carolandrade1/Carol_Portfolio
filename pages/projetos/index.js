@@ -19,13 +19,12 @@ export default websitePageHOC(ProjetoScreen, {
   },
 });
 
-// export async function getStaticProps() {
-//   const repositorios = await fetch('https://api.github.com/users/carolandrade1/repos')
-//     .then((respostaDoServer) => respostaDoServer.json())
-//     .then((respostaConvertida) => respostaConvertida.data);
-//   return {
-//     props: {
-//       repositorios,
-//     }, // will be passed to the page component as props
-//   };
-// }
+export async function getStaticProps() {
+  const repositorios = await fetch('https://api.github.com/users/carolandrade1/repos')
+    .then((respostaDoServer) => respostaDoServer.json());
+  return {
+    props: {
+      repositorios,
+    }, // will be passed to the page component as props
+  };
+}
