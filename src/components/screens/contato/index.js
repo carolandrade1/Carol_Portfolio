@@ -3,7 +3,7 @@ import Box from '../../foundation/box';
 import Text from '../../foundation/text';
 import Button from '../../common/button/button';
 import RedesSociais, { ContatoModal } from './style';
-import FormCadastro from '../../forms/formCadastro';
+import FormEmail from '../../forms/formEmail';
 import Modal from '../../common/modal/modal';
 
 function Contato() {
@@ -35,7 +35,7 @@ function Contato() {
         }}
       >
         {(propsDoModal) => (
-          <FormCadastro propsDoModal={propsDoModal} setModalState={setModalState} />
+          <FormEmail propsDoModal={propsDoModal} setModalState={setModalState} />
         )}
       </Modal>
       <ContatoModal>
