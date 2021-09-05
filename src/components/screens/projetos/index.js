@@ -5,7 +5,7 @@ import Text from '../../foundation/text';
 import ArrowCircle from './animation/arrowCircle';
 import ListaProjetos from './style';
 
-const repositoriosId = [397245461, 390006089, 380740837, 385367528, 396137846, 370833957];
+const repositoriosId = [390006089, 370833957, 380740837, 385367528, 396137846];
 
 // eslint-disable-next-line no-unused-vars
 function Projetos({ repositorios }) {
