@@ -28,8 +28,7 @@ const ContainerAnimation = styled.div`
     ${breakpointsMedia({
     md: css`
       display: flex;
-      justify-content: center;
-      align-items: flex-end;
+      justify-content: left;
     `,
   })}
 

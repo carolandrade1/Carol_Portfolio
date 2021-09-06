@@ -1,8 +1,69 @@
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../../theme/util/breakpoints';
 
+export const ProjetoPrincipal = styled.ul`
+    flex-basis: 45%;
+
+    .ProjetoPrincipal {
+        border-bottom: 1px solid ${({ theme }) => theme.colors.fonts.light.color};
+        padding: 20px 0;
+
+    ${breakpointsMedia({
+    md: css`
+        border-bottom: none;
+    `,
+  })}
+    }
+
+    h2 {
+        padding: 15px 0;
+    }
+
+    p {
+        max-width: 350px;
+        line-height: 1.1;
+        letter-spacing: 1px;
+        text-align: justify;
+
+    ${breakpointsMedia({
+    md: css`
+        max-width: 450px;
+    `,
+  })}
+    }
+
+    img {
+        width: 100%;
+        box-shadow:  15px 15px 25px #767676;
+    }
+
+    .arrow {
+        display: none;
+
+    ${breakpointsMedia({
+    md: css`
+        display: initial;
+        border-radius: 50%;
+        transform: rotate(45deg);
+        transition: ease-in-out 0.3s;
+    `,
+  })}
+    }
+
+    .ProjetoPrincipal:hover .arrow {
+        transform: rotate(0);
+        background-color: ${({ theme }) => theme.colors.details.main.color};
+    }
+`;
+
 const ListaProjetos = styled.ul`
     padding-top: 0;
+
+    ${breakpointsMedia({
+    md: css`
+        padding-top: 100px;
+    `,
+  })}
 
     .itemsProjetos {
         display: flex;
