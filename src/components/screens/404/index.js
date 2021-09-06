@@ -30,7 +30,7 @@ function NotFound() {
       </Erro>
       <GoBack>
         <Link href="/" className="voltar">Voltar ao inicio</Link>
-        <img src="/images/dontsee.webp" alt="Você não viu nada!" loading="lazy" />
+        <img src="/images/dontsee.webp" alt="Você não viu nada!" />
       </GoBack>
     </Box>
   );

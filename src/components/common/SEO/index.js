@@ -9,7 +9,7 @@ function SEO({ headTitle }) {
     ? (`${headTitle} | ${pageTitleDefault}`)
     : (pageTitleDefault);
   const url = 'https://carol-portfolio.vercel.app/';
-  const image = '';
+  const image = 'https://i.postimg.cc/pVfNzS9G/portfolio.png';
   const description = 'Confira meu Portfolio!';
 
   return (
