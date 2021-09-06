@@ -1,56 +1,45 @@
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../../theme/util/breakpoints';
 
-export const ProjetoPrincipal = styled.div`
-    display: flex;
-    justify-content: space-between;
-    max-width: 650px;
-    max-height: 380px;
-    padding-bottom: 20px;
-    margin: 0 auto;
-    transform: none;
+export const ProjetoPrincipal = styled.ul`
+    flex-basis: 45%;
+
+    .ProjetoPrincipal {
+        border-bottom: 1px solid ${({ theme }) => theme.colors.fonts.light.color};
+        padding: 20px 0;
 
     ${breakpointsMedia({
     md: css`
-        margin-right: 0;
-        transform: translateY(-100px);
-
-        &:hover {
-            opacity: 1;
-        }
-
-        &:hover svg{
-            transform: rotate(0);
-            background-color: ${({ theme }) => theme.colors.details.main.color};
-        }
+        border-bottom: none;
     `,
   })}
-
-    img {
-        display: initial;
-        width: 290px;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-
-    ${breakpointsMedia({
-    md: css`
-        height: 100%;
-        width: 100%;
-    `,
-  })}
-    }
-
-    p {
-        max-width: 300px;
-        line-height: 1.1;
-        letter-spacing: 1px;
     }
 
     h2 {
         padding: 15px 0;
     }
 
-    svg {
+    p {
+        max-width: 350px;
+        line-height: 1.1;
+        letter-spacing: 1px;
+        text-align: justify;
+
+    ${breakpointsMedia({
+    md: css`
+        max-width: 450px;
+    `,
+  })}
+    }
+
+    img {
+        width: 100%;
+        box-shadow:  15px 15px 25px #767676;
+    }
+
+    .arrow {
         display: none;
+
     ${breakpointsMedia({
     md: css`
         display: initial;
@@ -60,50 +49,39 @@ export const ProjetoPrincipal = styled.div`
     `,
   })}
     }
-`;
 
-export const Seta = styled.a`
-    width: 80px;
-
-    svg {
-        display: none;
-        transform: rotate(134deg);
-        border-radius: 50%;
-
-        &:hover {
-            background-color: ${({ theme }) => theme.colors.details.main.color};
-        }
-
-    ${breakpointsMedia({
-    md: css`
-        display: initial;
-    `,
-  })}
+    .ProjetoPrincipal:hover .arrow {
+        transform: rotate(0);
+        background-color: ${({ theme }) => theme.colors.details.main.color};
     }
 `;
 
 const ListaProjetos = styled.ul`
     padding-top: 0;
 
+    ${breakpointsMedia({
+    md: css`
+        padding-top: 100px;
+    `,
+  })}
+
     .itemsProjetos {
         display: flex;
         position: relative;
         padding: 20px 0;
         justify-content: center;
-        border-bottom: none;
+        border-bottom: 1px solid ${({ theme }) => theme.colors.fonts.light.color};
 
     ${breakpointsMedia({
     md: css`
         justify-content: space-between;
         align-items: center;
         padding: 20px;
-        border-bottom: 1px solid ${({ theme }) => theme.colors.fonts.light.color};
     `,
   })}
     }
-    
 
-    img {
+    /* img {
         display: initial;
         width: 290px;
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -118,9 +96,9 @@ const ListaProjetos = styled.ul`
         opacity: 0.9;
     `,
   })}
-    }
+    } */
 
-    .itemsProjetos:hover img {
+    /* .itemsProjetos:hover img {
 
     ${breakpointsMedia({
     md: css`
@@ -131,27 +109,27 @@ const ListaProjetos = styled.ul`
         transform: translate(-65%, -50%);
     `,
   })}
-    }
+    } */
 
     h2 {
         padding: 15px 0;
+        text-transform: capitalize;
     }
 
     p {
-        max-width: 300px;
+        max-width: 350px;
         line-height: 1.1;
         letter-spacing: 1px;
         text-align: justify;
-        z-index: 2;
 
     ${breakpointsMedia({
     md: css`
-        max-width: 350px;
+        max-width: 450px;
     `,
   })}
     }
 
-    svg {
+    .arrow {
         display: none;
     ${breakpointsMedia({
     md: css`
@@ -163,7 +141,7 @@ const ListaProjetos = styled.ul`
   })}
     }
 
-    .itemsProjetos:hover svg {
+    .itemsProjetos:hover .arrow {
         transform: rotate(0);
         background-color: ${({ theme }) => theme.colors.details.main.color};
     }
