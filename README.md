@@ -15,7 +15,7 @@
 <h3 align="center"><a href="https://carol-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">Clique aqui para conferir o projeto!</a><h3><br>
 
 <p align="center">
-<img src="https://i.postimg.cc/PfSBBWzG/landingpage.png" alt="Portfolio" width="800" height=""/>
+<img src="https://i.postimg.cc/pVfNzS9G/portfolio.png" alt="Portfolio" width="800" height=""/>
 </p>
   
 O desafio do projeto é criar uma Single Page Application, que deve ser desenvolvida utilizando NextJS e a biblioteca styled-components.
