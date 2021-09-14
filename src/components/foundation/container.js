@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
-import breakpointsMedia from '../../theme/util/breakpoints';
-import propToStyle from '../../theme/util/propToStyle';
+import breakpointsMedia from '../../theme/util/breakpoints/breakpoints';
+import propToStyle from '../../theme/util/propToStyle/propToStyle';
 
 const Container = styled.div`
   ${propToStyle('flex')}

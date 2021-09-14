@@ -1,6 +1,6 @@
 import typographyVariants from './global/typographyVariants';
 import colors from './global/colors';
-import breakpoints from './util/breakpoints';
+import breakpoints from './util/breakpoints/breakpoints';
 
 const theme = {
   colors,

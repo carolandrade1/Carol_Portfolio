@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import breakpointsMedia from '../../../../../theme/util/breakpoints';
+import breakpointsMedia from '../../../../../theme/util/breakpoints/breakpoints';
 
 const Ul = styled.ul`
   display: flex;

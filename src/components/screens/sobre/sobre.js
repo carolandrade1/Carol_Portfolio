@@ -16,7 +16,7 @@ const canais = [
   },
   {
     name: 'Mario Souto',
-    url: 'https://github.com/omariosouto',
+    url: 'https://www.youtube.com/c/DevSoutinho',
     imageurl: 'https://github.com/omariosouto.png',
   },
   {
@@ -88,7 +88,7 @@ function Sobre() {
             <Text tag="p" variant="paragraph3">
               Durante os últimos meses tive acesso a vários canais e sites que me ensinaram
               diversas tecnologias e ferramentas e esses materiais me auxiliaram a desenvolver
-              alguns dos meus projetos e queria deixar aqui meus agradecimentos.
+              alguns dos meus projetos então queria deixar aqui meus agradecimentos.
             </Text>
           </Descricao>
           <Canais>

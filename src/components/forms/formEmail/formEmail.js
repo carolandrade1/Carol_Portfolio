@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react';
-import Button from '../common/button/button';
-import TextField from './textfield';
-import Box from '../foundation/box';
-import Text from '../foundation/text';
+import Button from '../../common/button/button';
+import TextField from '../textField/textfield';
+import Box from '../../foundation/box';
+import Text from '../../foundation/text';
 
 const formStates = {
   DEFAULT: 'DEFAULT',

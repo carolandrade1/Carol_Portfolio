@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import breakpointsMedia from '../../../../theme/util/breakpoints';
+import breakpointsMedia from '../../../../theme/util/breakpoints/breakpoints';
 
 const Erro = styled.div`
     margin-bottom: 100px;

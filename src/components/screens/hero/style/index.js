@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import breakpointsMedia from '../../../../theme/util/breakpoints';
+import breakpointsMedia from '../../../../theme/util/breakpoints/breakpoints';
 
 const TextContainer = styled.div`
     display: flex;

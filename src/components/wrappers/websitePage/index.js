@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Footer from '../../common/footer/footer';
 import Menu from '../../common/menu';
 import Modal from '../../common/modal/modal';
-import FormEmail from '../../forms/formEmail';
+import FormEmail from '../../forms/formEmail/formEmail';
 import Container from '../../foundation/container';
 import SEO from '../../common/SEO';
 
