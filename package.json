@@ -7,11 +7,12 @@
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "eslint --fix --ignore-path .gitignore .",
     "prepare": "husky install",
-    "commit": "cz"
+    "commit": "cz",
+    "test:integration:open": "cypress open"
   },
   "dependencies": {
-    "cross-env": "^7.0.3",
     "@sendgrid/mail": "^7.4.6",
+    "cross-env": "^7.0.3",
     "framer-motion": "^4.1.17",
     "lodash": "^4.17.21",
     "lodash.get": "^4.4.2",
@@ -25,9 +26,11 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.12.0",
+    "cypress": "^8.4.0",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.25.1",
