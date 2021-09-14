@@ -3,7 +3,7 @@ import Box from '../../foundation/box';
 import Text from '../../foundation/text';
 import Button from '../../common/button/button';
 import RedesSociais, { ContatoModal } from './style';
-import FormEmail from '../../forms/formEmail/formEmail';
+import FormContato from '../../forms/formContato/formContato';
 import Modal from '../../common/modal/modal';
 
 function Contato() {
@@ -35,11 +35,12 @@ function Contato() {
         }}
       >
         {(propsDoModal) => (
-          <FormEmail propsDoModal={propsDoModal} setModalState={setModalState} />
+          <FormContato propsDoModal={propsDoModal} setModalState={setModalState} />
         )}
       </Modal>
       <ContatoModal>
         <Button
+          id="button"
           title="Vamos conversar?"
           ghost
           onClick={() => {

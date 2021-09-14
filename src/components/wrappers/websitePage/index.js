@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Footer from '../../common/footer/footer';
 import Menu from '../../common/menu';
 import Modal from '../../common/modal/modal';
-import FormEmail from '../../forms/formEmail/formEmail';
+import FormContato from '../../forms/formContato/formContato';
 import Container from '../../foundation/container';
 import SEO from '../../common/SEO';
 
@@ -45,7 +45,7 @@ export default function WebsitePageWrapper({
           }}
         >
           {(propsDoModal) => (
-            <FormEmail propsDoModal={propsDoModal} />
+            <FormContato propsDoModal={propsDoModal} />
           )}
         </Modal>
         <Menu

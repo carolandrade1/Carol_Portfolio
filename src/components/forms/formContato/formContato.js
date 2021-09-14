@@ -38,6 +38,7 @@ function FormContent() {
 
   return (
     <form
+      id="formContato"
       onSubmit={(event) => {
         event.preventDefault();
         setIsFormSubmited(true);
@@ -161,7 +162,7 @@ function FormContent() {
 }
 
 // eslint-disable-next-line react/prop-types
-export default function FormEmail({ propsDoModal, setModalState }) {
+export default function FormContato({ propsDoModal, setModalState }) {
   return (
     <Box
       display="grid"
