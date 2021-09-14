@@ -3,8 +3,8 @@ import Box from '../../foundation/box';
 import Text from '../../foundation/text';
 import Button from '../../common/button/button';
 import RedesSociais, { ContatoModal } from './style';
-import FormEmail from '../../forms/formEmail/formEmail';
 import Modal from '../../common/modal/modal';
+import FormContato from '../../forms/formContato/formContato';
 
 function Contato() {
   const [isModalOpen, setModalState] = React.useState(false);
@@ -35,7 +35,7 @@ function Contato() {
         }}
       >
         {(propsDoModal) => (
-          <FormEmail propsDoModal={propsDoModal} setModalState={setModalState} />
+          <FormContato propsDoModal={propsDoModal} setModalState={setModalState} />
         )}
       </Modal>
       <ContatoModal>
