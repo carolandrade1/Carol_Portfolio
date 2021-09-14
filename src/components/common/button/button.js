@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { TextStyleVariantsMap } from '../../foundation/text';
-import breakpointsMedia from '../../../theme/util/breakpoints';
-import propToStyle from '../../../theme/util/propToStyle';
+import breakpointsMedia from '../../../theme/util/breakpoints/breakpoints';
+import propToStyle from '../../../theme/util/propToStyle/propToStyle';
 import Link from '../link/link';
 
 const ButtonGhost = css`

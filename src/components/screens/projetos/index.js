@@ -81,7 +81,7 @@ function Projetos({ repositorios }) {
             {reposPrincipal.map((item) => (
               <li key={item.id}>
                 <Link
-                  href="/casePortfolio"
+                  href="/projetos/casePortfolio"
                   title="Case Portfolio"
                 >
                   <Box

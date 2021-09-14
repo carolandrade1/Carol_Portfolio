@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Link from '../../../common/link/link';
-import breakpointsMedia from '../../../../theme/util/breakpoints';
+import breakpointsMedia from '../../../../theme/util/breakpoints/breakpoints';
 
 const ContainerCircle = () => (
   <Link href="/projetos" className="circlelink" title="Mostrar projetos">

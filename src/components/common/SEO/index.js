@@ -3,7 +3,7 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 
 function SEO({ headTitle }) {
-  const pageTitleDefault = 'Carol Andrade - Portfolio';
+  const pageTitleDefault = 'Portfolio';
   const hasHeadTitle = Boolean(headTitle);
   const title = hasHeadTitle
     ? (`${headTitle} | ${pageTitleDefault}`)

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import get from 'lodash/get';
 import styled, { css } from 'styled-components';
 import Link from '../common/link/link';
-import breakpointsMedia from '../../theme/util/breakpoints';
-import propToStyle from '../../theme/util/propToStyle';
+import breakpointsMedia from '../../theme/util/breakpoints/breakpoints';
+import propToStyle from '../../theme/util/propToStyle/propToStyle';
 
 export const TextStyleVariantsMap = {
   titleXS: css`

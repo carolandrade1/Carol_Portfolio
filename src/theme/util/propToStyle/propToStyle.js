@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import breakpointsMedia from './breakpoints';
+import breakpointsMedia from '../breakpoints/breakpoints';
 
 export default function propToStyle(propName) {
   return (props) => {

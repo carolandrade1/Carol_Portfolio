@@ -3,7 +3,7 @@ import Box from '../../foundation/box';
 import Text from '../../foundation/text';
 import Button from '../../common/button/button';
 import RedesSociais, { ContatoModal } from './style';
-import FormEmail from '../../forms/formEmail';
+import FormEmail from '../../forms/formEmail/formEmail';
 import Modal from '../../common/modal/modal';
 
 function Contato() {
