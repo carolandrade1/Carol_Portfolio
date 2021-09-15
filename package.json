@@ -8,6 +8,8 @@
     "lint:fix": "eslint --fix --ignore-path .gitignore .",
     "prepare": "husky install",
     "commit": "cz",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "test:integration:open": "cypress open"
   },
   "dependencies": {
