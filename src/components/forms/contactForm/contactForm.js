@@ -41,7 +41,7 @@ function FormContent() {
 
   return (
     <form
-      id="formContato"
+      id="contactForm"
       onSubmit={form.handleSubmit}
     >
       <Text
@@ -134,7 +134,7 @@ function FormContent() {
 }
 
 // eslint-disable-next-line react/prop-types
-export default function FormContato({ propsDoModal, setModalState }) {
+export default function ContactForm({ propsDoModal, setModalState }) {
   return (
     <Box
       display="grid"
