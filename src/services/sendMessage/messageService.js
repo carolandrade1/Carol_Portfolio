@@ -8,8 +8,8 @@ async function HttpClient(url, { headers, body, ...options }) {
     body: JSON.stringify(body),
     ...options,
   })
-    .then(() => {
-      console.log('Tudo certo!');
+    .then((resposta) => {
+      console.log('Tudo certo!', resposta);
     })
     .catch(() => {
       console.log('Alguma coisa deu errado!');

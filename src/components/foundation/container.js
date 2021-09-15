@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../theme/util/breakpoints/breakpoints';
 import propToStyle from '../../theme/util/propToStyle/propToStyle';
 
-const Container = styled.div`
+const Container = styled.section`
   ${propToStyle('flex')}
   ${propToStyle('display')}
   ${propToStyle('flexDirection')}
