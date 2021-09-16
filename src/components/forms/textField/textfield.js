@@ -35,7 +35,7 @@ export default function TextField({
 }) {
   return (
     <InputWrapper>
-      <label htmlFor={name}>{label}</label>
+      <label htmlFor={name} aria-label={name}>{label}</label>
       <Input
         type={type}
         placeholder={placeholder}

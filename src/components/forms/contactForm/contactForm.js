@@ -59,39 +59,33 @@ function FormContent() {
         Deixe uma mensagem que entrarei em contato.
       </Text>
 
-      <div>
-        <TextField
-          placeholder="nome"
-          name="nome"
-          value={form.values.nome}
-          onChange={form.handleChange}
-          label="Nome"
-          type="text"
-        />
-      </div>
+      <TextField
+        placeholder="nome"
+        name="nome"
+        value={form.values.nome}
+        onChange={form.handleChange}
+        label="Nome"
+        type="text"
+      />
 
-      <div>
-        <TextField
-          placeholder="email@dominio.com"
-          name="email"
-          value={form.values.email}
-          onChange={form.handleChange}
-          label="Email"
-          type="email"
-        />
-      </div>
+      <TextField
+        placeholder="email@dominio.com"
+        name="email"
+        value={form.values.email}
+        onChange={form.handleChange}
+        label="Email"
+        type="email"
+      />
 
-      <div>
-        <TextField
-          placeholder="mande sua mensagem"
-          name="mensagem"
-          value={form.values.mensagem}
-          onChange={form.handleChange}
-          label="Mensagem"
-          type="text"
-          row="5"
-        />
-      </div>
+      <TextField
+        placeholder="mande sua mensagem"
+        name="mensagem"
+        value={form.values.mensagem}
+        onChange={form.handleChange}
+        label="Mensagem"
+        type="text"
+        rows="5"
+      />
 
       <Button
         variant="paragraph3"
