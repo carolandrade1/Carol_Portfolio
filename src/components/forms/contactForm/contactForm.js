@@ -1,4 +1,6 @@
+/* eslint-disable no-undef */
 import React from 'react';
+import * as yup from 'yup';
 import Button from '../../common/button/button';
 import TextField from '../textField/textfield';
 import Box from '../../foundation/box';
@@ -6,16 +8,31 @@ import Text from '../../foundation/text';
 import useForm from '../../../infra/hooks/forms/useForm';
 import messageService from '../../../services/sendMessage/messageService';
 
-const formStates = {
+const formStates = { // TODO
   DEFAULT: 'DEFAULT',
   LOADING: 'LOADING',
   DONE: 'DONE',
   ERROR: 'ERROR',
 };
 
-function FormContent() {
-  const [submissionStatus, setSubmissionStatus] = React.useState(formStates.DEFAULT);
+const contactSchema = yup.object().shape({
+  nome: yup
+    .string()
+    .required('Nome é obrigatório')
+    .min(3, 'Preencha ao menos 3 caracteres'),
+  email: yup
+    .string()
+    .email('Email precisa ser válido')
+    .required('Email é obrigatório')
+    .min(10, 'Preencha ao menos 10 caracteres'),
+  mensagem: yup
+    .string()
+    .required('Mensagem é obrigatória')
+    .min(3, 'Preencha ao menos 3 caracteres'),
+});
 
+function FormContent() {
+  const [submissionStatus, setSubmissionStatus] = React.useState(formStates.DEFAULT); // TODO
   const initialValues = {
     nome: '',
     email: '',
@@ -36,6 +53,11 @@ function FormContent() {
         .catch(() => {
           setSubmissionStatus(formStates.ERROR);
         });
+    },
+    async validateSchema(values) {
+      return contactSchema.validate(values, {
+        abortEarly: false,
+      });
     },
   });
 
@@ -60,43 +82,51 @@ function FormContent() {
       </Text>
 
       <TextField
-        placeholder="nome"
+        label="Nome"
         name="nome"
+        placeholder="nome"
+        type="text"
         value={form.values.nome}
         onChange={form.handleChange}
-        label="Nome"
-        type="text"
+        error={form.errors.nome}
+        onBlur={form.handleBlur}
+        isTouched={form.touched.nome}
       />
 
       <TextField
-        placeholder="email@dominio.com"
+        label="Email"
         name="email"
+        placeholder="email@dominio.com"
+        type="email"
         value={form.values.email}
         onChange={form.handleChange}
-        label="Email"
-        type="email"
+        error={form.errors.email}
+        onBlur={form.handleBlur}
+        isTouched={form.touched.email}
       />
 
       <TextField
-        placeholder="mande sua mensagem"
+        label="Mensagem"
         name="mensagem"
+        placeholder="mande sua mensagem"
+        type="text"
         value={form.values.mensagem}
         onChange={form.handleChange}
-        label="Mensagem"
-        type="text"
-        rows="5"
+        error={form.errors.mensagem}
+        onBlur={form.handleBlur}
+        isTouched={form.touched.mensagem}
       />
 
       <Button
         variant="paragraph3"
         type="submit"
-        // disabled={isFormInvalid}
         fullWidth
+        disabled={form.isFormDisabled}
       >
         Enviar mensagem
       </Button>
 
-      {submissionStatus === formStates.DONE && (
+      {submissionStatus === formStates.DONE && ( // TODO
         <Box
           display="flex"
           justifyContent="center"
@@ -110,7 +140,7 @@ function FormContent() {
         </Box>
       )}
 
-      {submissionStatus === formStates.ERROR && (
+      {submissionStatus === formStates.ERROR && ( // TODO
         <Box
           display="flex"
           justifyContent="center"
