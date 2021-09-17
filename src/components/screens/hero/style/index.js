@@ -9,46 +9,50 @@ const ContainerHero = styled.section`
     padding: 20px 0;
     overflow-y: scroll;
 
-    ${breakpointsMedia({
-    md: css`
-        padding: 50px;
-    `,
-  })}
-
-  &::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-  }
-
-  &:hover {
     &::-webkit-scrollbar {
       width: 5px;
       height: 5px;
     }
-    &::-webkit-scrollbar-thumb:hover {
-      background: #ffffff;
+
+    &:hover {
+      &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: #ffffff;
+      }
+      &::-webkit-scrollbar-thumb:active {
+        background: #000000;
+      }
+      &::-webkit-scrollbar-button {
+        width: 12px;
+        height: 12px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #ffffff;
+        border: 17px none #ffffff;
+        border-radius: 50px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+        border: 16px none #ffffff;
+        border-radius: 50px;
+      }
+      &::-webkit-scrollbar-corner {
+        background: transparent;
+      }
     }
-    &::-webkit-scrollbar-thumb:active {
-      background: #000000;
-    }
-    &::-webkit-scrollbar-button {
-      width: 12px;
-      height: 12px;
-    }
-    &::-webkit-scrollbar-thumb {
-      background: #ffffff;
-      border: 17px none #ffffff;
-      border-radius: 50px;
-    }
-    &::-webkit-scrollbar-track {
-      background: transparent;
-      border: 16px none #ffffff;
-      border-radius: 50px;
-    }
-    &::-webkit-scrollbar-corner {
-      background: transparent;
-    }
-  }
+
+    ${breakpointsMedia({
+    md: css`
+        padding: 50px;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+    `,
+  })}
+
 `;
 
 export const TextContainer = styled.div`
@@ -119,7 +123,7 @@ export const TextContainer = styled.div`
       &:active {
           transform: scale(.96);
       }
-    }
+  }
 `;
 
 export default ContainerHero;
