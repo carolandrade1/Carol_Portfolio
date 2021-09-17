@@ -23,14 +23,15 @@ const Ul = styled.ul`
     md: css`
       flex: 0;
       flex-flow: row nowrap;
+      /* justify-content: flex-start; */
       height: 8vh;
-      padding: 0;
+      padding: 10px 0;
+      align-items: center;
       opacity: 1;
       animation: none;
       transform: translateX(0);
       position: relative;
-      background-color: ${({ theme }) => theme.colors.background.main.color};
-      align-items: center;
+      background-color: transparent;
     `,
   })}
 
@@ -50,7 +51,8 @@ const Ul = styled.ul`
       font-size: ${({ theme }) => theme.typographyVariants.paragraph3.fontSize};
       opacity: 1;
       animation: none;
-      padding: 0 10px;
+      padding: 0 15px;
+      /* align-self: flex-end; */
     `,
   })}
   }
