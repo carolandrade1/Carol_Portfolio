@@ -16,10 +16,20 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: 'Sora', sans-serif;
-    background-color: ${({ theme }) => theme.colors.background.main.color};
     display: flex;
     min-height: 100vh;
     width: 100%;
+  }
+
+  body {
+    background: linear-gradient(132deg, #E0E0E0, #96a7cf, #E0E0E0);
+    background-size: 100% 100%;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding:0;
+    margin:0px;
   }
 
   ul {
