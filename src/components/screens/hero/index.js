@@ -1,33 +1,12 @@
 import React from 'react';
-import Box from '../../foundation/box';
 import Text from '../../foundation/text';
 import CircleVideo from './animation/circleVideo';
-import TextContainer from './style';
+import ContainerHero, { TextContainer } from './style';
 import Link from '../../common/link/link';
 
 function Hero() {
   return (
-    <Box
-      display="flex"
-      justifyContent="space-around"
-      flexDirection={{
-        xs: 'column',
-        md: 'row',
-      }}
-      height="75vh"
-      padding={{
-        xs: '0px',
-        md: '40px',
-      }}
-      paddingLeft={{
-        xs: '20px',
-        md: '40px',
-      }}
-      paddingRight={{
-        xs: '20px',
-        md: '40px',
-      }}
-    >
+    <ContainerHero>
       <TextContainer>
         <Text
           tag="p"
@@ -64,7 +43,7 @@ function Hero() {
         </Link>
       </TextContainer>
       <CircleVideo />
-    </Box>
+    </ContainerHero>
   );
 }
 

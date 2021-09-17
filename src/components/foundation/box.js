@@ -10,6 +10,7 @@ const Box = styled.div`
   ${propToStyle('justifyContent')}
   ${propToStyle('flexWrap')}
   ${propToStyle('height')}
+  ${propToStyle('overflowY')}
   ${propToStyle('placeItems')}
   ${propToStyle('minHeight')}
   ${propToStyle('width')}
@@ -31,6 +32,7 @@ const Box = styled.div`
   ${propToStyle('marginRight')}
   ${propToStyle('marginTop')}
   ${propToStyle('marginBottom')}
+  ${propToStyle('borderRadius')}
 `;
 
 export default Box;

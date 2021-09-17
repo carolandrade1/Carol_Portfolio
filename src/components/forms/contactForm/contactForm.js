@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
 import React from 'react';
 import * as yup from 'yup';
@@ -157,7 +158,6 @@ function FormContent() {
   );
 }
 
-// eslint-disable-next-line react/prop-types
 export default function ContactForm({ propsDoModal, setModalState }) {
   return (
     <Box
@@ -168,17 +168,25 @@ export default function ContactForm({ propsDoModal, setModalState }) {
       flex="1"
     >
       <Box
-        boxShadow="-10px 0px 24px rgba(7, 12, 14, 0.1)"
+        boxShadow="-10px 0px 24px rgba(7, 12, 14, 0.2)"
         display="flex"
         flexDirection="column"
         justifyContent="center"
-        height="100vh"
-        width="100%"
+        borderRadius="15px"
+        height={{
+          xs: 'auto',
+          md: '600px',
+        }}
+        width={{
+          xs: 'auto',
+          md: '60%',
+        }}
         flex="1"
         padding={{
-          xs: '16px',
+          xs: '20px',
           md: '100px',
         }}
+        backgroundColor="white"
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...propsDoModal}
       >

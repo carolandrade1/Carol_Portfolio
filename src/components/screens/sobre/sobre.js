@@ -1,7 +1,9 @@
 import React from 'react';
 import Box from '../../foundation/box';
 import Text from '../../foundation/text';
-import Canais, { Descricao, Image, Info } from './style';
+import ContainerSobre, {
+  Canais, Descricao, Image, Info,
+} from './style';
 
 const canais = [
   {
@@ -53,20 +55,7 @@ const canais = [
 
 function Sobre() {
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      justifyContent="space-between"
-      paddingLeft={{
-        xs: '20px',
-        md: '40px',
-      }}
-      paddingRight={{
-        xs: '20px',
-        md: '40px',
-      }}
-      minHeight="70vh"
-    >
+    <ContainerSobre>
       <Text tag="h1" variant="titleXS">Sobre</Text>
       <Box
         display="flex"
@@ -76,6 +65,10 @@ function Sobre() {
         }}
         justifyContent="space-between"
         alignItems="center"
+        marginBottom={{
+          xs: '0',
+          md: '150px',
+        }}
       >
         <Info>
           <Descricao>
@@ -94,7 +87,7 @@ function Sobre() {
           <Canais>
             {canais.map((dado) => (
               <li key={dado.name}>
-                <Text tag="a" href={dado.url} title={dado.name} color="fonts.light" target="_blank" rel="noopener noreferrer">
+                <Text tag="a" href={dado.url} title={dado.name} color="fonts.main" target="_blank" rel="noopener noreferrer">
                   {dado.name}
                   <img src={dado.imageurl} alt="" />
                 </Text>
@@ -106,7 +99,7 @@ function Sobre() {
           <img src="https://avatars.githubusercontent.com/u/65976843?v=4" alt="" />
         </Image>
       </Box>
-    </Box>
+    </ContainerSobre>
   );
 }
 

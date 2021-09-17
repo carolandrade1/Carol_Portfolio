@@ -1,4 +1,22 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import breakpointsMedia from '../../../../theme/util/breakpoints/breakpoints';
+
+const ContainerContato = styled.section`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 82vh;
+    /* overflow-y: scroll; */
+    text-align: center;
+    margin-top: 50px;
+
+    ${breakpointsMedia({
+    md: css`
+        margin-top: 100px;
+        padding: 40px;
+    `,
+  })}
+`;
 
 export const ContatoModal = styled.div`
     position: relative;
@@ -10,12 +28,17 @@ export const ContatoModal = styled.div`
 
 `;
 
-const RedesSociais = styled.div`
+export const RedesSociais = styled.div`
+    display: flex;
+    justify-content: space-between;
     padding: 20px 0;
 
-    a {
-        padding: 10px;
-    }
+    ${breakpointsMedia({
+    md: css`
+        width: 500px;
+        margin: 0 auto;
+    `,
+  })}
 `;
 
-export default RedesSociais;
+export default ContainerContato;
