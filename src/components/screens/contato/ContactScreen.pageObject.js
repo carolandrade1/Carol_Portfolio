@@ -7,6 +7,8 @@ export default class ContactScreenPageObject {
 
   callModalForm() {
     this.cy.get('#button').click().invoke('show');
+
+    return this;
   }
 
   fillContactForm({ name, email, message }) {
@@ -14,16 +16,19 @@ export default class ContactScreenPageObject {
     this.cy.get('#contactForm input[name=nome]').last().type(name);
     this.cy.get('#contactForm input[name=email]').last().type(email);
     this.cy.get('#contactForm input[name=mensagem]').last().type(message);
+
     return this;
   }
 
   submitForm() {
     this.cy.get('#contactForm button[type="submit"]').last().click();
+
     return this;
   }
 
   closeForm() {
     this.cy.get('button:contains(Fechar)').last().invoke('show').click();
+
     return this;
   }
 }

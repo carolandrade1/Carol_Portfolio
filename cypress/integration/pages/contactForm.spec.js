@@ -9,16 +9,11 @@ describe('/contato', () => {
         // Pré teste
 
         // Cenário
-        const data = {
-          name: 'Carol',
-          email: 'teste@teste.com',
-          message: 'Olá Mundo!',
-        };
-
         const contactScreen = new ContactScreenPageObject(cy);
+
         contactScreen
           .callModalForm()
-          .fillContactForm(data)
+          .fillContactForm({ name: 'Carol', email: 'teste@teste.com', message: 'Olá Mundo!' })
           .submitForm()
           .closeForm();
 
