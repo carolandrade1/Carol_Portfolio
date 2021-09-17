@@ -65,6 +65,16 @@ export const TextStyleVariantsMap = {
         font-weight: ${({ theme }) => theme.typographyVariants.paragraph3.fontWeight};
         line-height: ${({ theme }) => theme.typographyVariants.paragraph3.lineHeight};
     `,
+  paragraph4: css`
+        font-size: ${({ theme }) => theme.typographyVariants.paragraph4.fontSize};
+        font-weight: ${({ theme }) => theme.typographyVariants.paragraph4.fontWeight};
+        line-height: ${({ theme }) => theme.typographyVariants.paragraph4.lineHeight};
+    `,
+  paragraph5: css`
+        font-size: ${({ theme }) => theme.typographyVariants.paragraph5.fontSize};
+        font-weight: ${({ theme }) => theme.typographyVariants.paragraph5.fontWeight};
+        line-height: ${({ theme }) => theme.typographyVariants.paragraph5.lineHeight};
+    `,
 };
 
 const TextBase = styled.span`
@@ -102,7 +112,7 @@ export default function Text({
 
 Text.propTypes = {
   tag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'li', 'a', 'span', 'input']),
-  variant: PropTypes.oneOf(['titleXS', 'title', 'subTitleXS', 'subTitle', 'paragraph1', 'paragraph1XS', 'paragraph2', 'paragraph3']),
+  variant: PropTypes.oneOf(['titleXS', 'title', 'subTitleXS', 'subTitle', 'paragraph1', 'paragraph1XS', 'paragraph2', 'paragraph3', 'paragraph4', 'paragraph5']),
   children: PropTypes.node,
   href: PropTypes.string,
 };

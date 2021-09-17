@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -31,11 +32,22 @@ Input.defaultProps = {
 };
 
 export default function TextField({
-  placeholder, name, onChange, value, label, type,
+  placeholder,
+  name,
+  onChange,
+  value,
+  label,
+  type,
+  error,
+  isTouched,
+  ...props
 }) {
+  const hasError = Boolean(error);
+  const isFieldInvalid = hasError && isTouched;
+
   return (
     <InputWrapper>
-      <label htmlFor={name}>{label}</label>
+      <label htmlFor={name} aria-label={name}>{label}</label>
       <Input
         type={type}
         placeholder={placeholder}
@@ -43,16 +55,35 @@ export default function TextField({
         onChange={onChange}
         value={value}
         required
+        {...props}
       />
+
+      {isFieldInvalid && (
+        <Text
+          variant="paragraph5"
+          color="error.main"
+          textAlign="left"
+          role="alert"
+        >
+          {error}
+        </Text>
+      )}
     </InputWrapper>
   );
 }
+
+TextField.defaultProps = {
+  error: '',
+  isTouched: false,
+};
 
 TextField.propTypes = {
   placeholder: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
+  error: PropTypes.string,
+  isTouched: PropTypes.bool,
   label: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
 };

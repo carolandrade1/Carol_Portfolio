@@ -7,12 +7,18 @@
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "eslint --fix --ignore-path .gitignore .",
     "prepare": "husky install",
-    "commit": "cz"
+    "commit": "cz",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:integration:open": "cypress open"
   },
   "dependencies": {
-    "cross-env": "^7.0.3",
     "@sendgrid/mail": "^7.4.6",
+    "@types/jest": "^27.0.1",
+    "cross-env": "^7.0.3",
+    "eslint-plugin-jest": "^24.4.0",
     "framer-motion": "^4.1.17",
+    "jest": "^27.2.0",
     "lodash": "^4.17.21",
     "lodash.get": "^4.4.2",
     "next": "latest",
@@ -21,18 +27,26 @@
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
     "styled-components": "^5.3.1",
-    "styled-normalize": "^8.0.7"
+    "styled-normalize": "^8.0.7",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.0",
+    "@testing-library/react-hooks": "^7.0.2",
     "babel-plugin-styled-components": "^1.12.0",
+    "cypress": "^8.4.0",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^7.0.2"
+    "husky": "^7.0.2",
+    "jest-canvas-mock": "^2.3.1",
+    "jest-styled-components": "^7.0.5"
   },
   "config": {
     "commitizen": {

@@ -28,6 +28,16 @@ const colors = {
       color: '#B488DA',
     },
   },
+  error: {
+    main: {
+      color: '#dc3545',
+    },
+  },
+  success: {
+    main: {
+      color: '#28a745',
+    },
+  },
 };
 
 export default colors;

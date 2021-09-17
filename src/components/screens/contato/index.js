@@ -3,8 +3,8 @@ import Box from '../../foundation/box';
 import Text from '../../foundation/text';
 import Button from '../../common/button/button';
 import RedesSociais, { ContatoModal } from './style';
-import FormEmail from '../../forms/formEmail/formEmail';
 import Modal from '../../common/modal/modal';
+import ContactForm from '../../forms/contactForm/contactForm';
 
 function Contato() {
   const [isModalOpen, setModalState] = React.useState(false);
@@ -35,11 +35,12 @@ function Contato() {
         }}
       >
         {(propsDoModal) => (
-          <FormEmail propsDoModal={propsDoModal} setModalState={setModalState} />
+          <ContactForm propsDoModal={propsDoModal} setModalState={setModalState} />
         )}
       </Modal>
       <ContatoModal>
         <Button
+          id="button"
           title="Vamos conversar?"
           ghost
           onClick={() => {
