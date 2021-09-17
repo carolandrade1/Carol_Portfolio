@@ -10,10 +10,11 @@ exports[`<TextField /> renders component 1`] = `
 .c1 {
   width: 100%;
   border: none;
-  border-bottom: 1px solid #000000;
-  padding: 12px 0;
+  border-radius: 5px;
+  padding: 10px 5px;
   outline: 0;
-  background-color: #EFEFEF;
+  background-color: #E0E0E0;
+  margin-bottom: 2px;
 }
 
 <input
