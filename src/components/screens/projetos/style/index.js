@@ -1,62 +1,111 @@
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../../theme/util/breakpoints/breakpoints';
 
+const ContainerProjetos = styled.section`
+    display: flex;
+    flex-direction: column;
+    justify-content: justify;
+    height: 82vh;
+    overflow-y: scroll;
+
+    ${breakpointsMedia({
+    md: css`
+      justify-content: flex-start;
+      padding: 0 20px;
+    `,
+  })}
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #ffffff;
+    }
+    &::-webkit-scrollbar-thumb:active {
+      background: #000000;
+    }
+    &::-webkit-scrollbar-button {
+      width: 12px;
+      height: 12px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #ffffff;
+      border: 17px none #ffffff;
+      border-radius: 50px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+      border: 16px none #ffffff;
+      border-radius: 50px;
+    }
+    &::-webkit-scrollbar-corner {
+      background: transparent;
+    }
+  }
+`;
+
 export const ProjetoPrincipal = styled.ul`
     flex-basis: 45%;
 
     .ProjetoPrincipal {
-        border-bottom: 1px solid ${({ theme }) => theme.colors.fonts.light.color};
-        padding: 20px 0;
+      border-bottom: 1px solid ${({ theme }) => theme.colors.fonts.main.color};
+      padding-bottom: 20px;
 
     ${breakpointsMedia({
     md: css`
-        border-bottom: none;
+      border-bottom: none;
+      padding-bottom: 0;
     `,
   })}
     }
 
     h2 {
-        padding: 15px 0;
+      padding: 15px 0;
     }
 
     p {
-        max-width: 350px;
-        line-height: 1.1;
-        letter-spacing: 1px;
-        text-align: justify;
+      line-height: 1.1;
+      letter-spacing: 1px;
+      text-align: justify;
 
     ${breakpointsMedia({
     md: css`
-        max-width: 450px;
+      max-width: 450px;
     `,
   })}
     }
 
     img {
-        width: 100%;
-        box-shadow:  15px 15px 25px #767676;
+      width: 100%;
+      /* box-shadow:  15px 15px 25px #767676; */
     }
 
     .arrow {
-        display: none;
+      display: none;
 
     ${breakpointsMedia({
     md: css`
-        display: initial;
-        border-radius: 50%;
-        transform: rotate(45deg);
-        transition: ease-in-out 0.3s;
+      display: initial;
+      border-radius: 50%;
+      transform: rotate(45deg);
+      transition: ease-in-out 0.3s;
     `,
   })}
     }
 
     .ProjetoPrincipal:hover .arrow {
-        transform: rotate(0);
-        background-color: ${({ theme }) => theme.colors.details.main.color};
+      transform: rotate(0);
+      background-color: ${({ theme }) => theme.colors.details.main.color};
     }
 `;
 
-const ListaProjetos = styled.ul`
+export const ListaProjetos = styled.ul`
     padding-top: 0;
 
     ${breakpointsMedia({
@@ -66,17 +115,17 @@ const ListaProjetos = styled.ul`
   })}
 
     .itemsProjetos {
-        display: flex;
-        position: relative;
-        padding: 20px 0;
-        justify-content: center;
-        border-bottom: 1px solid ${({ theme }) => theme.colors.fonts.light.color};
+      display: flex;
+      position: relative;
+      padding: 20px 0;
+      justify-content: center;
+      border-bottom: 1px solid ${({ theme }) => theme.colors.fonts.main.color};
 
     ${breakpointsMedia({
     md: css`
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
     `,
   })}
     }
@@ -112,39 +161,39 @@ const ListaProjetos = styled.ul`
     } */
 
     h2 {
-        padding: 15px 0;
-        text-transform: capitalize;
+      padding: 15px 0;
+      text-transform: capitalize;
     }
 
     p {
-        max-width: 350px;
-        line-height: 1.1;
-        letter-spacing: 1px;
-        text-align: justify;
+      max-width: auto;
+      line-height: 1.1;
+      letter-spacing: 1px;
+      text-align: justify;
 
     ${breakpointsMedia({
     md: css`
-        max-width: 450px;
+      max-width: 450px;
     `,
   })}
     }
 
     .arrow {
-        display: none;
+      display: none;
     ${breakpointsMedia({
     md: css`
-        display: initial;
-        border-radius: 50%;
-        transform: rotate(45deg);
-        transition: ease-in-out 0.3s;
+      display: initial;
+      border-radius: 50%;
+      transform: rotate(45deg);
+      transition: ease-in-out 0.3s;
     `,
   })}
     }
 
     .itemsProjetos:hover .arrow {
-        transform: rotate(0);
-        background-color: ${({ theme }) => theme.colors.details.main.color};
+      transform: rotate(0);
+      background-color: ${({ theme }) => theme.colors.details.main.color};
     }
 `;
 
-export default ListaProjetos;
+export default ContainerProjetos;
