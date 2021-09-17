@@ -11,9 +11,6 @@ const colors = {
     main: {
       color: '#000000',
     },
-    light: {
-      color: '#424242',
-    },
   },
   svg: {
     main: {
@@ -22,10 +19,7 @@ const colors = {
   },
   details: {
     main: {
-      color: '#9759CD',
-    },
-    second: {
-      color: '#B488DA',
+      color: '#FFFFFF',
     },
   },
   error: {
