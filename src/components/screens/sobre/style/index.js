@@ -4,15 +4,9 @@ import breakpointsMedia from '../../../../theme/util/breakpoints/breakpoints';
 const ContainerSobre = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 82vh;
   overflow-y: scroll;
-
-  ${breakpointsMedia({
-    md: css`
-      padding: 0 40px;
-    `,
-  })}
 
   &::-webkit-scrollbar {
     width: 5px;
@@ -49,9 +43,21 @@ const ContainerSobre = styled.section`
     }
   }
 
-  h1 {
-    margin-bottom: 50px;
-  }
+  ${breakpointsMedia({
+    md: css`
+      padding: 0 40px;
+      
+      h1 {
+        margin-bottom: 100px;
+      }
+      
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    `,
+  })}
+
+  
 `;
 
 export const Info = styled.div`
@@ -144,8 +150,8 @@ export const Image = styled.div`
 
     ${breakpointsMedia({
     md: css`
-      width: 350px;
-      height: 350px;
+      width: 320px;
+      height: 320px;
       border-radius: 50%;
     `,
   })}
