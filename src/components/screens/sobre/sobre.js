@@ -65,10 +65,6 @@ function Sobre() {
         }}
         justifyContent="space-between"
         alignItems="center"
-        marginBottom={{
-          xs: '0',
-          md: '150px',
-        }}
       >
         <Info>
           <Descricao>
