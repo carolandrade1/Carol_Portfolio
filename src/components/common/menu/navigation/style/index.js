@@ -6,7 +6,7 @@ const Ul = styled.ul`
   flex-flow: column nowrap;
   flex: 1;
   justify-content: space-around;
-  background-color: ${({ theme }) => theme.colors.details.second.color};
+  background-color: ${({ theme }) => theme.colors.details.main.color};
   position: fixed;
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
   top: 0;

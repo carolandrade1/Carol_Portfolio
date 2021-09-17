@@ -1,16 +1,11 @@
 const typographyVariants = {
-  titleXS: {
-    fontSize: '44px',
-    fontWeight: '700',
-    lineHeight: 1.25,
-  },
-  titleS: {
-    fontSize: '50px',
-    fontWeight: '700',
-    lineHeight: 1.25,
-  },
   title: {
     fontSize: '74px',
+    fontWeight: '700',
+    lineHeight: 1.25,
+  },
+  titleXS: {
+    fontSize: '45px',
     fontWeight: '700',
     lineHeight: 1.25,
   },

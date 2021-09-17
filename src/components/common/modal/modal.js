@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import styled, { createGlobalStyle, css } from 'styled-components';
 import { motion } from 'framer-motion';
 import Button from '../button/button';
+import breakpointsMedia from '../../../theme/util/breakpoints/breakpoints';
 
 const ModalWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: ${({ theme }) => theme.colors.background.main.color};
+  background: rgba(0,0,0,0.3);
   position: fixed;
   align-items: stretch;
   top: 0;
@@ -16,9 +17,10 @@ const ModalWrapper = styled.div`
   left: 0;
   bottom: 0;
   margin: auto;
-  overflow: scroll;
+  overflow: hidden;
   transition: .3s;
   z-index: 999;
+  padding: 0 10px;
 
   ${({ isOpen }) => {
     if (isOpen) {
@@ -32,6 +34,23 @@ const ModalWrapper = styled.div`
       pointer-events: none;
     `;
   }}
+`;
+
+const CloseButton = styled.div`
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  button {
+    border-radius: 50%;
+  }
+
+  ${breakpointsMedia({
+    md: css`
+      display: flex;
+    `,
+  })}
 `;
 
 const LockScroll = createGlobalStyle`
@@ -56,15 +75,15 @@ function Modal({ isOpen, onClose, children }) {
       <motion.div
         variants={{
           open: {
-            x: 0,
+            y: 0,
           },
           closed: {
-            x: '100%',
+            y: '100%',
           },
         }}
         animate={isOpen ? 'open' : 'closed'}
         transition={{
-          duration: 0.5,
+          duration: 0.3,
         }}
         style={{
           display: 'flex',
@@ -75,17 +94,11 @@ function Modal({ isOpen, onClose, children }) {
         {children({
           'data-modal-safe-area': 'true',
         })}
-        <Button
-          ghost
-          style={{
-            display: 'inline-block',
-            position: 'absolute',
-            right: '30px',
-            top: '30px',
-          }}
-        >
-          Fechar
-        </Button>
+        <CloseButton>
+          <Button>
+            X
+          </Button>
+        </CloseButton>
       </motion.div>
     </ModalWrapper>
   );

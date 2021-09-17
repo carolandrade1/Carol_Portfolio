@@ -14,16 +14,18 @@ const InputWrapper = styled.div`
     color: ${({ theme }) => theme.colors.fonts.main.color};
     text-align: left;
     font-weight: 600;
+    margin-bottom: 5px;
   }
 `;
 
 const Input = styled(Text)`
   width: 100%;
   border: none;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.svg.main.color};
-  padding: 12px 0;
+  border-radius: 5px;
+  padding: 10px 5px;
   outline: 0;
-  background-color: ${({ theme }) => theme.colors.background.main.color};
+  background-color: ${({ theme }) => theme.colors.background.second.color};
+  margin-bottom: 2px;
 `;
 
 Input.defaultProps = {

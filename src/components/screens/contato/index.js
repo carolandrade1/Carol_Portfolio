@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '../../foundation/box';
 import Text from '../../foundation/text';
 import Button from '../../common/button/button';
-import RedesSociais, { ContatoModal } from './style';
+import ContainerContato, { RedesSociais, ContatoModal } from './style';
 import Modal from '../../common/modal/modal';
 import ContactForm from '../../forms/contactForm/contactForm';
 
@@ -10,24 +10,7 @@ function Contato() {
   const [isModalOpen, setModalState] = React.useState(false);
 
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      justifyContent={{
-        xs: 'space-around',
-        md: 'space-around',
-      }}
-      height="70vh"
-      padding={{
-        xs: '0px',
-        md: '40px',
-      }}
-      marginTop={{
-        xs: '50px',
-        md: '100px',
-      }}
-      textAlign="center"
-    >
+    <ContainerContato>
       <Modal
         isOpen={isModalOpen}
         onClose={() => {
@@ -97,7 +80,7 @@ function Contato() {
           </Text>
         </RedesSociais>
       </Box>
-    </Box>
+    </ContainerContato>
   );
 }
 

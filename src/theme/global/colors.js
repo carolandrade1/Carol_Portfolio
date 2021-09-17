@@ -1,15 +1,18 @@
 const colors = {
   background: {
     main: {
-      color: '#96a7cf',
+      color: '#EFEFEF',
     },
     second: {
-      color: '#E0E0E0',
+      color: '#D0D0D0',
     },
   },
   fonts: {
     main: {
       color: '#000000',
+    },
+    light: {
+      color: '#424242',
     },
   },
   svg: {
@@ -19,7 +22,10 @@ const colors = {
   },
   details: {
     main: {
-      color: '#FFFFFF',
+      color: '#9759CD',
+    },
+    second: {
+      color: '#B488DA',
     },
   },
   error: {

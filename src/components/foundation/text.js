@@ -16,13 +16,6 @@ export const TextStyleVariantsMap = {
     ${breakpointsMedia({
     md: css`
         ${({ theme }) => css`
-            font-size: ${theme.typographyVariants.titleS.fontSize};
-            font-weight: ${theme.typographyVariants.titleS.fontWeight};
-            line-height: ${theme.typographyVariants.titleS.lineHeight};
-        `}
-    `,
-    lg: css`
-        ${({ theme }) => css`
             font-size: ${theme.typographyVariants.title.fontSize};
             font-weight: ${theme.typographyVariants.title.fontWeight};
             line-height: ${theme.typographyVariants.title.lineHeight};
