@@ -1,7 +1,56 @@
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../../theme/util/breakpoints/breakpoints';
 
-const Info = styled.div`
+const ContainerCasePortfolio = styled.section`
+    display: flex;
+    flex-direction: column;
+    justify-content: justify;
+    height: 82vh;
+    overflow-y: scroll;
+
+    ${breakpointsMedia({
+    md: css`
+        justify-content: flex-start;
+        padding: 0 40px;
+    `,
+  })}
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #ffffff;
+    }
+    &::-webkit-scrollbar-thumb:active {
+      background: #000000;
+    }
+    &::-webkit-scrollbar-button {
+      width: 12px;
+      height: 12px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #ffffff;
+      border: 17px none #ffffff;
+      border-radius: 50px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+      border: 16px none #ffffff;
+      border-radius: 50px;
+    }
+    &::-webkit-scrollbar-corner {
+      background: transparent;
+    }
+  }
+`;
+
+export const Info = styled.div`
     order: 2;
     width: 100%;
 
@@ -25,6 +74,7 @@ export const LogoImage = styled.div`
     display: flex;
     justify-content: center;
     width: 45%;
+    margin: 0 auto;
     order: 1;
 
     img {
@@ -102,4 +152,4 @@ export const Image = styled.div`
     }
 `;
 
-export default Info;
+export default ContainerCasePortfolio;

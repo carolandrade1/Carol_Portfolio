@@ -1,9 +1,8 @@
 import React from 'react';
 import Box from '../../foundation/box';
 import Text from '../../foundation/text';
-import Link from '../../common/link/link';
-import Info, {
-  Description, Image, LogoImage, Referencia,
+import ContainerCasePortfolio, {
+  Info, Description, Image, LogoImage, Referencia,
 } from './style';
 
 const listDescription = [
@@ -26,21 +25,7 @@ const listDescription = [
 
 function CasePortfolio() {
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      justifyContent={{
-        xs: 'justify',
-        md: 'space-between',
-      }}
-      padding={{
-        xs: '0px',
-        md: '40px',
-      }}
-      paddingLeft="20px"
-      paddingRight="20px"
-      minHeight="70vh"
-    >
+    <ContainerCasePortfolio>
       <Text tag="h1" variant="subTitleXS">Portfolio</Text>
       <Box
         display="flex"
@@ -61,15 +46,15 @@ function CasePortfolio() {
       >
         <Info>
           <Box>
-            <Text tag="p" variant="paragraph3" color="fonts.light">Website</Text>
-            <Link href="/">
+            <Text tag="p" variant="paragraph3" color="fonts.main">Website</Text>
+            <a href="https://carolandrade.dev/" target="_blank" rel="noopener noreferrer" title="Site Portfolio">
               <Text tag="p" variant="paragraph2" color="fonts.main">
-                https://carol-portfolio.vercel.app/
+                https://carolandrade.dev/
               </Text>
-            </Link>
+            </a>
           </Box>
           <Box>
-            <Text tag="p" variant="paragraph3" color="fonts.light">Data</Text>
+            <Text tag="p" variant="paragraph3" color="fonts.main">Data</Text>
             <Text tag="p" variant="paragraph2">agosto 2021 - Incompleto</Text>
           </Box>
         </Info>
@@ -97,7 +82,7 @@ function CasePortfolio() {
               <Referencia>
                 {item.ref.map((dado) => (
                   <li key={dado}>
-                    <Text tag="span" color="fonts.light">{dado}</Text>
+                    <Text tag="span" color="fonts.main">{dado}</Text>
                   </li>
                 ))}
               </Referencia>
@@ -114,7 +99,7 @@ function CasePortfolio() {
         Com isso, conheci e aprendi novas ferramentas, desenvolvi novos projetos e
         adquiri novos conhecimentos.
       </Text>
-    </Box>
+    </ContainerCasePortfolio>
   );
 }
 
