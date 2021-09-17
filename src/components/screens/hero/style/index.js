@@ -47,6 +47,7 @@ const ContainerHero = styled.section`
     ${breakpointsMedia({
     md: css`
         padding: 50px;
+        flex-direction: row;
         &::-webkit-scrollbar {
           display: none;
         }
@@ -80,7 +81,6 @@ export const TextContainer = styled.div`
     `,
   })}
     }
-
     .contato {
       width: 130px;
       margin-bottom: 15px;
