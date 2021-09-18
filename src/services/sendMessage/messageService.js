@@ -8,8 +8,8 @@ async function HttpClient(url, { headers, body, ...options }) {
     body: JSON.stringify(body),
     ...options,
   })
-    .then((resposta) => {
-      console.log('Tudo certo!', resposta);
+    .then(() => {
+      console.log('Tudo certo!');
     })
     .catch(() => {
       console.log('Alguma coisa deu errado!');
@@ -17,9 +17,7 @@ async function HttpClient(url, { headers, body, ...options }) {
 }
 
 const messageService = {
-  async message({
-    name, email, message,
-  }) {
+  async message({ name, email, message }) {
     return HttpClient('/api/sendgrid', {
       method: 'POST',
       body: {

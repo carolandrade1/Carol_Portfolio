@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import Text from '../../foundation/text';
 
@@ -26,6 +26,14 @@ const Input = styled(Text)`
   outline: 0;
   background-color: ${({ theme }) => theme.colors.background.second.color};
   margin-bottom: 2px;
+
+  ${({ theme, isFieldInvalid }) => isFieldInvalid && css`
+    border: 1px solid;
+    border-color: ${theme.colors.error.main.color};
+    & + span {
+      color: ${theme.colors.error.main.color};
+    }
+  `}
 `;
 
 Input.defaultProps = {
@@ -56,6 +64,7 @@ export default function TextField({
         name={name}
         onChange={onChange}
         value={value}
+        isFieldInvalid={isFieldInvalid}
         required
         {...props}
       />

@@ -27,7 +27,7 @@ export default class ContactScreenPageObject {
   }
 
   closeForm() {
-    this.cy.get('button:contains(Fechar)').last().invoke('show').click();
+    this.cy.get('#contactForm button[type="button"]').last().click();
 
     return this;
   }
