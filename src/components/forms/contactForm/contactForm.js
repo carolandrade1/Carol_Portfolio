@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as yup from 'yup';
 import styled from 'styled-components';
 import Button from '../../common/button/button';
@@ -12,11 +13,13 @@ import messageService from '../../../services/sendMessage/messageService';
 
 const CloseButton = styled.div`
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 10px;
+  right: 10px;
   padding: 0;
 
   button {
+    height: 38px;
+    width: 38px;
     font-weight: 600;
     border-radius: 50%;
     padding: 10px;
@@ -46,7 +49,7 @@ const contactSchema = yup.object().shape({
     .min(3, 'Preencha ao menos 3 caracteres'),
 });
 
-function FormContent() {
+function FormContent({ onSubmit, setModalState }) {
   const [submissionStatus, setSubmissionStatus] = React.useState(formStates.DEFAULT); // TODO
   const initialValues = {
     nome: '',
@@ -83,10 +86,13 @@ function FormContent() {
   return (
     <form
       id="contactForm"
-      onSubmit={form.handleSubmit}
+      onSubmit={onSubmit || form.handleSubmit}
     >
       <CloseButton>
-        <Button>
+        <Button
+          type="button"
+          onClick={() => setModalState(false)}
+        >
           X
         </Button>
       </CloseButton>
@@ -181,7 +187,15 @@ function FormContent() {
   );
 }
 
-export default function ContactForm({ propsDoModal, setModalState }) {
+FormContent.defaultProps = {
+  onSubmit: undefined,
+};
+
+FormContent.propTypes = {
+  onSubmit: PropTypes.func,
+};
+
+export default function ContactForm({ propsDoModal, setModalState, onSubmit }) {
   return (
     <Box
       display="grid"
@@ -214,7 +228,7 @@ export default function ContactForm({ propsDoModal, setModalState }) {
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...propsDoModal}
       >
-        <FormContent setModalState={setModalState} />
+        <FormContent setModalState={setModalState} onSubmit={onSubmit} />
       </Box>
     </Box>
   );
