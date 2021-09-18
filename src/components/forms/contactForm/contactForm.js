@@ -17,9 +17,9 @@ const CloseButton = styled.div`
   padding: 0;
 
   button {
+    font-weight: 600;
     border-radius: 50%;
     padding: 10px;
-    background-color: blue;
   }
 `;
 
@@ -57,6 +57,7 @@ function FormContent() {
   const form = useForm({
     initialValues,
     onSubmit: (values) => {
+      form.setIsFormDisabled(true);
       messageService.message({
         name: values.nome,
         email: values.email,
@@ -67,6 +68,9 @@ function FormContent() {
         })
         .catch(() => {
           setSubmissionStatus(formStates.ERROR);
+        })
+        .finally(() => {
+          form.setIsFormDisabled(false);
         });
     },
     async validateSchema(values) {

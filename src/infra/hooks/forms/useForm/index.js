@@ -48,6 +48,7 @@ function useForm({
     },
     // validação do form
     isFormDisabled,
+    setIsFormDisabled,
     errors,
     touched,
     handleBlur(event) {
