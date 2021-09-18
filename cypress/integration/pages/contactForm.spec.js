@@ -14,11 +14,12 @@ describe('/contato', () => {
         contactScreen
           .callModalForm()
           .fillContactForm({ name: 'Carol', email: 'teste@teste.com', message: 'Olá Mundo!' })
-          .submitForm()
-          .closeForm();
+          .submitForm();
 
         // o que esperar?
-        cy.url().should('include', '/contato');
+        cy.get('[alt="Tudo certo!"]')
+          .should('be.visible');
+        contactScreen.closeForm();
       });
     });
   });
