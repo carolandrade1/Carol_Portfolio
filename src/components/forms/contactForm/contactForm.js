@@ -2,12 +2,26 @@
 /* eslint-disable no-undef */
 import React from 'react';
 import * as yup from 'yup';
+import styled from 'styled-components';
 import Button from '../../common/button/button';
 import TextField from '../textField/textfield';
 import Box from '../../foundation/box';
 import Text from '../../foundation/text';
 import useForm from '../../../infra/hooks/forms/useForm';
 import messageService from '../../../services/sendMessage/messageService';
+
+const CloseButton = styled.div`
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 0;
+
+  button {
+    border-radius: 50%;
+    padding: 10px;
+    background-color: blue;
+  }
+`;
 
 const formStates = { // TODO
   DEFAULT: 'DEFAULT',
@@ -67,6 +81,11 @@ function FormContent() {
       id="contactForm"
       onSubmit={form.handleSubmit}
     >
+      <CloseButton>
+        <Button>
+          X
+        </Button>
+      </CloseButton>
       <Text
         variant="paragraph1XS"
         tag="h1"
@@ -183,10 +202,11 @@ export default function ContactForm({ propsDoModal, setModalState }) {
         }}
         flex="1"
         padding={{
-          xs: '20px',
+          xs: '32px',
           md: '100px',
         }}
         backgroundColor="white"
+        position="relative"
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...propsDoModal}
       >

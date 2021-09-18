@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { createGlobalStyle, css } from 'styled-components';
 import { motion } from 'framer-motion';
-import Button from '../button/button';
-import breakpointsMedia from '../../../theme/util/breakpoints/breakpoints';
 
 const ModalWrapper = styled.div`
   display: flex;
@@ -34,23 +32,6 @@ const ModalWrapper = styled.div`
       pointer-events: none;
     `;
   }}
-`;
-
-const CloseButton = styled.div`
-  display: none;
-  position: absolute;
-  top: 30px;
-  right: 30px;
-
-  button {
-    border-radius: 50%;
-  }
-
-  ${breakpointsMedia({
-    md: css`
-      display: flex;
-    `,
-  })}
 `;
 
 const LockScroll = createGlobalStyle`
@@ -94,11 +75,6 @@ function Modal({ isOpen, onClose, children }) {
         {children({
           'data-modal-safe-area': 'true',
         })}
-        <CloseButton>
-          <Button>
-            X
-          </Button>
-        </CloseButton>
       </motion.div>
     </ModalWrapper>
   );
