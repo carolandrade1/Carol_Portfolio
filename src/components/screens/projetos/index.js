@@ -48,6 +48,10 @@ function Projetos({ repositorios }) {
             xs: 'center',
             md: 'left',
           }}
+          paddingRight={{
+            xs: '0',
+            md: '20px',
+          }}
         >
           <Text tag="h1" variant="titleXS" color="fonts.main" marginBottom="50px" textAlign="left">
             Projetos Selecionados
@@ -55,7 +59,7 @@ function Projetos({ repositorios }) {
           <ArrowCircle />
         </Box>
         <Box
-          flexBasis="95%"
+          flexBasis="100%"
         >
           <ProjetoPrincipal>
             {reposPrincipal.map((item) => (
@@ -70,7 +74,7 @@ function Projetos({ repositorios }) {
                     className="ProjetoPrincipal"
                   >
                     <img
-                      src="/images/LPportfolio.webp"
+                      src="https://i.postimg.cc/MGYnPDGf/PORTFOLIO-Home.png"
                       alt={item.name}
                       loading="lazy"
                     />

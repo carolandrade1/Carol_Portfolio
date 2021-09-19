@@ -46,7 +46,7 @@ const ContainerHero = styled.section`
 
     ${breakpointsMedia({
     md: css`
-        padding: 50px;
+        padding: 80px;
         flex-direction: row;
         &::-webkit-scrollbar {
           display: none;
@@ -59,15 +59,13 @@ const ContainerHero = styled.section`
 export const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 0;
     text-align: left;
     max-width: auto;
 
     ${breakpointsMedia({
     md: css`
-        max-width: 600px;
-        margin-top: 20px;
-        padding: 0 20px;
+      max-width: 600px;
+      padding: 0 20px;
     `,
   })}
 

@@ -48,7 +48,7 @@ const ContainerSobre = styled.section`
       padding: 0 40px;
       
       h1 {
-        margin-bottom: 100px;
+        margin-bottom: 50px;
       }
       
       &::-webkit-scrollbar {

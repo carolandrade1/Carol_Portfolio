@@ -12,7 +12,7 @@ const ContainerContato = styled.section`
 
     ${breakpointsMedia({
     md: css`
-        margin-top: 100px;
+        margin-top: 50px;
         padding: 40px;
     `,
   })}

@@ -85,7 +85,7 @@ function Sobre() {
               <li key={dado.name}>
                 <Text tag="a" href={dado.url} title={dado.name} color="fonts.main" target="_blank" rel="noopener noreferrer">
                   {dado.name}
-                  <img src={dado.imageurl} alt="" />
+                  <img src={dado.imageurl} alt={dado.name} />
                 </Text>
               </li>
             ))}
