@@ -1,38 +1,18 @@
 import React from 'react';
-import Link from '../../common/link/link';
-import Box from '../../foundation/box';
-import Text from '../../foundation/text';
-import Erro, { GoBack } from './style';
+import Button from '../../common/button/button';
+import Container404, { Erro, GoBack } from './style';
 
 function NotFound() {
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      textAlign="center"
-      position="relative"
-      padding={{
-        xs: '0px',
-        md: '40px',
-      }}
-      paddingLeft={{
-        xs: '20px',
-        md: '40px',
-      }}
-      paddingRight={{
-        xs: '20px',
-        md: '40px',
-      }}
-    >
+    <Container404>
       <Erro>
-        <Text tag="p" className="quatroZeroQuatro" color="fonts.main">404</Text>
-        <Text tag="p">Não entre em panico!</Text>
+        <img src="/images/erro404.svg" alt="" />
       </Erro>
       <GoBack>
-        <Link href="/" className="voltar">Voltar ao inicio</Link>
+        <Button href="/" className="voltar">Voltar ao inicio</Button>
         <img src="/images/dontsee.webp" alt="Você não viu nada!" />
       </GoBack>
-    </Box>
+    </Container404>
   );
 }
 

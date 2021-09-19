@@ -76,7 +76,6 @@ function Projetos({ repositorios }) {
                     <img
                       src="https://i.postimg.cc/MGYnPDGf/PORTFOLIO-Home.png"
                       alt={item.name}
-                      loading="lazy"
                     />
                     <Box
                       display="flex"
