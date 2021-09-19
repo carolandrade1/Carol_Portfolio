@@ -1,16 +1,22 @@
 import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../../theme/util/breakpoints/breakpoints';
 
-const Erro = styled.div`
-    margin-bottom: 100px;
+const Container404 = styled.section`
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+`;
 
-    .quatroZeroQuatro {
-        font-size: 100px;
-        font-weight: 700;
+export const Erro = styled.div`
+
+    img {
+        width: 100%;
 
     ${breakpointsMedia({
     md: css`
-        font-size: 150px;
+        width: 80%;
     `,
   })}
     }
@@ -19,30 +25,33 @@ const Erro = styled.div`
 export const GoBack = styled.div`
     justify-content: center;
     margin: 0 auto;
-    width: 130px;
 
     &:hover img {
+        display: none;
+
+    ${breakpointsMedia({
+    md: css`
         display: initial;
         position: absolute;
-        top: -50px;
-        margin-left: auto;
-        margin-right: auto;
+        top: 70px;
         left: 0;
         right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    `,
+  })}
     }
 
     img {
         display: none;
-        width: 250px;
-        height: 200px;
 
     ${breakpointsMedia({
     md: css`
-        width: 330px;
-        height: 280px;
+        width: 400px;
+        height: 350px;
     `,
   })}
     }
 `;
 
-export default Erro;
+export default Container404;
