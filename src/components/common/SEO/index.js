@@ -9,7 +9,7 @@ function SEO({ headTitle }) {
     ? (`${headTitle} | ${pageTitleDefault}`)
     : (pageTitleDefault);
   const url = 'https://carol-portfolio.vercel.app/';
-  const image = 'https://i.postimg.cc/pVfNzS9G/portfolio.png';
+  const image = 'https://i.postimg.cc/MGYnPDGf/PORTFOLIO-Home.png';
   const description = 'Confira meu Portfolio!';
 
   return (
@@ -17,7 +17,7 @@ function SEO({ headTitle }) {
       <title>{title}</title>
       <meta name="description" content="Portfolio" />
       <meta name="author" content="Carol Andrade Santos" />
-      <meta name="keywords" content="Next.js, JAMStack, React, Portfolio" />
+      <meta name="keywords" content="Next.js, React, Portfolio" />
       <meta httpEquiv="content-language" content="pt-br, en-US" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta httpEquiv="Content-Security-Policy" content="script-src 'self' https://carol-portfolio.vercel.app/;" />
