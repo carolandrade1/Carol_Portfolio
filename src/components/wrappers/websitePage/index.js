@@ -3,8 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Footer from '../../common/footer/footer';
 import Menu from '../../common/menu';
-import Modal from '../../common/modal/modal';
-import ContactForm from '../../forms/contactForm/contactForm';
 import Container from '../../foundation/container';
 import SEO from '../../common/SEO';
 
@@ -38,16 +36,6 @@ export default function WebsitePageWrapper({
         flexDirection="column"
         justifyContent="space-between"
       >
-        <Modal
-          isOpen={isModalOpen}
-          onClose={() => {
-            setModalState(false);
-          }}
-        >
-          {(propsDoModal) => (
-            <ContactForm propsDoModal={propsDoModal} />
-          )}
-        </Modal>
         <Menu
           onCadastrarClick={() => setModalState(true)}
         />

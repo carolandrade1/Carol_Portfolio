@@ -13,21 +13,21 @@ export default class ContactScreenPageObject {
 
   fillContactForm({ name, email, message }) {
     // encontrar e preencher input Nome (erro, Text também com o name=nome dentro do TextField)
-    this.cy.get('#contactForm input[name=nome]').last().type(name);
-    this.cy.get('#contactForm input[name=email]').last().type(email);
-    this.cy.get('#contactForm input[name=mensagem]').last().type(message);
+    this.cy.get('#contactForm input[name=nome]').type(name);
+    this.cy.get('#contactForm input[name=email]').type(email);
+    this.cy.get('#contactForm input[name=mensagem]').type(message);
 
     return this;
   }
 
   submitForm() {
-    this.cy.get('#contactForm button[type="submit"]').last().click();
+    this.cy.get('#contactForm button[type="submit"]').click();
 
     return this;
   }
 
   closeForm() {
-    this.cy.get('#contactForm button[type="button"]').last().click();
+    this.cy.get('#contactForm button[type="button"]').click();
 
     return this;
   }
