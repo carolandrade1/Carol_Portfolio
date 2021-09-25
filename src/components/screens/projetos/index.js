@@ -6,12 +6,17 @@ import Link from '../../common/link/link';
 import ArrowCircle from './animation/arrowCircle';
 import ContainerProjetos, { ProjetoPrincipal, ListaProjetos } from './style';
 
-const repositoriosId = [390006089, 370833957, 371118356, 380740837, 385367528, 396137846];
+const repositoriosId = {
+  390006089: '/images/LPinstalura.webp',
+  371118356: '/images/LPlayouts.webp',
+  380740837: '/images/LPjavascriptprojetos.webp',
+  385367528: '/images/LPalurakut.webp',
+  396137846: '/images/LPtemplate.webp',
+};
 const repositorioIdPrincipal = [397245461];
 
-// eslint-disable-next-line no-unused-vars
 function Projetos({ repositorios }) {
-  const repos = repositorios.filter((repo) => repositoriosId.includes(repo.id));
+  const repos = repositorios.filter((repo) => repositoriosId[repo.id]);
   const reposPrincipal = repositorios.filter((repo) => repositorioIdPrincipal.includes(repo.id));
   return (
     <ContainerProjetos>
@@ -154,11 +159,11 @@ function Projetos({ repositorios }) {
                   display="flex"
                   flexDirection="column"
                 >
-                  {/* <img
-                    src={item.src}
+                  <img
+                    src={repositoriosId[item.id]}
                     alt={item.name}
                     loading="lazy"
-                  /> */}
+                  />
                   <Box
                     display="flex"
                     justifyContent="space-between"
