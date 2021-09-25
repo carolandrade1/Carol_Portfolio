@@ -2,11 +2,11 @@ import styled, { css } from 'styled-components';
 import breakpointsMedia from '../../../../theme/util/breakpoints/breakpoints';
 
 const ContainerProjetos = styled.section`
-    display: flex;
-    flex-direction: column;
-    justify-content: justify;
-    height: 82vh;
-    overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: justify;
+  height: 82vh;
+  overflow-y: scroll;
 
     ${breakpointsMedia({
     md: css`
@@ -51,7 +51,7 @@ const ContainerProjetos = styled.section`
 `;
 
 export const ProjetoPrincipal = styled.ul`
-    flex-basis: 45%;
+  flex-basis: 45%;
 
     .ProjetoPrincipal {
       border-bottom: 1px solid ${({ theme }) => theme.colors.fonts.main.color};
@@ -110,7 +110,7 @@ export const ListaProjetos = styled.ul`
 
     ${breakpointsMedia({
     md: css`
-        padding-top: 100px;
+      padding-top: 100px;
     `,
   })}
 
@@ -130,35 +130,36 @@ export const ListaProjetos = styled.ul`
   })}
     }
 
-    /* img {
-        display: initial;
-        width: 290px;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    img {
+      display: initial;
+      width: 100%;
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
     ${breakpointsMedia({
     md: css`
-        display: none;
-        width: 410px;
-        height: 250px;
-        box-shadow: none;
-        z-index: 0;
-        opacity: 0.9;
+      display: none;
+      width: 410px;
+      height: 250px;
+      box-shadow: none;
+      z-index: 0;
+      opacity: 0.7;
     `,
   })}
-    } */
+    }
 
-    /* .itemsProjetos:hover img {
+    .itemsProjetos:hover img {
 
     ${breakpointsMedia({
     md: css`
-        display: initial;
-        position: absolute;
-        top: 50%;
-        left: 65%;
-        transform: translate(-65%, -50%);
+      z-index: -1;
+      display: initial;
+      position: absolute;
+      top: 50%;
+      left: 80%;
+      transform: translate(-80%, -50%);
     `,
   })}
-    } */
+    }
 
     h2 {
       padding: 15px 0;
