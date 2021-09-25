@@ -10,8 +10,8 @@ const ContainerCasePortfolio = styled.section`
 
     ${breakpointsMedia({
     md: css`
-        justify-content: flex-start;
-        padding: 0 40px;
+      justify-content: flex-start;
+      padding: 0 40px;
     `,
   })}
   &::-webkit-scrollbar {
@@ -48,6 +48,11 @@ const ContainerCasePortfolio = styled.section`
       background: transparent;
     }
   }
+
+  .finalText {
+    margin-bottom: 50px;
+  }
+
 `;
 
 export const Info = styled.div`
@@ -56,17 +61,17 @@ export const Info = styled.div`
 
     ${breakpointsMedia({
     md: css`
-        width: 45%;
+      width: 45%;
     `,
   })}
 
     div {
-        padding-top: 10px;
-        padding-bottom: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
 
     p {
-        margin-bottom: 8px;
+      margin-bottom: 8px;
     }
 `;
 
@@ -78,12 +83,12 @@ export const LogoImage = styled.div`
     order: 1;
 
     img {
-        width: 40%;
-        margin-bottom: 25px;
+      width: 40%;
+      margin-bottom: 25px;
 
     ${breakpointsMedia({
     md: css`
-        width: 30%;
+      width: 30%;
     `,
   })}
     }
@@ -121,32 +126,33 @@ export const Description = styled.ul`
 `;
 
 export const Referencia = styled.ul`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-self: start;
-    gap: 18px;
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-self: start;
+  gap: 18px;
+  width: 100%;
 
     ${breakpointsMedia({
     md: css`
-        width: 45%;
-        gap: 22px;
+      width: 45%;
+      gap: 22px;
     `,
   })}
 `;
 
 export const Image = styled.div`
-    display: flex;
-    justify-content: right;
+  display: flex;
+  justify-content: right;
 
     img {
-        width: 100%;
-        transform: translateY(-50px);
+      width: 100%;
+      box-shadow: rgba(0, 0, 0, 0.20) -2px 2px 4px;
+      transform: translateY(-80px);
 
     ${breakpointsMedia({
     md: css`
-        width: 45%;
-        padding-bottom: 50px;
+      width: 45%;
+      transform: translateY(-180px);
     `,
   })}
     }

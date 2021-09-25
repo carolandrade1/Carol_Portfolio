@@ -17,9 +17,14 @@ const listDescription = [
     ref: ['JS, ES6', 'HTML', 'CSS', 'Style-components', 'Next.js', 'React', 'Conventional Commits', 'ESLint', 'Husky'],
   },
   {
+    title: 'Testes e validações',
+    description: 'Os testes servem para garantir a qualidade das funcionalidades do site. O Cypress foi utilizado para testar o ContactForm e o yup para validar os inputs do formulário. O React Testing Library foi utilizado nos componentes e Jest para o código JS mais simples. Também adicionei o mecanismo de testes ao padrão de qualidade do ESLint.',
+    ref: ['Cypress', 'Jest', 'Yup', 'React Testing Library'],
+  },
+  {
     title: 'Fontes e cores',
-    description: 'A fonte escolhida para o projeto foi Sora, disponibilizada pelo GoogleFonts. Foram escolhidas cores neutras e para alguns detalhes da pagina, a cor roxa.',
-    ref: ['Background', 'Fonte', 'Detalhes', '#EFEFEF', '#000000', '#9759CD', '#CDC2D3', '#424242', '#B488DA'],
+    description: 'A fonte escolhida para o projeto foi Sora, disponibilizada pelo GoogleFonts. Foram escolhidas cores neutras e para alguns detalhes da pagina, a cor #96A7CF.',
+    ref: [],
   },
 ];
 
@@ -59,7 +64,7 @@ function CasePortfolio() {
           </Box>
         </Info>
         <LogoImage>
-          <img src="/images/logo.svg" alt="Logo Portfolio" />
+          <img src="/images/logo.svg" alt="Logo Portfolio" title="Logo Portfolio" />
         </LogoImage>
       </Box>
       <Description>
@@ -93,7 +98,7 @@ function CasePortfolio() {
       <Image>
         <img src="/images/fonte.svg" alt="Fonte Sora" />
       </Image>
-      <Text tag="p" variant="paragraph3" color="fonts.main" textAlign="justify" lineHeight="1.5">
+      <Text tag="p" variant="paragraph2" color="fonts.main" textAlign="justify" lineHeight="1.5" className="finalText">
         O portfolio começou sendo o primeiro desafio do Bootcamp Front End Avançado da Alura,
         mas com o passar das etapas decidi me aprofundar e melhorar cada vez mais o projeto.
         Com isso, conheci e aprendi novas ferramentas, desenvolvi novos projetos e
