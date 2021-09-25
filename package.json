@@ -3,6 +3,7 @@
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
+    "export": "next build && next export",
     "start": "next start",
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "eslint --fix --ignore-path .gitignore .",
@@ -32,6 +33,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
+    "start-server-and-test": "^1.14.0",
     "styled-components": "^5.3.1",
     "styled-normalize": "^8.0.7",
     "yup": "^0.32.9"
