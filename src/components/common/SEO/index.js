@@ -20,7 +20,6 @@ function SEO({ headTitle }) {
       <meta name="keywords" content="Next.js, React, Portfolio" />
       <meta httpEquiv="content-language" content="pt-br, en-US" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <meta httpEquiv="Content-Security-Policy" content="script-src 'self' https://carol-portfolio.vercel.app/;" />
 
       {/* <!-- Open Graph / Facebook --> */}
       <meta property="og:type" content="website" />
