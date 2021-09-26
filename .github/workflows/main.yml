@@ -34,3 +34,51 @@ jobs:
         run: yarn install
       - name: Roda o Linter!
         run: yarn lint
+  unit_tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest # The type of runner that the job will run on
+    steps: # Steps represent a sequence of tasks that will be executed as part of the job
+      # [Pre Build-step]
+      - uses: actions/checkout@v2 ## Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.15.0'
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+      # ####################
+
+      # Commands that will run:
+      - name: Install Packages
+        run: yarn --prefer-offline
+
+      - name: Run Unit Tests
+        run: yarn test
+  integration_tests:
+    name: Integration Tests
+    runs-on: ubuntu-latest # The type of runner that the job will run on
+    steps: # Steps represent a sequence of tasks that will be executed as part of the job
+      # [Pre Build-step]
+      - uses: actions/checkout@v2 ## Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.15.0'
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+      # ####################
+
+      # Commands that will run:
+      - name: Install Packages
+        run: yarn --prefer-offline
+
+      - name: Run Integration Tests
+        run: yarn test:integration:build 
