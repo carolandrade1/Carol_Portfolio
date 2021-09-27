@@ -1,12 +1,18 @@
 import React from 'react';
-import Sobre from '../src/components/screens/sobre/sobre';
+import PropTypes from 'prop-types';
+import Sobre, { getContent } from '../src/components/screens/sobre/sobre';
 import websitePageHOC from '../src/components/wrappers/websitePage/hoc';
 
-function SobreScreen() {
+function SobreScreen({ messages }) {
   return (
-    <Sobre />
+    <Sobre messages={messages} />
   );
 }
+
+SobreScreen.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  messages: PropTypes.object.isRequired,
+};
 
 export default websitePageHOC(SobreScreen, {
   pageWrapperProps: {
@@ -16,4 +22,12 @@ export default websitePageHOC(SobreScreen, {
   },
 });
 
-SobreScreen.defaultProps = {};
+export async function getStaticProps() {
+  const messages = await getContent();
+
+  return {
+    props: {
+      messages,
+    },
+  };
+}

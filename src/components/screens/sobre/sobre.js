@@ -1,59 +1,15 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import Box from '../../foundation/box';
 import Text from '../../foundation/text';
 import ContainerSobre, {
   Canais, Descricao, Image, Info,
 } from './style';
 
-const canais = [
-  {
-    name: 'Alura',
-    url: 'https://www.alura.com.br/',
-    imageurl: 'https://github.com/alura.png',
-  },
-  {
-    name: 'Ju Negreiros',
-    url: 'https://github.com/juunegreiros',
-    imageurl: 'https://github.com/juunegreiros.png',
-  },
-  {
-    name: 'Mario Souto',
-    url: 'https://www.youtube.com/c/DevSoutinho',
-    imageurl: 'https://github.com/omariosouto.png',
-  },
-  {
-    name: 'John Smilga',
-    url: 'https://www.youtube.com/c/CodingAddict',
-    imageurl: 'https://github.com/john-smilga.png',
-  },
-  {
-    name: 'Coder Coder',
-    url: 'https://www.youtube.com/c/TheCoderCoder',
-    imageurl: 'https://github.com/thecodercoder.png',
-  },
-  {
-    name: 'Free Code Camp',
-    url: 'https://www.freecodecamp.org/',
-    imageurl: 'https://github.com/freeCodeCamp.png',
-  },
-  {
-    name: 'Rafaella Ballerini',
-    url: 'https://www.youtube.com/c/rafaellaballerini',
-    imageurl: 'https://github.com/rafaballerini.png',
-  },
-  {
-    name: 'Kevin Powell',
-    url: 'https://www.youtube.com/kepowob',
-    imageurl: 'https://github.com/kevin-powell.png',
-  },
-  {
-    name: 'Bedimcode',
-    url: 'https://www.youtube.com/c/Bedimcode',
-    imageurl: 'https://github.com/bedimcode.png',
-  },
-];
+export { getContent } from './getContent';
 
-function Sobre() {
+function Sobre({ messages }) {
   return (
     <ContainerSobre>
       <Text tag="h1" variant="titleXS">Sobre</Text>
@@ -81,11 +37,11 @@ function Sobre() {
             </Text>
           </Descricao>
           <Canais>
-            {canais.map((dado) => (
-              <li key={dado.name}>
-                <Text tag="a" href={dado.url} title={dado.name} color="fonts.main" target="_blank" rel="noopener noreferrer">
+            {messages.allPageSobres.map((dado) => (
+              <li key={dado.id}>
+                <Text tag="a" href={dado.siteUrl} title={dado.name} color="fonts.main" target="_blank" rel="noopener noreferrer">
                   {dado.name}
-                  <img src={dado.imageurl} alt={dado.name} />
+                  <img src={dado.imageUrl} alt={dado.name} />
                 </Text>
               </li>
             ))}
@@ -98,5 +54,10 @@ function Sobre() {
     </ContainerSobre>
   );
 }
+
+Sobre.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  messages: PropTypes.object.isRequired,
+};
 
 export default Sobre;
