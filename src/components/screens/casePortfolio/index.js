@@ -1,34 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Box from '../../foundation/box';
 import Text from '../../foundation/text';
 import ContainerCasePortfolio, {
   Info, Description, Image, LogoImage, Referencia,
 } from './style';
 
-const listDescription = [
-  {
-    title: 'Pesquisa e Planejamento',
-    description: 'O desafio do Bootcamp era criar um Portfolio com o intutio de dispor outros projetos. A principio eu realizei uma pesquisa para referências de layout, cores e fontes. Em seguida fiz um rascunho no Figma, para então começar a desenvolver o projeto.',
-    ref: ['Sistema de design', 'Dribbble', 'Awwwards', 'Airbnb design', 'Behance', 'UX Design', 'Google Fonts'],
-  },
-  {
-    title: 'Tecnologias e Linguagens',
-    description: 'Durante o Bootcamp, pude conhecer o Next.js, React e Style-components. Expandi meu conhecimento em CSS e pude desenvolver animações e efeitos. Além disso passei a utilizar pacotes para garantir fluxos de integração contínua e deploy contínuo (CI/CD) no projeto.',
-    ref: ['JS, ES6', 'HTML', 'CSS', 'Style-components', 'Next.js', 'React', 'Conventional Commits', 'ESLint', 'Husky'],
-  },
-  {
-    title: 'Testes e validações',
-    description: 'Os testes servem para garantir a qualidade das funcionalidades do site. O Cypress foi utilizado para testar o ContactForm e o yup para validar os inputs do formulário. O React Testing Library foi utilizado nos componentes e Jest para o código JS mais simples. Também adicionei o mecanismo de testes ao padrão de qualidade do ESLint.',
-    ref: ['Cypress', 'Jest', 'Yup', 'React Testing Library'],
-  },
-  {
-    title: 'Fontes e cores',
-    description: 'A fonte escolhida para o projeto foi Sora, disponibilizada pelo GoogleFonts. Foram escolhidas cores neutras e para alguns detalhes da pagina, a cor #96A7CF.',
-    ref: [],
-  },
-];
+export { getContent } from './getContent';
 
-function CasePortfolio() {
+function CasePortfolio({ messages }) {
   return (
     <ContainerCasePortfolio>
       <Text tag="h1" variant="subTitleXS">Portfolio</Text>
@@ -68,8 +48,8 @@ function CasePortfolio() {
         </LogoImage>
       </Box>
       <Description>
-        {listDescription.map((item) => (
-          <li className="list" key={item.title}>
+        {messages.allPageCasePortfolios.map((item) => (
+          <li className="list" key={item.id}>
             <Text tag="h2" variant="paragraph1XS" color="fonts.main">{item.title}</Text>
             <Box
               display="flex"
@@ -86,8 +66,8 @@ function CasePortfolio() {
               <Text tag="p" variant="paragraph3" color="fonts.main">{item.description}</Text>
               <Referencia>
                 {item.ref.map((dado) => (
-                  <li key={dado}>
-                    <Text tag="span" color="fonts.main">{dado}</Text>
+                  <li key={dado.description}>
+                    <Text tag="span" color="fonts.main">{dado.description}</Text>
                   </li>
                 ))}
               </Referencia>
@@ -107,5 +87,10 @@ function CasePortfolio() {
     </ContainerCasePortfolio>
   );
 }
+
+CasePortfolio.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  messages: PropTypes.object.isRequired,
+};
 
 export default CasePortfolio;

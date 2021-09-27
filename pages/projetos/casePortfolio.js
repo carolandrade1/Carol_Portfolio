@@ -1,12 +1,18 @@
 import React from 'react';
-import CasePortfolio from '../../src/components/screens/casePortfolio';
+import PropTypes from 'prop-types';
+import CasePortfolio, { getContent } from '../../src/components/screens/casePortfolio';
 import websitePageHOC from '../../src/components/wrappers/websitePage/hoc';
 
-function CaseStudy() {
+function CaseStudy({ messages }) {
   return (
-    <CasePortfolio />
+    <CasePortfolio messages={messages} />
   );
 }
+
+CaseStudy.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  messages: PropTypes.object.isRequired,
+};
 
 export default websitePageHOC(CaseStudy, {
   pageWrapperProps: {
@@ -16,4 +22,12 @@ export default websitePageHOC(CaseStudy, {
   },
 });
 
-CaseStudy.defaultProps = {};
+export async function getStaticProps() {
+  const messages = await getContent();
+
+  return {
+    props: {
+      messages,
+    },
+  };
+}

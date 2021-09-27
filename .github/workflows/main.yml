@@ -81,4 +81,6 @@ jobs:
         run: yarn --prefer-offline
 
       - name: Run Integration Tests
+        env:
+          DATO_CMS_TOKEN: ${{ secrets.DATO_CMS_TOKEN }}
         run: yarn test:integration:build 
