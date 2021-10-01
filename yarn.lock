@@ -844,13 +844,13 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@sendgrid/client@^7.4.6":
-  version "7.4.6"
-  resolved "https://registry.yarnpkg.com/@sendgrid/client/-/client-7.4.6.tgz#c7b5a6fc0c12e48fcc77faf183f0a99f5cc8ec52"
-  integrity sha512-g3vjDyN1hDTKwPe9THGNuf4HKkx+cC3dSOM7SM88Pg6Q9SRI+GDGzsdnGRfFFpsdHBVVrHCSk0n2f4YZVCv4zA==
+"@sendgrid/client@^7.4.7":
+  version "7.4.7"
+  resolved "https://registry.yarnpkg.com/@sendgrid/client/-/client-7.4.7.tgz#052d7ea99a19ae880d7fb0e396337f0ab59c7e2a"
+  integrity sha512-Zh3H/nCyI2+MaAZW9KJpyk6JXfxE27W+mR636Hju/GX95SR7+uymeuLLJ3GtLvtapLTl8l6/0YoHjzlg65xtqg==
   dependencies:
     "@sendgrid/helpers" "^7.4.6"
-    axios "^0.21.1"
+    axios "^0.21.4"
 
 "@sendgrid/helpers@^7.4.6":
   version "7.4.6"
@@ -859,12 +859,12 @@
   dependencies:
     deepmerge "^4.2.2"
 
-"@sendgrid/mail@^7.4.6":
-  version "7.4.6"
-  resolved "https://registry.yarnpkg.com/@sendgrid/mail/-/mail-7.4.6.tgz#497e59ac415bf19561293c1fe92c5ef86eee7fae"
-  integrity sha512-1HTW5Iu1oKw5r8cltAPfVFbaJjjIrWmYR8WP0I8br01ImUhy1/42vGCVl6QWkPP6pcAfsWNIrjSPx20ZcVNvVQ==
+"@sendgrid/mail@^7.4.7":
+  version "7.4.7"
+  resolved "https://registry.yarnpkg.com/@sendgrid/mail/-/mail-7.4.7.tgz#cc8f77ec27443e02e7be1df01bf0899434155804"
+  integrity sha512-lGfXJBEx7PMQje/NsVsebF6MdP2ptHWjmuI4YANjReAQlIGq3Cqm4JLP5Fb4n5Bbr1LXLCM7R0gJo+/PT6ENKw==
   dependencies:
-    "@sendgrid/client" "^7.4.6"
+    "@sendgrid/client" "^7.4.7"
     "@sendgrid/helpers" "^7.4.6"
 
 "@sideway/address@^4.1.0":
@@ -1471,6 +1471,13 @@ axios@^0.21.1:
   version "0.21.3"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.3.tgz#f85d9b747f9b66d59ca463605cedf1844872b82e"
   integrity sha512-JtoZ3Ndke/+Iwt5n+BgSli/3idTvpt5OjKyoCmz4LX5+lPiY5l7C1colYezhlxThjNa/NhngCUWZSZFypIFuaA==
+  dependencies:
+    follow-redirects "^1.14.0"
+
+axios@^0.21.4:
+  version "0.21.4"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
+  integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
   dependencies:
     follow-redirects "^1.14.0"
 
