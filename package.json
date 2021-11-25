@@ -19,7 +19,7 @@
     "build/start": "yarn build && yarn start"
   },
   "dependencies": {
-    "@sendgrid/mail": "^7.5.0",
+    "@sendgrid/mail": "^7.6.0",
     "@testing-library/user-event": "^13.2.1",
     "@types/jest": "^27.0.1",
     "cross-env": "^7.0.3",
